@@ -8,7 +8,6 @@
   <br>
   🎓 LSE Data Analytics Career Accelerator (Distinction)
 </p>     
----
 
 ## About Me
 I help businesses make smarter decisions by transforming complex data into clear, actionable insights.
