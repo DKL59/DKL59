@@ -8,8 +8,7 @@
   <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/main/icons/location.png" width="18" height="18" alt="Location"> Nepal | 
   <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/main/icons/remote.png" width="18" height="18" alt="Remote"> Open to Remote Roles  <br>
   <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/main/icons/education.png" width="18" height="18" alt="Education"> LSE Data Analytics Career Accelerator (Distinction)
-</p>
-
+</p>   
 ---
 
 ## About Me
