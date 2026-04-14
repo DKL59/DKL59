@@ -9,7 +9,7 @@
   🎓 LSE Data Analytics Career Accelerator (Distinction)
 </p>     
 
-<img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
+<img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
 
 ## About Me
 I help businesses make smarter decisions by transforming complex data into clear, actionable insights.
