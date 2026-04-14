@@ -1,5 +1,6 @@
 <!-- PROFILE SECTION -->
-<h1 align="center">📊 Dipendra Limbu</h1>
+<h1 align="center">📊![Uploading image.png…]()
+ Dipendra Limbu</h1>
 <p align="center">
   <b>Data Analyst | Business Intelligence</b><br>
   📍 Nepal | 🌍 Open to Remote Roles  
