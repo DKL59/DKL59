@@ -1,5 +1,5 @@
 <!-- PROFILE SECTION -->
-<h1 align="center"> <img width="180" height="180" alt="image" src="https://github.com/user-attachments/assets/e72a5552-50c1-425c-a591-1f8ea00773fb" />
+<h1 align="center"> <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/e72a5552-50c1-425c-a591-1f8ea00773fb" />
 
   Dipendra Limbu</h1>
 <p align="center">
@@ -9,7 +9,7 @@
   🎓 LSE Data Analytics Career Accelerator (Distinction)
 </p>     
 
-<img width="180" height="180" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
+<img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
 
 ## About Me
 I help businesses make smarter decisions by transforming complex data into clear, actionable insights.
