@@ -1,10 +1,13 @@
 <!-- PROFILE SECTION -->
-<h1 align="center">📊 Dipendra Limbu</h1>
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/main/icons/powerbi.png" width="24" height="24" alt="Data Analyst"> 
+  Dipendra Limbu
+</h1>
 <p align="center">
   <b>Data Analyst | Business Intelligence</b><br>
-  📍 Nepal | 🌍 Open to Remote Roles  
-  <br>
-  🎓 LSE Data Analytics Career Accelerator (Distinction)
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/main/icons/location.png" width="18" height="18" alt="Location"> Nepal | 
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/main/icons/remote.png" width="18" height="18" alt="Remote"> Open to Remote Roles  <br>
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/main/icons/education.png" width="18" height="18" alt="Education"> LSE Data Analytics Career Accelerator (Distinction)
 </p>
 
 ---
