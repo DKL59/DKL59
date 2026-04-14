@@ -1,14 +1,11 @@
 <!-- PROFILE SECTION -->
-<h1 align="center">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/microsoftpowerbi.svg" width="24" height="24" alt="Power BI"> 
-  Dipendra Limbu
-</h1>
+<h1 align="center">📊 Dipendra Limbu</h1>
 <p align="center">
   <b>Data Analyst | Business Intelligence</b><br>
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/googlemaps.svg" width="18" height="18" alt="Location"> Nepal | 
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/remotestack.svg" width="18" height="18" alt="Remote"> Open to Remote Roles  <br>
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/londonshoolofeconomics.svg" width="18" height="18" alt="LSE"> LSE Data Analytics Career Accelerator (Distinction)
-</p>        
+  📍 Nepal | 🌍 Open to Remote Roles  
+  <br>
+  🎓 LSE Data Analytics Career Accelerator (Distinction)
+</p>     
 ---
 
 ## About Me
