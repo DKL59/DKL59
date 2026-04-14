@@ -9,7 +9,7 @@
 
 ---
 
-## 🧩 About Me
+## About Me
 I help businesses make smarter decisions by transforming complex data into clear, actionable insights.
 
 I have completed the Data Analytics Career Accelerator training from The London School of Economics and Political Science (LSE) presented in collaboration with FourthRev. This training helped me strengthen my skills in Python, Excel, Tableau, SQL and taught me how to combine analytical thinking with business storytelling when providing data-driven solution to business problems. 
