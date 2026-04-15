@@ -3,7 +3,7 @@
 
   Dipendra Limbu</h1>
 <p align="center">
-  <b>Data Analyst | Business Intelligence</b><br>
+  <b>Data Analyst | Business Intelligence | Analyst </b><br>
   📍 Nepal | 🌍 Open to Remote Roles  
   <br>
   🎓 LSE Data Analytics Career Accelerator 
