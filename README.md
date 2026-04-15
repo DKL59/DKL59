@@ -6,7 +6,7 @@
   <b>Data Analyst | Business Intelligence</b><br>
   📍 Nepal | 🌍 Open to Remote Roles  
   <br>
-  🎓 LSE Data Analytics Career Accelerator (Distinction)
+  🎓 LSE Data Analytics Career Accelerator 
 </p>     
 
 <img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
