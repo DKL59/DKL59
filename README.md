@@ -48,6 +48,28 @@ I’m particularly interested in opportunities where data is used not just to un
 </p>
 ---
 
+## Featured Projects
+
+###  1. Customer and advertising analytics
+**Goal:** Assist the marketing team to design a marketing campaign.  
+**Highlights:** Customer segmentation, Interactive Tableau dashboards, Data cleaning and visualisation using Excel.  
+**Tools:** Excel · SQL (PostgreSQL) · Tableau
+
+---
+
+###  2. Customer Trends Analytics
+**Goal:** Identify customer trends and loyalty patterns to improve sales.  
+**Highlights:** Correlation, Customer segmentation, sentiment analysis (TextBlob), and clustering.  
+**Tools:** Python · Pandas · Numpy · Matplotlib · Seaborn · TextBlob · NLP  
+
+---
+
+###  3. Employer Project - Study Group
+**Goal:** 
+**Highlights:**
+**Tools:**
+
+
 
 ## 🌐 Connect With Me
 <p align="left">
