@@ -78,7 +78,7 @@ Key cleaning steps in **Excel**:
 ### 📣 Advertising Effectiveness
 - **Most effective channel:** Twitter  
 - **Least effective channel:** Brochure  
-- Channel performance varies slightly by country and marital status.
+- Channel performance varies slightly by country and customer demographics.
 
 ---
 
