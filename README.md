@@ -50,7 +50,7 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ## Featured Projects
 
-###  1. Customer and advertising analytics
+### 1. [Customer and advertising analytics](project1.md)
 **Goal:** Assist the marketing team to design a marketing campaign.  
 **Highlights:** Customer segmentation, Interactive Tableau dashboards, Data cleaning and visualisation using Excel.  
 **Tools:** Excel · SQL (PostgreSQL) · Tableau
