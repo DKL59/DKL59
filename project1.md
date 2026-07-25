@@ -101,7 +101,7 @@ Key cleaning steps in **Excel**:
 
 ## 📄 Project Documentation & Technical Reports
 
-👉 [Open and Read the Full Technical Report (PDF)](Technical_report_2Market.pdf?raw=true)
+👉 [Open and Read the Full Technical Report (PDF)](report1.pdf?raw=true)
 
 ---
 
