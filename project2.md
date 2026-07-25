@@ -1,5 +1,14 @@
 # 🎮 Turtle Games Customer Trends Analysis
 
+## 💻 Complete Python Code & Data Visualizations
+
+👉 [Open the Interactive Jupyter Notebook (.ipynb)](LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb)
+
+## 📈 R Script & Data Visualizations
+
+👉 [Open the Source R Script (marketing_analysis.R)](LSE_DA301_Assignment_R_Limbu_Dipendra.R)
+
+
 ## 📋 Overview
 This project was completed as part of the **Data Analytics Career Accelerator** from **The London School of Economics and Political Science (LSE)** in collaboration with FourthRev.
 
