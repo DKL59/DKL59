@@ -135,6 +135,9 @@ The analysis focused on:
 ---
 
 ## 💡 Recommendations
+
+![Recommendation](recommendation.png)
+
 1. **Leverage high-spending and high-earning customers** through exclusive loyalty campaigns.  
 2. **Reward consistency** — incentivize mid-spending customers to increase loyalty engagement.  
 3. **Monitor feedback sentiment** regularly to track satisfaction and spot emerging issues.  
