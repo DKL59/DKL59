@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+
 <!-- PROFILE SECTION -->
 <h1 align="center"> <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/e72a5552-50c1-425c-a591-1f8ea00773fb" />
 
