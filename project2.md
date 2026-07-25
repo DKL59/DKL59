@@ -8,6 +8,8 @@
 
 👉 [Open the R Script (marketing_analysis.R)](LSE_DA301_Assignment_R_Limbu_Dipendra.R)
 
+---
+
 
 ## 📋 Overview
 This project was completed as part of the **Data Analytics Career Accelerator** from **The London School of Economics and Political Science (LSE)** in collaboration with FourthRev.
