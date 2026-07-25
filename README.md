@@ -57,7 +57,7 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ---
 
-###  2. Customer Trends Analytics
+###  2. [Customer Trends Analytics](project2.md)
 **Goal:** Identify customer trends and loyalty patterns to improve sales.  
 **Highlights:** Correlation, Customer segmentation, sentiment analysis (TextBlob), and clustering.  
 **Tools:** Python · Pandas · Numpy · Matplotlib · Seaborn · TextBlob · NLP  
