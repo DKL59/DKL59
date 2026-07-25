@@ -133,6 +133,7 @@ The analysis focused on:
 - Suggests overall positive customer experience with some minor product feedback.
 
 ---
+<img width="859" height="757" alt="image" src="https://github.com/user-attachments/assets/f49e1d86-e45b-4b32-9a02-28845c7606fd" />
 
 ## 💡 Recommendations
 1. **Leverage high-spending and high-earning customers** through exclusive loyalty campaigns.  
