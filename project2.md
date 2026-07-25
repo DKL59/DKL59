@@ -2,7 +2,7 @@
 
 ## 💻 Complete Python Code & Data Visualizations
 
-👉 [Open the Jupyter Notebook (.ipynb)](LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb)
+👉 [Open the Jupyter Notebook (.ipynb)(LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb)](https://nbviewer.org/github/DKL59/DKL59/blob/main/LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb)
 
 ## 📈 R Script & Data Visualizations
 
