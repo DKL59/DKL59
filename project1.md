@@ -98,15 +98,15 @@ Key cleaning steps in **Excel**:
 ---
 
 ## 🎥 Project Presentation Video
-[Project solution presentation](YOUR_GITHUB_VIDEO_LINK_HERE)
+[Project solution presentation](Dipendra Limbu Presentation.mp4)
 
+---
 
 ## 👤 Author
 **Dipendra Limbu**  
-📍 Nepal  💼 Data Analyst | Business Intelligence Analyst 
-🔗 [LinkedIn](https://www.linkedin.com/in/dipendra-limbu-4234901a9/) | [GitHub](#)
+📍 Nepal  💼 Data Analyst | Business Intelligence Analyst [LinkedIn](https://www.linkedin.com/in/dipendra-limbu-4234901a9/) | [GitHub](#)
 
 ---
 
 ## 🏁 Summary
-This project demonstrates a complete analytics workflow — from data cleaning to visualization and insight generation — translating data into actionable marketing recommendations for strategic decision-making.
+This project demonstrates a complete analytics workflow — from data cleaning, insight generation to visualization and — translating data into actionable marketing recommendations for strategic decision-making.
