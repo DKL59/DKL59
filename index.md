@@ -3,8 +3,10 @@ layout: default
 ---
 
 <!-- PROFILE SECTION -->
+<h1 align="center"> <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/e72a5552-50c1-425c-a591-1f8ea00773fb" />
 
-  Dipendra Limbu</h1>
+
+Dipendra Limbu</h1>
 <p align="center">
   <b>Data Analyst | Business Intelligence | Analyst </b><br>
   📍 Nepal | 🌍 Open to Remote Roles  
@@ -13,7 +15,6 @@ layout: default
 </p>     
 
 <img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
-
 ---
 
 
