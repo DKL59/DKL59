@@ -3,21 +3,17 @@ layout: default
 ---
 
 <!-- PROFILE SECTION -->
-<div align="center">
-  <!-- Secondary Picture (Now placed at the very top and centered) -->
-  <img width="80" height="80" alt="secondary icon" src="https://github.com" style="display: block; margin: 0 auto 15px auto;" />
+<h1 align="center"> <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/e72a5552-50c1-425c-a591-1f8ea00773fb" />
 
-  <!-- Profile Image -->
-  <img width="100" height="100" alt="profile picture" src="https://github.com" style="display: block; margin: 0 auto 10px auto;" />
-  
-  <h1>Dipendra Limbu</h1>
-  
-  <p>
-    <b>Data Analyst | Business Intelligence | Analyst </b><br>
-    📍 Nepal | 🌍 Open to Remote Roles<br>
-    🎓 LSE Data Analytics Career Accelerator 
-  </p>     
-</div>
+  Dipendra Limbu</h1>
+<p align="center">
+  <b>Data Analyst | Business Intelligence | Analyst </b><br>
+  📍 Nepal | 🌍 Open to Remote Roles  
+  <br>
+  🎓 LSE Data Analytics Career Accelerator 
+</p>     
+
+<img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
 
 ---
 
