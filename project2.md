@@ -82,6 +82,8 @@ The analysis focused on:
 ---
 
 ## 💳 Correlation Findings
+![Correlation Findings](pic4.png)
+
 - **Remuneration ↔ Loyalty Points:** Moderate positive correlation (**r = 0.62**)  
 - **Spending Score ↔ Loyalty Points:** Stronger positive correlation (**r = 0.67**)  
 - Indicates that higher spenders and earners accumulate more loyalty points.
