@@ -43,14 +43,6 @@ The analysis focused on:
 
 ## 🧰 Tools & Technologies
 ![Tools & Technologies](pic1.png)
-| Category | Tools Used |
-|-----------|-------------|
-| Data Analysis | **Python (Pandas, NumPy)** |
-| Data Visualization | **Matplotlib, Seaborn** |
-| Statistical Analysis | **Scipy, Statsmodels** |
-| Natural Language Processing | **TextBlob** |
-| Environment | **Jupyter Notebook** |
-| Documentation | **MS Word / PDF** |
 
 ---
 
@@ -84,12 +76,6 @@ The analysis focused on:
 
 ### 📈 Distribution Analysis
 ![Distribution Analysis](pic2.png)
-| Variable | Skewness | Kurtosis | Interpretation |
-|-----------|-----------|-----------|----------------|
-| **Age** | +0.61 | 2.80 | Slight right skew, light-tailed |
-| **Remuneration** | +0.41 | 2.59 | Right skew, light-tailed |
-| **Spending Score** | -0.04 | 2.11 | Nearly symmetric |
-| **Loyalty Points** | +1.46 | 4.70 | Heavily right skewed, outlier-sensitive |
 
 ---
 
@@ -104,13 +90,7 @@ The analysis focused on:
 
 ### Loyalty Points by Remuneration Group
 ![Loyalty Points by Remuneration Group](pic3.png)
-| Group | Mean Loyalty Points | Median Loyalty Points |
-|--------|---------------------|-----------------------|
-| **Low Earners** | 725 | 724 |
-| **Medium Earners** | 1,551 | 1,463 |
-| **High Earners** | 2,503 | 2,262 |
 
-➡️ *Higher earners accumulate more loyalty points consistently.*
 
 ### Loyalty Points by Spending Group
 - **High Spending** customers accumulate the **most loyalty points**.  
