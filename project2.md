@@ -42,6 +42,7 @@ The analysis focused on:
 ---
 
 ## 🧰 Tools & Technologies
+![Tools & Technologies](pic1.png)
 | Category | Tools Used |
 |-----------|-------------|
 | Data Analysis | **Python (Pandas, NumPy)** |
@@ -82,6 +83,7 @@ The analysis focused on:
 - **Average loyalty points:** 1,578 (range: 25–6,847).  
 
 ### 📈 Distribution Analysis
+![Distribution Analysis](pic2.png)
 | Variable | Skewness | Kurtosis | Interpretation |
 |-----------|-----------|-----------|----------------|
 | **Age** | +0.61 | 2.80 | Slight right skew, light-tailed |
@@ -101,6 +103,7 @@ The analysis focused on:
 ## 👥 Customer Segmentation Insights
 
 ### Loyalty Points by Remuneration Group
+![Loyalty Points by Remuneration Group](pic3.png)
 | Group | Mean Loyalty Points | Median Loyalty Points |
 |--------|---------------------|-----------------------|
 | **Low Earners** | 725 | 724 |
