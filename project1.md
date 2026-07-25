@@ -101,9 +101,10 @@ Key cleaning steps in **Excel**:
 
 ## 📄 Project Documentation & Technical Reports
 
-👉 [Open and Read the Full Technical Report (Technical Report 2Market.pdf)](Technical Report 2Market.pdf)
+👉 [Open and Read the Full Technical Report (Technical_Report_2Market.pdf)](Technical_Report_2Market.pdf)
 
 ---
+
 
 ## 🎥 Project Presentation Video
 https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1
