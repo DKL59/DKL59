@@ -153,10 +153,7 @@ The analysis focused on:
 ---
 
 ## 👤 Author
-**Dipendra Limbu**  
-📍 Nepal  
-💼 Data Analyst | Business Intelligence Enthusiast  
-🔗 [LinkedIn](https://www.linkedin.com/in/dipendra-limbu-4234901a9/) | [GitHub](#)
+**Dipendra Limbu**  📍 Nepal  💼 Data Analyst | Business Intelligence Enthusiast  🔗 [LinkedIn](https://www.linkedin.com/in/dipendra-limbu-4234901a9/) | [GitHub](#)
 
 ---
 
