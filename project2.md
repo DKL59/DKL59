@@ -11,7 +11,7 @@
 
 
 
-## 📄 Project Documentation & Technical Reports
+## 📄 Technical Report
 
 👉 [Open and Read the Full Technical Report (PDF)]([https://github.com](https://github.com/DKL59/DKL59/blob/main/report2.pdf)
 
