@@ -3,8 +3,8 @@
   <b>Data Analyst | Business Intelligence</b><br>
   📍 Nepal | 🌍 Open to Remote Roles  
   <br>
-  🎓 BSc & MSc in Strategy, Organisation & Leadership, Copenhagen Business School (CBS) <br>
-  🎓 LSE Data Analytics Career Accelerator 
+  🎓 BSc & MSc in Strategy, Copenhagen Business School (CBS) <br>
+  🎓 LSE Data Analytics  
 </p>
     
 
