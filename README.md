@@ -64,12 +64,6 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ---
 
-###  3. Employer Project - Study Group
-**Goal:** 
-**Highlights:**
-**Tools:**
-
-
 
 ## 🌐 Connect With Me
 <p align="left">
