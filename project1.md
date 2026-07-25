@@ -93,14 +93,14 @@ Key cleaning steps in **Excel**:
 ## 🧩 Skills Demonstrated
 - Data cleaning & transformation in Excel  
 - SQL querying & data import in PostgreSQL  
-- Dashboard design in Power BI  
-- Exploratory data analysis & trend discovery  
-- Business storytelling & insight communication  
+- Dashboard design in Tableau
+- Exploratory data analysis
+- Business storytelling
 
 ---
 
 ## 🎥 Project Presentation Video
-https://github.com/user-attachments/assets/13831b57-0c08-42bb-8360-c7764fd524b6
+https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1
 
 ---
 
