@@ -8,6 +8,14 @@
 
 👉 [Open the R Script (marketing_analysis.R)](LSE_DA301_Assignment_R_Limbu_Dipendra.R)
 
+
+## 📄 Project Documentation & Technical Reports
+
+👉 [Open and Read the Full Technical Report (PDF)]([https://github.com](https://github.com/DKL59/DKL59/blob/main/report2.pdf)
+
+
+
+
 ---
 
 
