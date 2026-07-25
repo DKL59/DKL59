@@ -11,7 +11,7 @@
 <img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
 
 ## About Me
-I help businesses make strategic decisions by transforming complex data into clear, actionable insights.
+I help businesses utilize the potential of data in making informed decisions by transforming complex data into clear, actionable insights.
 
 I have completed the Data Analytics Career Accelerator training from The London School of Economics and Political Science (LSE) presented in collaboration with FourthRev. This training helped me strengthen my skills in Python, Excel, Tableau, SQL and taught me how to combine analytical thinking with business storytelling when providing data-driven solution to business problems. 
  
