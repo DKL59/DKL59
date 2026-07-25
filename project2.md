@@ -2,11 +2,11 @@
 
 ## 💻 Complete Python Code & Data Visualizations
 
-👉 [Open the Interactive Jupyter Notebook (.ipynb)](LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb)
+👉 [Open the Jupyter Notebook (.ipynb)](LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb)
 
 ## 📈 R Script & Data Visualizations
 
-👉 [Open the Source R Script (marketing_analysis.R)](LSE_DA301_Assignment_R_Limbu_Dipendra.R)
+👉 [Open the R Script (marketing_analysis.R)](LSE_DA301_Assignment_R_Limbu_Dipendra.R)
 
 
 ## 📋 Overview
