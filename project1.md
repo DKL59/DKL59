@@ -97,10 +97,13 @@ Key cleaning steps in **Excel**:
 
 ---
 
+## 🎥 Project Presentation Video
+[Project solution presentation](YOUR_GITHUB_VIDEO_LINK_HERE)
+
+
 ## 👤 Author
 **Dipendra Limbu**  
-📍 Nepal  
-💼 Data Analyst | Business Intelligence Analyst 
+📍 Nepal  💼 Data Analyst | Business Intelligence Analyst 
 🔗 [LinkedIn](https://www.linkedin.com/in/dipendra-limbu-4234901a9/) | [GitHub](#)
 
 ---
