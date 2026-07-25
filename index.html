@@ -5,145 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipendra Limbu | Data Analyst Portfolio</title>
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0ea5e9;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            max-width: 750px;
-            width: 100%;
-        }
-        .profile-card {
-            text-align: center;
-            background: var(--card-bg);
-            padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-            border: 1px solid #334155;
-            margin-bottom: 30px;
-        }
-        .icon-top {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-            border-radius: 50%;
-        }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--accent);
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-        }
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2rem;
-            letter-spacing: -0.5px;
-        }
-        .title-tags {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        .meta-info {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .portfolio-section {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid #334155;
-        }
-        h2 {
-            color: var(--text-main);
-            border-bottom: 2px solid #334155;
-            padding-bottom: 8px;
-            margin-top: 0;
-        }
-        .project-card {
-            background: #111827;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            border-left: 4px solid var(--accent);
-        }
-        .project-card h3 {
-            margin: 0 0 10px 0;
-            color: #fff;
-        }
-        .project-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin: 0 0 15px 0;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: #0f172a;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.2s ease;
-        }
-        .btn:hover {
-            background: var(--accent-hover);
-        }
+        body { font-family: -apple-system, sans-serif; background-color: #0f172a; color: #f8fafc; padding: 40px 20px; }
+        .container { max-width: 750px; margin: 0 auto; }
+        .profile-card, .portfolio-section { background: #1e293b; padding: 30px; border-radius: 16px; margin-bottom: 30px; border: 1px solid #334155; }
+        h1 { margin: 0 0 10px 0; color: #fff; }
+        .title-tags { color: #38bdf8; font-weight: 600; }
+        .meta-info { color: #94a3b8; margin-top: 10px; }
+        .project-card { background: #111827; padding: 20px; border-radius: 10px; border-left: 4px solid #38bdf8; margin-top: 20px; }
+        .tools-badge { display: inline-block; background: #334155; color: #38bdf8; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; margin-top: 10px; }
     </style>
 </head>
 <body>
-
 <div class="container">
-    <!-- PROFILE CARD -->
     <div class="profile-card">
-        <!-- LSE / Career Icon Above Name -->
-        <img class="icon-top" alt="Icon" src="https://github.com" />
-        <br>
-        <!-- Profile Main Image -->
-        <img class="profile-img" alt="Dipendra Limbu" src="https://github.com" />
-        
         <h1>Dipendra Limbu</h1>
         <div class="title-tags">Data Analyst | Business Intelligence Analyst</div>
-        
-        <div class="meta-info">
-            📍 Nepal &nbsp;|&nbsp; 🌍 Open to Remote Roles <br>
-            🎓 LSE Data Analytics Career Accelerator
-        </div>
+        <div class="meta-info">📍 Nepal | 🌍 Open to Remote Roles</div>
     </div>
-
-    <!-- MAIN PORTFOLIO CONTENT -->
     <div class="portfolio-section">
-        <h2>📊 Featured Project</h2>
-        
-        <div class="project-card">
-            <h3>🧠 Customer and Advertising Analytics</h3>
-            <p>
-                A comprehensive data-driven marketing campaign analysis completed in collaboration with <strong>The London School of Economics (LSE)</strong>. Cleaned and analyzed over 2,200 records using PostgreSQL and created interactive executive dashboards in Tableau.
-            </p>
-            <a href="project1.html" class="btn">👁️ View Project Details</a>
-        </div>
+        <h2>About Me</h2>
+        <p>Data Analyst with a background in business strategy, specialized in Python and Tableau.</p>
     </div>
 </div>
-
 </body>
 </html>
