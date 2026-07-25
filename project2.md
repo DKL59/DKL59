@@ -138,12 +138,6 @@ The analysis focused on:
 
 ![Recommendation](recommendation.png)
 
-1. **Leverage high-spending and high-earning customers** through exclusive loyalty campaigns.  
-2. **Reward consistency** — incentivize mid-spending customers to increase loyalty engagement.  
-3. **Monitor feedback sentiment** regularly to track satisfaction and spot emerging issues.  
-4. **Develop targeted marketing strategies** for the five identified customer clusters.  
-5. **Address outliers** with high loyalty points in low-spending groups — potential data anomalies or unique loyalty behaviors.
-
 ---
 
 ## 🧩 Skills Demonstrated
