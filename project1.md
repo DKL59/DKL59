@@ -99,8 +99,7 @@ Key cleaning steps in **Excel**:
 
 ## 📄 Project Documentation & Technical Reports
 
-👉 [Open and Read the Full Technical Report (PDF)](https://github.com/DKL59/DKL59/blob/main/report1.pdf)?raw=true)
-
+👉 [Open and Read the Full Technical Report (PDF)](https://github.com/DKL59/DKL59/blob/main/report1.pdf)
 ---
 
 
