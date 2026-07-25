@@ -1,4 +1,4 @@
-# 🧠 Customer and Advertising Analytics Project Detail Page
+# 🧠 Customer and Advertising Analytics
 
 ## 📋 Overview
 This project was completed as part of the **Data Analytics Career Accelerator** from **The London School of Economics and Political Science (LSE)** in collaboration with FourthRev.
