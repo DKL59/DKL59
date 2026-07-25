@@ -72,8 +72,9 @@ The analysis focused on:
 - **Average customer age:** 39 years (range: 17–72).  
 - **Average annual remuneration:** £48,080 (range: £12,300–£112,340).  
 - **Average spending score:** 50 (range: 1–99).  
-- **Average loyalty points:** 1,578 (range: 25–6,847).  
-
+- **Average loyalty points:** 1,578 (range: 25–6,847).
+   
+---
 
 ### 📈 Distribution Analysis
 ![Distribution Analysis](pic2.png)
