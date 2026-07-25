@@ -134,7 +134,7 @@ The analysis focused on:
 
 ---
 
-## 💡 Recommendations
+## 💡 Recommendation
 
 ![Recommendation](recommendation.png)
 
