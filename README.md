@@ -64,15 +64,9 @@ I’m particularly interested in opportunities where data is used not just to un
 ---
 
 
-## 🌐 Connect With Me
-<p align="left">
-  <a href="https://linkedin.com">
-    <img src="https://shields.io" alt="LinkedIn" />
-  </a>
-  <a href="https://github.com/DKL59">
-    <img src="https://shields.io" alt="GitHub" />
-  </a>
-</p>
+### 🌐 Connect With Me
+
+[![LinkedIn](https://shields.io)](https://linkedin.com) [![GitHub](https://shields.io)](https://github.com)
 
 
 ---
