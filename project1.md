@@ -105,7 +105,10 @@ Key cleaning steps in **Excel**:
 
 
 ## 🎥 Project Presentation Video
-https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1
+## 🎥 Project Presentation Video
+<video src="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
