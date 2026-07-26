@@ -143,7 +143,7 @@ The analysis focused on:
 
 ### 🌐 Connect With Me
 <a href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
- | [GitHub](#)
+ | <a href="https://github.com/DKL59/Dipendra-Limbu" target="_blank" rel="noopener noreferrer">GitHub</a>
 
 ---
 
