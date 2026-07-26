@@ -1,7 +1,7 @@
 <!-- PROFILE SECTION -->
 <p align="center">
   <b>Data Analyst | Business Intelligence</b><br>
-  📍 Nepal | 🌍 Open to Remote Roles | 📧 dklimbuz@hotmail.com
+  📍Nepal |🌍 Open to Remote Roles | 📧 dklimbuz@hotmail.com
   <br>
   🎓 BSc & MSc in Strategy, Copenhagen Business School (CBS) <br>
   🎓 LSE Data Analytics  
