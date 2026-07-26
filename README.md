@@ -66,11 +66,9 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ## 🌐 Connect With Me
 <p align="left">
-  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #0077B5; font-family: sans-serif; font-weight: bold;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" width="20" height="20" alt="LinkedIn Sign">
-  <span>LinkedIn</span>
+  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block;">
+  <img src="https://wikimedia.org" width="32" height="32" alt="LinkedIn Profile" style="border: none;">
 </a>
-
   <a href="https://github.com/DKL59" target="_blank" rel="noopener noreferrer">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40"/>
   </a>
