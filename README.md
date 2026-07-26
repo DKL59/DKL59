@@ -63,18 +63,9 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ---
 
-<h3>🌐 Connect With Me</h3>
-
-<p align="left">
-  <a href="https://linkedin.com">
-    <img src="https://githubusercontent.com" alt="LinkedIn" width="40" height="40" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com">
-    <img src="https://githubusercontent.com" alt="GitHub" width="40" height="40" />
-  </a>
-</p>
-
+### 🌐 Connect With Me
+<a href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+ | [GitHub](#)
 
 
 
