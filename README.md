@@ -13,11 +13,11 @@
 ## About Me
 I help businesses utilize the potential of data in making informed decisions by transforming complex data into clear, actionable insights.
 
-I have completed the Data Analytics Career Accelerator training from The London School of Economics and Political Science (LSE) presented in collaboration with FourthRev. This eight-months' intensive, hands-on training helped me strengthen my skills in Python, Excel, Tableau, SQL and taught me how to combine analytical thinking with business storytelling when providing data-driven solution to business problems. 
+I have completed the Data Analytics Career Accelerator training from The London School of Economics and Political Science (LSE) presented in collaboration with FourthRev. This eight-months' intensive, hands-on training strengthened my skills in Python, Excel, Tableau, SQL and taught me how to combine analytical thinking with business storytelling when providing data-driven solution to business problems. 
  
 With hands-on experience in Python, SQL, Tableau, and Excel, I specialize in analyzing large datasets, uncovering trends, and translating findings into strategies that drive measurable impact. My approach goes beyond reporting—I focus on solving real business problems and delivering insights that influence outcomes.
  
-With an education background in business economics, strategy and data from CBS, Denmark, I bring a strong understanding of how data connects to business performance, enabling me to bridge the gap between technical analysis and commercial decision-making.
+With an education background in business economics, strategy and data, I bring a strong understanding of how data connects to business performance, enabling me to bridge the gap between technical analysis and commercial decision-making.
  
 What I bring:
  
@@ -25,7 +25,7 @@ What I bring:
  - Creating Interactive dashboards in Tableau that communicate insights clearly to stakeholders. 
  - A business-first mindset—prioritizing insights that solve real problems.
   
-I’m particularly interested in opportunities where data is used not just to understand the past, but to shape future strategy. I’m now looking for remote opportunities as a Data Analyst, Business Intelligence Analyst, or Analyst, where I can collaborate with diverse teams and continue learning through meaningful, data-driven work.
+I’m particularly interested in opportunities where data is used not just to understand the past, but to shape future strategy. I’m now searching out for remote opportunities to work in the field of Data as: [Data Analyst, Data Strategist, Business Intelligence Analyst, or Analyst], where I can collaborate with diverse teams and continue learning through meaningful, data-driven work.
 
 ## 🧰 Core Skills
 ✅ Data Cleaning & Preparation    
