@@ -66,12 +66,11 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ## 🌐 Connect With Me
 <p align="left">
-  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-block;">
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjM0IiBoZWlnaHQ9IjM0Ij48cGF0aCBmaWxsPSIjMDA3N0I1IiBkPSJNMTkgMEg1QzIuMiAwIDAgMi4yIDAgNXYxNGMwIDIuOCAyLjIgNSA1IDVoMTRjMi44IDAgNS0yLjIgNS01VjVDMjQgMi4yIDIxLjggMCAxOSAwek03LjYgMTkuM0g0LjRWOVg3LjZoMy4ydjEwLjN6TTYuIDUuOWMtMSAwLTEuOC0uOC0xLjgtMS44czguOC0xLjggMS44LTEuOFM3LjggMyA3LjggNC4xUzYuOSA1LjkgNiA1Ljl6TTIwIDE5LjNoLTMuMlYxMy40YzAtMS40IDAtMy4yLTItMmMtMiAwLTIuMyAxLjYtMi4zIDN2NS4zaC0zLjJWOUg5LjN2MTIuM2gzLjJ2LTEuNmMuNS0uOSAxLjYtMS44IDMuMy0xLjggMy42IDAgNC4yIDIuNCA0LjIgNS41djcuMnoiLz48L3N2Zz4=" alt="LinkedIn Profile" style="border: none; display: block;">
-</a>
-
-  <a href="https://github.com/DKL59" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="40"/>
+  <a href="https://linkedin.com">
+    <img src="https://shields.io" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/DKL59">
+    <img src="https://shields.io" alt="GitHub" />
   </a>
 </p>
 
