@@ -66,6 +66,8 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ### 🌐 Connect With Me
 
+### 🌐 Connect With Me
+
 [![LinkedIn](https://shields.io)](https://linkedin.com) [![GitHub](https://shields.io)](https://github.com)
 
 
