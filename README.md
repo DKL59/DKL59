@@ -63,17 +63,20 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ---
 
-
-<h3>🌐 Connect With Me</h3>
+### 🌐 Connect With Me
 
 <p align="left">
-  <a href="https://linkedin.com" style="text-decoration:none; font-family:sans-serif; font-weight:bold; color:white; background:#0077B5; padding:8px 16px; border-radius:4px; margin-right:8px; display:inline-block;">
-    [in] LinkedIn
+  <a href="https://linkedin.com">
+    <img src="https://githubusercontent.com" alt="LinkedIn Logo" width="40" height="40" />
   </a>
-  <a href="https://github.com" style="text-decoration:none; font-family:sans-serif; font-weight:bold; color:white; background:#24292e; padding:8px 16px; border-radius:4px; display:inline-block;">
-    [os] GitHub
+  &nbsp;&nbsp;
+  <a href="https://github.com">
+    <img src="https://githubusercontent.com" alt="GitHub Logo" width="40" height="40" />
   </a>
 </p>
+
+
+
 
 
 
