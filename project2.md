@@ -137,7 +137,7 @@ The analysis focused on:
 ---
 
 ## 👤 Author
-**Dipendra Limbu**  📍 Nepal  💼 Data Analyst | Business Intelligence Enthusiast | dklimbuz@hotmail.com
+**Dipendra Limbu** |📍 Nepal | 💼 Data Analyst | Business Intelligence Enthusiast | 📧 dklimbuz@hotmail.com
 
 ---
 
