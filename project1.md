@@ -75,10 +75,11 @@ Key cleaning steps in **Excel**:
 ---
 
 ## 💡 Recommendations
-- Prioritize **Twitter** for advertising campaigns.  
+- Prioritize **Twitter** for advertising campaigns as it is the most effective channel overall.  
 - Target **50–59-year-old** customers, especially in **Spain**.  
-- Promote alcoholic beverages and meat products to high-income customers.  
-- Further analyze **in-store vs online sales** and **ad effectiveness by age/income**.
+- Promote alcoholic beverages and meat products to high-income customers.
+- Product Bundling offers could be made with alcohol + meat products as customers who purchased alcohol also purchased meat products.
+- Further analyze **in-store vs online sales**.
 
 ---
 
