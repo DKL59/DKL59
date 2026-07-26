@@ -19,13 +19,7 @@ This analysis sought to uncover:
 ---
 
 ## 🧰 Tools & Technologies
-| Category | Tools Used |
-|-----------|-------------|
-| Data Cleaning & Preparation | **Microsoft Excel** |
-| Database Management | **PostgreSQL** |
-| Data Visualization | **Tableau/Microsoft Excel** |
-| Querying & Analysis | **SQL** |
-| Documentation | **MS Word / PDF** |
+![Tools & Technologies](pic5.png)
 
 ---
 
