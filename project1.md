@@ -107,7 +107,7 @@ Key cleaning steps in **Excel**:
 ---
 
 ## 👤 Author
-**Dipendra Limbu**  📍 Nepal  💼 Data Analyst | Business Intelligence Analyst | dklimbuz@hotmail.com
+**Dipendra Limbu** | 📍 Nepal | 💼 Data Analyst | Business Intelligence Analyst | 📧 dklimbuz@hotmail.com
 
 ---
 
