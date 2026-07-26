@@ -48,7 +48,7 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ---
 
-## Featured Projects
+## 🚀 Featured Projects
 
 ### 1. [Customer and advertising analytics](project1.md)
 **Goal:** Assist the marketing team to design a marketing campaign.  
