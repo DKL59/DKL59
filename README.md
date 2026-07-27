@@ -44,7 +44,9 @@ I’m particularly interested in opportunities where data is used not just to un
   <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50" height="50"/>
+  <img src="https://icons8.com" alt="ChatGPT" width="50" height="50"/>
 </p>
+
 
 ---
 
