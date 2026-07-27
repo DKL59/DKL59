@@ -37,16 +37,23 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ⚙️ Tools & Technologies
 <p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" height="50"/>
+  <img src="https://jsdelivr.net" alt="Python" width="50" height="50"/>
+  <img src="https://jsdelivr.net" alt="PostgreSQL" width="50" height="50"/>
+  <img src="https://icons8.com" alt="Tableau" width="50" height="50"/>
+  <img src="https://icons8.com" alt="Excel" width="50" height="50"/>
+  <img src="https://jsdelivr.net" alt="Jupyter" width="50" height="50"/>
+  <img src="https://jsdelivr.net" alt="GitHub" width="50" height="50"/>
+  <img src="https://jsdelivr.net" alt="ChatGPT" width="50" height="50"/>
+</p>
+
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="50" height="50"/>
   <img src="https://img.icons8.com/color/48/tableau-software.png" alt="Tableau" width="50" height="50"/>
   <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50" height="50"/>
   <img src="https://simpleicons.org" alt="ChatGPT" width="50" height="50"/> 
-</p>
-
-
 ---
 
 ## 🚀 Featured Projects
