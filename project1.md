@@ -33,7 +33,7 @@ Key cleaning steps in **Excel**:
 - Converted income and date columns from text to numeric/date types.  
 - Removed three invalid records (ages beyond the oldest known human).  
 - Calculated customer ages using **2024** as the base year.  
-- Imported the final cleaned dataset (**2,213 records**) into **PostgreSQL** for further analysis.
+- Imported the final cleaned dataset (**2,213 records**) into **Tableau** and **PostgreSQL** for further analysis.
 
 ---
 
