@@ -6,9 +6,6 @@
 
 👉 **[Open the Jupyter Notebook](https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb)**
 
----
-
-
 ### 🔍 Project Overview
 
 *A data analytics case study investigating the impact of scholarship discounts on student enrolment using exploratory data analysis (EDA), statistical hypothesis testing, regression analysis, and data visualisation.*
@@ -23,6 +20,7 @@
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel)
 
 </div>
+
 ---
 
 # 📖 Executive Summary
@@ -37,13 +35,10 @@ Using **Python** and **statistical hypothesis testing**, the analysis identifies
 
 # 🎯 Business Objectives
 
-✔ Evaluate the impact of scholarship discounts on student enrolment.
-
-✔ Determine whether discounts influence student progression.
-
-✔ Analyse scholarship allocation across regions.
-
-✔ Identify opportunities to improve scholarship investment.
+- ✔ Evaluate the impact of scholarship discounts on student enrolment.
+- ✔ Determine whether discounts influence student progression.
+- ✔ Analyse scholarship allocation across regions.
+- ✔ Identify opportunities to improve scholarship investment.
 
 ---
 
@@ -51,10 +46,10 @@ Using **Python** and **statistical hypothesis testing**, the analysis identifies
 
 | Category | Tools |
 |----------|-------|
-| **Programming** | Python|
-| **Libraries** | pandas, numpy, matplotlib, seaborn, scipy, statsmodels  |
+| **Programming** | Python |
+| **Libraries** | pandas, numpy, matplotlib, seaborn, scipy, statsmodels |
 | **Visualisation** | matplotlib, seaborn |
-| **Data cleaning** | Excel |
+| **Data Cleaning** | Excel |
 | **Environment** | Jupyter Notebook |
 
 ---
@@ -72,10 +67,10 @@ Using **Python** and **statistical hypothesis testing**, the analysis identifies
 Rather than relying solely on descriptive analytics, this project applies a **Chi-Square Test of Independence** to determine whether scholarship discounts have a statistically significant relationship with student enrolment and progression.
 
 <p align="center">
-<img src="./pic12.png" width="950">
+<img src="./pic12.png" width="950" alt="Chi-Square Test Results">
 </p>
 
-### Results
+## Results
 
 | Hypothesis | Outcome |
 |------------|---------|
@@ -88,7 +83,6 @@ Rather than relying solely on descriptive analytics, this project applies a **Ch
 
 ---
 
-
 # 📊 Results & Insights
 
 ## 1️⃣ Scholarships Increase Student Enrolment
@@ -98,20 +92,19 @@ Students receiving a scholarship discount were <strong>over 11× more likely to 
 </p>
 
 <p align="center">
-  <img src="./pic9.png" width="900" alt="Discount vs No Discount Conversion">
+<img src="./pic9.png" width="900" alt="Discount vs No Discount Conversion">
 </p>
 
 | 📈 Offer → Enrolment | 💰 With Discount | 📉 Without Discount |
-|:-------------------:|:---------------:|:------------------:|
+|:--------------------:|:---------------:|:------------------:|
 | **9.99%** | **70.5%** | **6.2%** |
 
 ---
 
-
 ## 2️⃣ Regional Analysis
 
 <p align="center">
-<img src="./pic11.png" width="900">
+<img src="./pic11.png" width="900" alt="Regional Analysis">
 </p>
 
 ### Key Insights
@@ -121,17 +114,16 @@ Students receiving a scholarship discount were <strong>over 11× more likely to 
 - Pakistan, India and Nigeria showed comparatively low enrolment despite scholarship investment.
 - Scholarship effectiveness varies considerably between regions.
 
-**Recommendation**
+### Recommendation
 
 Adopt region-specific scholarship strategies rather than a uniform global allocation model.
 
 ---
 
-
 ## 3️⃣ Area-Level Analysis
 
 <p align="center">
-<img src="./pic10.png" width="900">
+<img src="./pic10.png" width="900" alt="Area-Level Analysis">
 </p>
 
 ### Key Insights
@@ -149,7 +141,7 @@ The results indicate that scholarship decisions should be informed by historical
 - Optimise scholarship allocation based on historical enrolment conversion rates.
 - Prioritise scholarship investment in regions with consistently high conversion performance.
 - Review scholarship strategies in low-performing regions to improve return on investment.
-- Consider additional factors influencing enrolment, such as programme demand, tuition fees, and market conditions, alongside scholarship incentives.
+- Consider additional factors influencing enrolment, such as programme demand, tuition fees and market conditions, alongside scholarship incentives.
 
 ---
 
@@ -165,7 +157,6 @@ The results indicate that scholarship decisions should be informed by historical
 
 ---
 
-
 # 📈 Project Impact
 
 This analysis provides StudyGroup with a data-driven framework for evaluating scholarship effectiveness.
@@ -174,6 +165,7 @@ The findings demonstrate that scholarships are highly effective at improving **s
 
 ---
 
+<div align="center">
 
 ### ⭐ If you enjoyed this project, consider giving it a star!
 
