@@ -55,21 +55,22 @@ The analysis focused on:
 
 ## 🔍 Analytical Approach
 
-1. **Exploratory Data Analysis (EDA)**  
-   - Assessed age, remuneration, spending score, and loyalty points distributions.  
-   - Calculated skewness and kurtosis for each variable to understand data symmetry and tail behaviour.
+### 1. Exploratory Data Analysis (EDA)
+* Assessed distributions for key variables including **age**, **remuneration**, **spending score**, and **loyalty points**.
+* Calculated **skewness** and **kurtosis** metrics to evaluate structural data symmetry and tail behaviour.
 
-2. **Correlation Analysis**  
-   - Generated a **correlation heatmap** to identify relationships between key variables.  
-   - Found strong positive correlations between **spending score**, **remuneration**, and **loyalty points**.
+### 2. Correlation Analysis
+* Generated an interactive correlation heatmap to map linear dependencies across variables.
+* Identified strong positive correlations linking **spending score** and **remuneration** with **loyalty points**.
 
-3. **Customer Segmentation**  
-   - Segmented customers into income and spending categories: *Low*, *Medium*, and *High*.  
-   - Analyzed loyalty point accumulation within each group.
+### 3. Customer Segmentation
+* Partitioned the customer base into discrete behavioural categories: **Low**, **Medium**, and **High** income/spending bands.
+* Analysed variations in **loyalty point accumulation** profiles across each distinct group.
 
-4. **Sentiment Analysis**  
-   - Used **nltk**, **textblob**, **vaderSentiment**  to calculate sentiment polarity of customer **summaries** and **reviews**.  
-   - Analyzed most frequent words and their sentiment polarity using **wordcloud** to determine overall tone.
+### 4. Sentiment Analysis
+* Evaluated customer review and summary text data to calculate baseline sentiment polarity metrics.
+* Generated text word clouds mapped against polarity scores to isolate high-frequency terms and determine overall perception tone.
+
 
 ---
 
