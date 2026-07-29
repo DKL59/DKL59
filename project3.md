@@ -44,10 +44,10 @@ Using **Python** and **statistical hypothesis testing**, the analysis identifies
 
 | Category | Tools |
 |----------|-------|
-| **Programming** | Python, SQL |
-| **Libraries** | Pandas, NumPy, Matplotlib |
-| **Visualisation** | Tableau |
-| **Data Processing** | Excel |
+| **Programming** | Python|
+| **Libraries** | pandas, numpy, matplotlib, seaborn, scipy, statsmodels  |
+| **Visualisation** | Python |
+| **Data cleaning** | Excel |
 | **Environment** | Jupyter Notebook |
 
 ---
