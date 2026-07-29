@@ -83,7 +83,7 @@ Key cleaning steps in **Excel**:
 
 ---
 
-## 🧩 Skills Demonstrated
+## 🧩 Proficiencies Demonstrated
 - Data cleaning & transformation in Excel  
 - SQL querying & data import in PostgreSQL  
 - Dashboard design in Tableau
