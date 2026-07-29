@@ -7,8 +7,7 @@
 ## 📖 Overview
 
 This project analyses the effectiveness of scholarship discounts on student enrolment and academic progression using historical application data from StudyGroup.
-
-By combining **Python, SQL, Excel, and Tableau**, the analysis identifies key enrolment trends, validates hypotheses using statistical testing, and provides actionable business recommendations to optimise scholarship allocation.
+The analysis was carried out using Python and basic data cleaning was done in Microsoft Excel. 
 
 ---
 
@@ -25,10 +24,10 @@ By combining **Python, SQL, Excel, and Tableau**, the analysis identifies key en
 
 | Category | Tools |
 |----------|-------|
-| **Programming** | Python, SQL |
-| **Libraries** | Pandas, NumPy, Matplotlib |
+| **Programming** | Python |
+| **Libraries** | Pandas, NumPy, Matplotlib, Seaborn |
 | **Visualisation** | Tableau |
-| **Data Processing** | Excel |
+| **Data Cleaning** | Excel |
 | **Development** | Jupyter Notebook |
 
 ---
@@ -60,12 +59,11 @@ By combining **Python, SQL, Excel, and Tableau**, the analysis identifies key en
 
 ---
 
-## 🧠 Skills Demonstrated
+## 🧠 Proficiencies Demonstrated
 
 - Data Cleaning & Wrangling
 - Exploratory Data Analysis (EDA)
 - Statistical Analysis (Chi-Square Test)
-- SQL Querying
 - Data Visualisation
 - Business Intelligence
 - Data-Driven Decision Making
