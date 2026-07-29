@@ -1,4 +1,4 @@
-# 🎮 Turtle Games Customer Trends Analysis
+# 🎮 Customer Analytics – Customer Trends Analytics (Turtle Games)
 
 ---
 
