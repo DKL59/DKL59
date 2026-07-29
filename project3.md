@@ -105,24 +105,6 @@ This demonstrates that scholarship incentives are one of the strongest drivers o
 ---
 
 
-## 2️⃣ Scholarship Distribution Overview
-
-<p align="center">
-<img src="./pic8.png" width="900">
-</p>
-
-### Chart Highlights
-
-| KPI | Value |
-|------|------:|
-| Applicants Receiving Offers | **73%** |
-| Offers Including a Scholarship | **5.8%** |
-| Offer → Enrolment Conversion | **9.99%** |
-| Enrolled Students Receiving Scholarships | **41.3%** |
-
----
-
-
 ## 3️⃣ Regional Analysis
 
 <p align="center">
