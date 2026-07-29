@@ -104,10 +104,6 @@ Students receiving a scholarship discount were <strong>over 11× more likely to 
 |:-------------------:|:---------------:|:------------------:|
 | **9.99%** | **70.5%** | **6.2%** |
 
-> **Business Insight**
->
-> Students receiving a scholarship discount were **over 11× more likely to enrol** than students who received an offer without financial support.
-
 ---
 
 
