@@ -1,12 +1,16 @@
-## 💻 Complete Python Code & Data Visualizations
+# 🎓 Education Analytics: Scholarship Impact Analysis (StudyGroup)
 
-👉 [Open the Jupyter Notebook](https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb)
+<div align="center">
+
+## 💻 Complete Python Code & Data Visualisations
+
+👉 **[Open the Jupyter Notebook](https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb)**
 
 ---
 
-### 🔍 Evaluating the Impact of Scholarship Discounts on Student Enrolment
+### 🔍 Project Overview
 
-*A data analytics case study evaluating the effectiveness of scholarship discounts on student enrolment using exploratory data analysis (EDA), statistical hypothesis testing, regression analysis, and data visualisation.*
+*A data analytics case study investigating the impact of scholarship discounts on student enrolment using exploratory data analysis (EDA), statistical hypothesis testing, regression analysis, and data visualisation.*
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
@@ -17,6 +21,7 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel)
 
+</div>
 ---
 
 # 📖 Executive Summary
