@@ -120,3 +120,13 @@ Key cleaning steps in **Excel**:
 
 ## 🏁 Summary
 This project demonstrates a complete analytics workflow — from data cleaning, insight generation to visualization and — translating data into actionable marketing recommendations for strategic decision-making.
+
+---
+<div align="center">
+
+### ⭐ If you enjoyed this project, consider giving it a star!
+
+</div>
+
+
+
