@@ -2,12 +2,11 @@
 
 ## 💻 Complete Python Code & Data Visualisations
 
-<p align="center">
 <a href="https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb">
 <strong>
   👉 Open the Jupyter Notebook</strong>
 </a>
-</p>
+
 
 ### 🔍 Project Overview
 
