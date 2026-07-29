@@ -46,7 +46,7 @@ Using **Python** and **statistical hypothesis testing**, the analysis identifies
 |----------|-------|
 | **Programming** | Python|
 | **Libraries** | pandas, numpy, matplotlib, seaborn, scipy, statsmodels  |
-| **Visualisation** | Python |
+| **Visualisation** | matplotlib, seaborn |
 | **Data cleaning** | Excel |
 | **Environment** | Jupyter Notebook |
 
