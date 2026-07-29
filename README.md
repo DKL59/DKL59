@@ -52,22 +52,27 @@ I’m particularly interested in opportunities where data is used not just to un
 
 ### 1. [🎯 Marketing Analytics – Customer & Advertising Analytics (2Market)](project1.md)
 **Goal:** Assist the marketing team to design a marketing campaign.  
+
 **Highlights:** Customer segmentation, Interactive Tableau dashboards, Data cleaning and visualisation using Excel.  
+
 **Tools:** Excel · SQL (PostgreSQL) · Tableau
 
 ---
 
 ###  2. [💎 Customer Analytics – Customer Trends Analytics (Turtle Games)](project2.md)
 **Goal:** Identify customer trends and loyalty patterns to improve sales.  
+
 **Highlights:** Correlation, Customer segmentation, sentiment analysis (TextBlob), and clustering.  
+
 **Tools:** Python · Pandas · Numpy · Matplotlib · Seaborn · TextBlob · NLP · R
 
 ---
 
-
 ### 3. [🎓 Education Analytics – Scholarship Impact Analysis (StudyGroup)](project3.md)
 **Goal:** Evaluate the effectiveness of scholarship discounts on student enrolment using statistical analysis.
+
 **Highlights:** Exploratory data analysis, Chi-Square hypothesis testing, statistical visualisation, and evidence-based business recommendations.
+
 **Tools:** Python · Pandas · NumPy · SciPy · Statsmodels · Matplotlib · Seaborn · Excel
 
 ---
