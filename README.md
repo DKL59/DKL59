@@ -24,7 +24,7 @@ What I bring:
  - Creating Interactive dashboards in Tableau that communicate insights clearly to stakeholders. 
  - A business-first mindset—prioritizing insights that solve real problems.
   
-I’m particularly interested in opportunities where data is used not just to understand the past, but to shape future strategy. I’m now searching out for remote opportunities to work in the field of Data as: [Data Analyst, Data Strategist, Business Intelligence Analyst, or Analyst], where I can collaborate with diverse teams and continue learning through meaningful, data-driven work.
+I’m particularly interested in opportunities where data is used not just to understand the past, but to shape future strategy. I’m actively searching out for remote opportunities to work in the field of Data as Data Analyst or Business Intelligence Analyst where I can collaborate with diverse teams and continue learning through meaningful, data-driven work.
 
 ## 🧰 Core Skills
 ✅ Data Cleaning & Preparation    
