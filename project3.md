@@ -1,79 +1,190 @@
 # 🎓 StudyGroup Scholarship Analysis
 
-> **Data-driven analysis of scholarship discounts and their impact on student enrolment.**
+<div align="center">
+
+### 📊 Evaluating the Impact of Scholarship Discounts on Student Enrolment
+
+*A data analytics case study exploring how financial incentives influence student enrolment using statistical analysis, data visualisation, and business intelligence.*
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau)
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel)
+
+</div>
 
 ---
 
-## 📖 Overview
+# 📖 Executive Summary
 
-This project analyses the effectiveness of scholarship discounts on student enrolment and academic progression using historical application data from StudyGroup.
-The analysis was carried out using Python and basic data cleaning was done in Microsoft Excel. 
+Scholarship programmes represent a significant financial investment for educational institutions, yet their effectiveness is rarely evaluated using data.
 
----
+This project analyses historical student application data from **StudyGroup** to determine whether scholarship discounts influence student enrolment and academic progression.
 
-## 🎯 Objectives
-
-- Evaluate the impact of scholarship discounts on student enrolment.
-- Determine whether discounts influence programme completion.
-- Analyse discount allocation across regions and nationalities.
-- Identify opportunities to improve scholarship distribution.
+Using **Python**, **SQL**, **Tableau**, and **statistical hypothesis testing**, the analysis identifies the true impact of scholarship incentives and provides evidence-based recommendations for optimising future scholarship allocation.
 
 ---
 
-## 🛠️ Tech Stack
+# 🎯 Business Objectives
+
+✔ Evaluate the impact of scholarship discounts on student enrolment.
+
+✔ Determine whether discounts influence student progression.
+
+✔ Analyse scholarship allocation across regions.
+
+✔ Identify opportunities to improve scholarship investment.
+
+---
+
+# 🛠 Technology Stack
 
 | Category | Tools |
 |----------|-------|
-| **Programming** | Python |
-| **Libraries** | Pandas, NumPy, Matplotlib, Seaborn |
+| **Programming** | Python, SQL |
+| **Libraries** | Pandas, NumPy, Matplotlib |
 | **Visualisation** | Tableau |
-| **Data Cleaning** | Excel |
-| **Development** | Jupyter Notebook |
+| **Data Processing** | Excel |
+| **Environment** | Jupyter Notebook |
 
 ---
 
-## 🚀 Project Workflow
+# 🚀 Project Workflow
 
 | 📥 Collect | 🧹 Clean | 🔍 Analyse | 📊 Visualise | 📈 Validate | 💡 Recommend |
 |:----------:|:--------:|:----------:|:------------:|:-----------:|:------------:|
-| Raw Dataset | Data Wrangling | Exploratory Data Analysis (EDA) | Charts & Dashboards | Chi-Square Statistical Test | Business Recommendations |
+| Raw Dataset | Data Wrangling | Exploratory Data Analysis | Charts & Dashboards | Chi-Square Test | Business Recommendations |
 
 ---
 
-## 📊 Key Findings
+# 🧪 Statistical Validation
 
-- 📈 Scholarship discounts significantly increased student enrolment.
-- 🎓 Discounts showed **no statistically significant impact** on programme completion.
-- 🌍 Conversion rates varied across regions and nationalities.
-- 🇨🇳 China achieved high enrolment despite relatively low average discounts.
-- 🇵🇰 Pakistan received one of the highest discount allocations but produced comparatively lower enrolment rates.
+Rather than relying solely on descriptive analytics, this project applies a **Chi-Square Test of Independence** to determine whether scholarship discounts have a statistically significant relationship with student enrolment and progression.
 
----
+<p align="center">
+<img src="./pic12.png" width="950">
+</p>
 
-## 💡 Recommendations
+### Results
 
-- Optimise scholarship allocation based on regional conversion performance.
-- Continue investing in high-conversion markets.
-- Investigate additional factors influencing enrolment beyond financial incentives.
-- Continuously monitor discount effectiveness to improve future allocation strategies.
+| Hypothesis | Outcome |
+|------------|---------|
+| Scholarship discounts increase student enrolment | ✅ **Supported** |
+| Scholarship discounts improve academic progression | ❌ **Not Supported** |
 
----
-
-## 🧠 Proficiencies Demonstrated
-
-- Data Cleaning & Wrangling
-- Exploratory Data Analysis (EDA)
-- Statistical Analysis (Chi-Square Test)
-- Data Visualisation
-- Business Intelligence
-- Data-Driven Decision Making
+> **Key Finding**
+>
+> Scholarship discounts significantly influence **student enrolment**, but they do **not** have a statistically significant effect on student progression.
 
 ---
 
-## 📌 Business Outcome
+# 📊 Results & Insights
 
-The analysis demonstrated that scholarship discounts are highly effective in increasing student enrolment but do not significantly influence academic progression. These findings provide StudyGroup with evidence-based recommendations for improving scholarship allocation and maximising enrolment growth.
+## 1️⃣ Scholarships Increase Student Enrolment
+
+<p align="center">
+<img src="./pic9.png" width="900">
+</p>
+
+| Metric | Result |
+|:-------|-------:|
+| Offer → Enrolment Conversion | **9.99%** |
+| Conversion with Discount | **70.5%** |
+| Conversion without Discount | **6.2%** |
+
+### Business Insight
+
+Applicants receiving a scholarship discount were **more than 11 times more likely to enrol** than applicants receiving an offer without financial support.
+
+This demonstrates that scholarship incentives are one of the strongest drivers of enrolment conversion.
 
 ---
 
-⭐ **If you found this project interesting, feel free to explore the notebooks, SQL scripts, and visualisations in this repository.**
+## 2️⃣ Scholarship Distribution Overview
+
+<p align="center">
+<img src="./pic8.png" width="900">
+</p>
+
+### Dashboard Highlights
+
+| KPI | Value |
+|------|------:|
+| Applicants Receiving Offers | **73%** |
+| Offers Including a Scholarship | **5.8%** |
+| Offer → Enrolment Conversion | **9.99%** |
+| Enrolled Students Receiving Scholarships | **41.3%** |
+
+---
+
+## 3️⃣ Regional Analysis
+
+<p align="center">
+<img src="./pic11.png" width="900">
+</p>
+
+### Key Insights
+
+- North Asia achieved the strongest enrolment performance.
+- South East Asia also demonstrated consistently high conversion.
+- Pakistan, India and Nigeria showed comparatively low enrolment despite scholarship investment.
+- Scholarship effectiveness varies considerably between regions.
+
+**Recommendation**
+
+Adopt region-specific scholarship strategies rather than a uniform global allocation model.
+
+---
+
+## 4️⃣ Area-Level Analysis
+
+<p align="center">
+<img src="./pic10.png" width="900">
+</p>
+
+### Key Insights
+
+- China achieved strong enrolment despite relatively low discounts.
+- ANZ & East Asia combined high discounts with strong enrolment outcomes.
+- UK & Americas and South Asia underperformed relative to scholarship investment.
+
+These findings suggest that scholarship allocation should be informed by historical conversion performance rather than average discount percentages alone.
+
+---
+
+# 💼 Business Recommendations
+
+- Optimise scholarship allocation using regional conversion performance.
+- Continue investment in consistently high-converting markets.
+- Reassess scholarship spending in low-performing regions.
+- Incorporate additional enrolment drivers beyond financial incentives.
+- Establish ongoing monitoring dashboards to evaluate scholarship ROI.
+
+---
+
+# 🧠 Competencies Demonstrated
+
+| Analytics | Technical | Business |
+|-----------|-----------|----------|
+| Exploratory Data Analysis | Python | Business Intelligence |
+| Statistical Testing | SQL | Decision Support |
+| Data Cleaning | Pandas | Strategy Development |
+| Data Visualisation | Tableau | Stakeholder Reporting |
+| Dashboard Design | Excel | Insight Generation |
+
+---
+
+# 📈 Project Impact
+
+This analysis provides StudyGroup with a data-driven framework for evaluating scholarship effectiveness.
+
+The findings demonstrate that scholarships are highly effective at improving **student enrolment**, while offering little measurable benefit to **academic progression**. These insights enable more strategic allocation of scholarship funding and support evidence-based decision-making.
+
+---
+
+
+### ⭐ If you enjoyed this project, consider giving it a star!
+
+</div>
