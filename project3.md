@@ -8,7 +8,7 @@
 
 ### 🔍 Project Overview
 
-*A data analytics case study investigating the impact of scholarship discounts on student enrolment using exploratory data analysis (EDA), statistical hypothesis testing, regression analysis, and data visualisation.*
+A data analytics case study investigating the impact of scholarship discounts on student enrolment using exploratory data analysis (EDA), statistical hypothesis testing, regression analysis, and data visualisation.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
