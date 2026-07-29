@@ -1,39 +1,37 @@
 # 🎓 Education Analytics: Scholarship Impact Analysis (StudyGroup)
 
-<h2 align="center">💻 Complete Python Code & Data Visualisations</h2>
+## 💻 Complete Python Code & Data Visualisations
 
 <p align="center">
-<a href="https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb"><strong>👉 Open the Jupyter Notebook</strong></a>
+<a href="https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb">
+<strong>👉 Open the Jupyter Notebook</strong>
+</a>
 </p>
 
-<h3 align="center">🔍 Project Overview</h3>
+### 🔍 Project Overview
 
-<p align="center">
 A data analytics case study investigating the impact of scholarship discounts on student enrolment using exploratory data analysis (EDA), statistical hypothesis testing, regression analysis, and data visualisation.
-</p>
 
 <p align="center">
+
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas" alt="Pandas">
-<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy" alt="NumPy">
+
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+
 <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy">
+
 <img src="https://img.shields.io/badge/Statsmodels-003B57?style=for-the-badge" alt="Statsmodels">
+
 <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge" alt="Matplotlib">
+
 <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge" alt="Seaborn">
-<img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel" alt="Excel">
+
+<img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel">
+
 </p>
 
----
-
-# 📖 Executive Summary
-
-Scholarship programmes represent a significant financial investment for educational institutions, yet their effectiveness is rarely evaluated using data.
-
-This project analyses historical student application data from **StudyGroup** to determine whether scholarship discounts influence student enrolment and academic progression.
-
-Using **Python** and **statistical hypothesis testing**, the analysis identifies the true impact of scholarship incentives and provides evidence-based recommendations for optimising future scholarship allocation.
-
----
 ---
 
 # 📖 Executive Summary
