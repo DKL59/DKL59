@@ -61,8 +61,8 @@ The analysis focused on:
    - Analyzed loyalty point accumulation within each group.
 
 4. **Sentiment Analysis**  
-   - Used **TextBlob** to calculate sentiment polarity of customer **summaries** and **reviews**.  
-   - Analyzed most frequent words and their sentiment polarity to determine overall tone.
+   - Used **nltk**, **textblob**, **vaderSentiment**  to calculate sentiment polarity of customer **summaries** and **reviews**.  
+   - Analyzed most frequent words and their sentiment polarity using **wordcloud** to determine overall tone.
 
 ---
 
