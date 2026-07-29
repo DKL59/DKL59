@@ -4,7 +4,7 @@
 
 ## 💻 Complete Python Code & Data Visualizations
 
-👉 [Open the Jupyter Notebook (.ipynb)(EDASTUDYGROUP.ipynb)](https://nbviewer.org/github/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb)
+👉 [Open the Jupyter Notebook](https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb)
 
 ---
 
