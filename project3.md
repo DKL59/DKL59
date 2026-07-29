@@ -1,4 +1,4 @@
-# 🎓 StudyGroup 
+# 🎓 Education Analytics – Scholarship Impact Analysis (StudyGroup)
 
 <div align="center">
 
