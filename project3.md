@@ -7,6 +7,7 @@
   👉 Open the Jupyter Notebook</strong>
 </a>
 
+---
 
 ### 🔍 Project Overview
 
