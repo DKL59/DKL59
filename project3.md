@@ -4,7 +4,7 @@
 
 ### 📊 Evaluating the Impact of Scholarship Discounts on Student Enrolment
 
-*A data analytics case study exploring how financial incentives influence student enrolment using statistical analysis, data visualisation, and business intelligence.*
+*A data analytics case study evaluating the effectiveness of scholarship discounts on student enrolment through exploratory data analysis, statistical hypothesis testing, regression analysis, and data visualisation.*
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
