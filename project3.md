@@ -1,4 +1,4 @@
-# 🎓 StudyGroup Scholarship Analysis
+# 🎓 StudyGroup 
 
 <div align="center">
 
