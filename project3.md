@@ -2,6 +2,12 @@
 
 <div align="center">
 
+## 💻 Complete Python Code & Data Visualizations
+
+👉 [Open the Jupyter Notebook (.ipynb)(EDASTUDYGROUP.ipynb)](https://nbviewer.org/github/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb)
+
+---
+
 ### 📊 Evaluating the Impact of Scholarship Discounts on Student Enrolment
 
 *A data analytics case study evaluating the effectiveness of scholarship discounts on student enrolment through exploratory data analysis, statistical hypothesis testing, regression analysis, and data visualisation.*
