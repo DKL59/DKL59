@@ -96,16 +96,15 @@ Rather than relying solely on descriptive analytics, this project applies a **Ch
 <img src="./pic9.png" width="900">
 </p>
 
-| Metric | Result |
-|:-------|-------:|
-| Offer → Enrolment Conversion | **9.99%** |
-| Conversion with Discount | **70.5%** |
-| Conversion without Discount | **6.2%** |
+    | Metric | Result |
+    |:-------|-------:|
+    | Offer → Enrolment Conversion | **9.99%** |
+    | Conversion with Discount | **70.5%** |
+    | Conversion without Discount | **6.2%** |
 
 ### Business Insight
 
 Applicants receiving a scholarship discount were **more than 11 times more likely to enrol** than applicants receiving an offer without financial support.
-
 This demonstrates that scholarship incentives are one of the strongest drivers of enrolment conversion.
 
 ---
