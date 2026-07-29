@@ -42,7 +42,14 @@ The analysis focused on:
 ---
 
 ## 🧰 Tools & Technologies
-![Tools & Technologies](pic7.png)
+
+| Category | Tools Used |
+| :--- | :--- |
+| **Data Analysis** | Python (pandas, numpy, scikit-learn), R (dplyr) |
+| **Data Visualisation** | Python (Matplotlib, Seaborn), R (ggplot2, ggcorrplot) |
+| **Statistical Analysis** | Python (Scipy, Statsmodels), R (moments) |
+| **Natural Language Processing (NLP)** | Python (nltk, wordcloud, textblob, collections, vaderSentiment) |
+| **Environment** | Jupyter Notebook, RStudio |
 
 ---
 
