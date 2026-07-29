@@ -135,7 +135,7 @@ The analysis focused on:
 
 ---
 
-## 🧩 Skills Demonstrated
+## 🧩 Core Competencies
 
 * **Data Wrangling & Descriptive Statistics**: Programmatically cleaning raw datasets, identifying outliers, and generating core summary statistics (mean, median, skewness, kurtosis).
 * **Correlation & Clustering Analysis**: Executing paired correlation tests to isolate dependencies and executing customer segmentation to isolate high-value behavioral groups.
