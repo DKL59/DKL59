@@ -2,15 +2,15 @@
 
 <div align="center">
 
-## 💻 Complete Python Code & Data Visualizations
+## 💻 Python Analysis & Interactive Visualisations
 
 👉 [Open the Jupyter Notebook](https://github.com/DKL59/DKL59/blob/main/EDASTUDYGROUP.ipynb)
 
 ---
 
-### 🔍 Evaluating the Impact of Scholarship Discounts on Student Enrolment
+### 🔍 Assessing the Impact of Scholarship Fee Discounts on Student Enrolment
 
-*A data analytics case study evaluating the effectiveness of scholarship discounts on student enrolment through exploratory data analysis, statistical hypothesis testing, regression analysis, and data visualisation.*
+*A data analytics case study using exploratory data analysis (EDA), statistical hypothesis testing, regression modelling, and data visualisation to evaluate how scholarship fee discounts influence student enrolment.*
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
@@ -20,6 +20,7 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel)
+
 </div>
 
 ---
