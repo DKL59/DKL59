@@ -139,17 +139,16 @@ Adopt region-specific scholarship strategies rather than a uniform global alloca
 - ANZ & East Asia combined high discounts with strong enrolment outcomes.
 - UK & Americas and South Asia underperformed relative to scholarship investment.
 
-These findings suggest that scholarship allocation should be informed by historical conversion performance rather than average discount percentages alone.
-
+The results indicate that scholarship decisions should be informed by historical conversion rates and regional performance, enabling resources to be directed towards markets where scholarships have demonstrated the greatest impact on enrolment.
 
 ---
 
 # 💼 Business Recommendations
 
-- Optimise scholarship allocation using regional conversion performance.
-- Continue investment in consistently high-converting markets.
-- Reassess scholarship spending in low-performing regions.
-- Incorporate additional enrolment drivers beyond financial incentives.
+- Optimise scholarship allocation based on historical enrolment conversion rates.
+- Prioritise scholarship investment in regions with consistently high conversion performance.
+- Review scholarship strategies in low-performing regions to improve return on investment.
+- Consider additional factors influencing enrolment, such as programme demand, tuition fees, and market conditions, alongside scholarship incentives.
 
 ---
 
