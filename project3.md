@@ -81,6 +81,7 @@ Rather than relying solely on descriptive analytics, this project applies a **Ch
 
 ---
 
+
 # 📊 Results & Insights
 
 ## 1️⃣ Scholarships Increase Student Enrolment
@@ -103,13 +104,14 @@ This demonstrates that scholarship incentives are one of the strongest drivers o
 
 ---
 
+
 ## 2️⃣ Scholarship Distribution Overview
 
 <p align="center">
 <img src="./pic8.png" width="900">
 </p>
 
-### Dashboard Highlights
+### Chart Highlights
 
 | KPI | Value |
 |------|------:|
@@ -119,6 +121,7 @@ This demonstrates that scholarship incentives are one of the strongest drivers o
 | Enrolled Students Receiving Scholarships | **41.3%** |
 
 ---
+
 
 ## 3️⃣ Regional Analysis
 
@@ -139,6 +142,7 @@ Adopt region-specific scholarship strategies rather than a uniform global alloca
 
 ---
 
+
 ## 4️⃣ Area-Level Analysis
 
 <p align="center">
@@ -153,6 +157,7 @@ Adopt region-specific scholarship strategies rather than a uniform global alloca
 
 These findings suggest that scholarship allocation should be informed by historical conversion performance rather than average discount percentages alone.
 
+
 ---
 
 # 💼 Business Recommendations
@@ -166,15 +171,16 @@ These findings suggest that scholarship allocation should be informed by histori
 
 # 🧠 Competencies Demonstrated
 
-| Analytics | Technical | Business |
-|-----------|-----------|----------|
-| Exploratory Data Analysis | Python | Business Intelligence |
-| Statistical Testing | SQL | Decision Support |
-| Data Cleaning | Pandas | Strategy Development |
-| Data Visualisation | Tableau | Stakeholder Reporting |
-| Dashboard Design | Excel | Insight Generation |
+- 🧹 Data Cleaning & Preparation
+- 📊 Exploratory Data Analysis (EDA)
+- 📈 Data Visualisation
+- 🧪 Chi-Square Hypothesis Testing
+- 📉 OLS Regression Analysis
+- 💡 Data-Driven Decision Making
+- 📝 Technical Reporting
 
 ---
+
 
 # 📈 Project Impact
 
