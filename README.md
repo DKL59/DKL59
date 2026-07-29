@@ -69,10 +69,9 @@ I’m particularly interested in opportunities where data is used not just to un
 ---
 
 ### 3. [🎓 Education Analytics – Scholarship Impact Analysis (StudyGroup)](project3.md)
+
 **Goal:** Evaluate the effectiveness of scholarship discounts on student enrolment using statistical analysis.
-
 **Highlights:** Exploratory data analysis, Chi-Square hypothesis testing, statistical visualisation, and evidence-based business recommendations.
-
 **Tools:** Python · Pandas · NumPy · SciPy · Statsmodels · Matplotlib · Seaborn · Excel
 
 ---
