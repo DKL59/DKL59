@@ -7,7 +7,6 @@
 *A data analytics case study exploring how financial incentives influence student enrolment using statistical analysis, data visualisation, and business intelligence.*
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau)
@@ -23,7 +22,7 @@ Scholarship programmes represent a significant financial investment for educatio
 
 This project analyses historical student application data from **StudyGroup** to determine whether scholarship discounts influence student enrolment and academic progression.
 
-Using **Python**, **SQL**, **Tableau**, and **statistical hypothesis testing**, the analysis identifies the true impact of scholarship incentives and provides evidence-based recommendations for optimising future scholarship allocation.
+Using **Python** and **statistical hypothesis testing**, the analysis identifies the true impact of scholarship incentives and provides evidence-based recommendations for optimising future scholarship allocation.
 
 ---
 
@@ -160,7 +159,6 @@ These findings suggest that scholarship allocation should be informed by histori
 - Continue investment in consistently high-converting markets.
 - Reassess scholarship spending in low-performing regions.
 - Incorporate additional enrolment drivers beyond financial incentives.
-- Establish ongoing monitoring dashboards to evaluate scholarship ROI.
 
 ---
 
