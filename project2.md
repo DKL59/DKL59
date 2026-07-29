@@ -136,11 +136,13 @@ The analysis focused on:
 ---
 
 ## 🧩 Skills Demonstrated
-- Data wrangling and descriptive statistics  
-- Correlation and clustering analysis  
-- Sentiment analysis using NLP (TextBlob)  
-- Data visualization and business interpretation  
-- Communicating insights through structured reporting  
+
+* **Data Wrangling & Descriptive Statistics**: Programmatically cleaning raw datasets, identifying outliers, and generating core summary statistics (mean, median, skewness, kurtosis).
+* **Correlation & Clustering Analysis**: Executing paired correlation tests to isolate dependencies and executing customer segmentation to isolate high-value behavioral groups.
+* **Natural Language Processing (NLP)**: Utilizing lexicon-based classifiers (`TextBlob`, `vaderSentiment`) to quantify text polarity and extract user perception trends.
+* **Data Visualization & Interpretation**: Constructing scannable exploratory heatmaps and word clouds to translate abstract data tables into strategic business realities.
+* **Structured Professional Communication**: Synthesizing dense statistical results into clean, actionable executive summaries tailored for non-technical stakeholders.
+  
 
 ---
 
