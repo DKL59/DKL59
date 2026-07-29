@@ -8,7 +8,7 @@
 
 ---
 
-### 📊 Evaluating the Impact of Scholarship Discounts on Student Enrolment
+### 🔍 Evaluating the Impact of Scholarship Discounts on Student Enrolment
 
 *A data analytics case study evaluating the effectiveness of scholarship discounts on student enrolment through exploratory data analysis, statistical hypothesis testing, regression analysis, and data visualisation.*
 
@@ -66,7 +66,7 @@ Using **Python** and **statistical hypothesis testing**, the analysis identifies
 
 ---
 
-# 🧪 Statistical Validation
+# 📊 Statistical Validation
 
 Rather than relying solely on descriptive analytics, this project applies a **Chi-Square Test of Independence** to determine whether scholarship discounts have a statistically significant relationship with student enrolment and progression.
 
