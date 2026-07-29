@@ -42,7 +42,7 @@ The analysis focused on:
 ---
 
 ## 🧰 Tools & Technologies
-![Tools & Technologies](pic1.png)
+![Tools & Technologies](pic7.png)
 
 ---
 
