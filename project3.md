@@ -8,7 +8,7 @@
 
 ---
 
-### 🔍 Assessing the Impact of Scholarship Fee Discounts on Student Enrolment
+### 🔍 Assessing the Impact of Scholarship Discounts on Student Enrolment
 
 *A data analytics case study using exploratory data analysis (EDA), statistical hypothesis testing, regression modelling, and data visualisation to evaluate how scholarship fee discounts influence student enrolment.*
 
