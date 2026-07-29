@@ -105,7 +105,7 @@ This demonstrates that scholarship incentives are one of the strongest drivers o
 ---
 
 
-## 3️⃣ Regional Analysis
+## 2️⃣ Regional Analysis
 
 <p align="center">
 <img src="./pic11.png" width="900">
@@ -125,7 +125,7 @@ Adopt region-specific scholarship strategies rather than a uniform global alloca
 ---
 
 
-## 4️⃣ Area-Level Analysis
+## 3️⃣ Area-Level Analysis
 
 <p align="center">
 <img src="./pic10.png" width="900">
