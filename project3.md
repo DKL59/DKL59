@@ -94,7 +94,6 @@ Rather than relying solely on descriptive analytics, this project applies a **Ch
 
 <p align="center">
 <strong>Business Insight</strong><br><br>
-
 Students receiving a scholarship discount were <strong>over 11× more likely to enrol</strong> than students who received an offer without financial support.
 </p>
 
