@@ -160,3 +160,10 @@ The analysis focused on:
 ## 🏁 Summary
 This project demonstrates how data analytics can uncover key customer trends that drive actionable sales strategies.  
 Through correlation, segmentation, and sentiment analysis, the study provides **evidence-based recommendations** for improving Turtle Games’ sales and loyalty performance.
+
+---
+<div align="center">
+
+### ⭐ If you enjoyed this project, consider giving it a star!
+
+</div>
