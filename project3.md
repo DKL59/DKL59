@@ -93,19 +93,16 @@ Rather than relying solely on descriptive analytics, this project applies a **Ch
 ## 1️⃣ Scholarships Increase Student Enrolment
 
 <p align="center">
-<img src="./pic9.png" width="900">
+  <img src="./pic9.png" width="900" alt="Discount vs No Discount Conversion">
 </p>
 
-    | Metric | Result |
-    |:-------|-------:|
-    | Offer → Enrolment Conversion | **9.99%** |
-    | Conversion with Discount | **70.5%** |
-    | Conversion without Discount | **6.2%** |
+| 📈 Offer → Enrolment | 💰 With Discount | 📉 Without Discount |
+|:-------------------:|:---------------:|:------------------:|
+| **9.99%** | **70.5%** | **6.2%** |
 
-### Business Insight
-
-Applicants receiving a scholarship discount were **more than 11 times more likely to enrol** than applicants receiving an offer without financial support.
-This demonstrates that scholarship incentives are one of the strongest drivers of enrolment conversion.
+> **Business Insight**
+>
+> Students receiving a scholarship discount were **over 11× more likely to enrol** than students who received an offer without financial support.
 
 ---
 
