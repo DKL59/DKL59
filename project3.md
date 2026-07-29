@@ -92,9 +92,11 @@ Rather than relying solely on descriptive analytics, this project applies a **Ch
 
 ## 1️⃣ Scholarships Increase Student Enrolment
 
-> **Business Insight**
->
-> Students receiving a scholarship discount were **over 11× more likely to enrol** than students who received an offer without financial support.
+<p align="center">
+<strong>Business Insight</strong><br><br>
+
+Students receiving a scholarship discount were <strong>over 11× more likely to enrol</strong> than students who received an offer without financial support.
+</p>
 
 <p align="center">
   <img src="./pic9.png" width="900" alt="Discount vs No Discount Conversion">
