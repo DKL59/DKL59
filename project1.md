@@ -18,6 +18,20 @@ This analysis sought to uncover:
 
 ---
 
+## 📄 Project Documentation & Technical Report
+
+👉 [Open and Read the Full Technical Report (PDF)](https://github.com/DKL59/DKL59/blob/main/report1.pdf)
+
+---
+
+
+## 🎥 Project Presentation Video
+<video src="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+---
+
 ## 🧰 Tools & Technologies
 ![Tools & Technologies](pic5.png)
 
@@ -92,19 +106,6 @@ Key cleaning steps in **Excel**:
 
 ---
 
-## 📄 Project Documentation & Technical Report
-
-👉 [Open and Read the Full Technical Report (PDF)](https://github.com/DKL59/DKL59/blob/main/report1.pdf)
-
----
-
-
-## 🎥 Project Presentation Video
-<video src="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1" controls width="100%">
-  Your browser does not support the video tag.
-</video>
-
----
 
 ## 👤 Author
 **Dipendra Limbu** | 📍 Nepal | 💼 Data Analyst | Business Intelligence | 📧 dklimbuz@hotmail.com
