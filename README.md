@@ -83,7 +83,7 @@ I’m particularly interested in opportunities where data is used not just to un
 
 **Result**: Students offered a scholarship enrolled at 70.5% versus 6.2% without one — an 11× difference against a 9.99% baseline. But the same testing found no statistically significant effect on academic progression: scholarship money buys enrolment, not student success. Effectiveness also varied sharply by market — China converted strongly on low discounts, while South Asia and UK & Americas underperformed relative to spend.
 
-**Recommendation**: Allocate scholarships by historical conversion rate per region rather than a uniform global model, and stop treating progression as a justification for scholarship spend.
+**Recommendation**: Allocate scholarships by historical conversion rate per region rather than a uniform global model.
 
 **Tools**: Python · Pandas · NumPy · SciPy · Statsmodels · Matplotlib · Seaborn · Excel
 
