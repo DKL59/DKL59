@@ -11,20 +11,17 @@
 <img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
 
 ## About Me
-I help businesses utilize the potential of data in making informed decisions by transforming complex data into clear, actionable insights.
-I have completed the Data Analytics Career Accelerator training from The London School of Economics and Political Science (LSE) presented in collaboration with FourthRev. This eight-months' intensive, hands-on training strengthened my skills in Python, Excel, Tableau, SQL and taught me how to combine analytical thinking with business storytelling when providing data-driven solution to business problems. 
- 
-With hands-on experience in Python, SQL, Tableau, and Excel, I specialize in analyzing large datasets, uncovering trends, and translating findings into strategies that drive measurable impact. My approach goes beyond reporting—I focus on solving real business problems and delivering insights that influence outcomes.
- 
-With an education background in business economics, strategy and data, I bring a strong understanding of how data connects to business performance, enabling me to bridge the gap between technical analysis and commercial decision-making.
- 
+I start with what a team needs to know and why, check that their data can actually answer it, and finish with a recommendation — not just a collection of charts. In recent projects I've found that a retailer's largest customer segment wasn't its most valuable one, and that a scholarship programme reliably drove enrolment while having no measurable effect on student progression — the kind of findings that change where money goes.
+
+I work in Python, SQL, Tableau and Excel, built through the LSE Data Analytics Career Accelerator (delivered with FourthRev) on top of BSc and MSc degrees in Strategy from Copenhagen Business School. That business grounding shapes how I approach analysis — I try to keep the decision someone needs to make in view, not just the output. With a dual background in BSc & MSc in Strategy and data analytics, I translate technical findings into commercial decisions.
+
 What I bring:
- 
- - Data analysis using Python (Pandas, NumPy, Scikit-learn) to uncover patterns and opportunities. 
- - Creating Interactive dashboards in Tableau that communicate insights clearly to stakeholders. 
- - A business-first mindset—prioritizing insights that solve real problems.
-  
-I’m particularly interested in opportunities where data is used not just to understand the past, but to shape future strategy. I’m actively searching out for remote opportunities to work in the field of Data as Data Analyst or Business Intelligence Analyst where I can collaborate with diverse teams and continue learning through meaningful, data-driven work.
+
+Analysis in Python (Pandas, NumPy) to uncover patterns and opportunities
+Interactive Tableau dashboards that make findings clear to stakeholders
+A business-first approach that prioritises insights people can act on
+
+I'm seeking remote Data Analyst or Business Intelligence Analyst roles, particularly where data is used to shape future strategy rather than only report on the past. Based in Nepal (UTC+5:45) and happy to work hours that overlap with teams in Asia, Australia, Africa, Europe or North America.
 
 ## 🧰 Core Skills
 ✅ Data Cleaning & Preparation    
