@@ -51,12 +51,15 @@ I’m particularly interested in opportunities where data is used not just to un
 ## 🚀 Featured Projects
 
 ### 1. [🎯 Marketing Analytics – Customer & Advertising Analytics (2Market)](project1.md)
-**Goal:** Assist the marketing team to design a marketing campaign.  
+**Goal**: Help the marketing team design a campaign by identifying who their customers are, what sells, and which advertising channels convert.
 
-**Highlights:** Customer segmentation, Interactive Tableau dashboards, Data cleaning and visualisation using Excel.  
+**Approach**: Cleaned and validated 2,213 customer records in Excel (repairing malformed date and currency fields, removing implausible ages), loaded to PostgreSQL for channel analysis, and built two interactive Tableau dashboards with demographic filters.
 
-**Tools:** Excel · SQL (PostgreSQL) · Tableau
+**Result**: Across $1.34M in sales, alcoholic beverages and meat products drove 78% of revenue (50% and 28%). Spain accounts for nearly half of all sales. The key finding: the largest customer group ($30–40k income) is not the most valuable — revenue peaks at $70–80k and declines above it, so customer count and customer value point in different directions. Twitter was the most effective ad channel; brochures the least.
 
+**Recommendation**: Concentrate spend on Twitter targeting married 50–59-year-olds in Spain, and prioritise the $70–80k income band over both the largest segment and the highest earners.
+
+**Tools**: Excel · PostgreSQL · Tableau
 ---
 
 ###  2. [💎 Customer Analytics – Customer Trends Analytics (Turtle Games)](project2.md)
