@@ -60,14 +60,19 @@ I’m particularly interested in opportunities where data is used not just to un
 **Recommendation**: Concentrate spend on Twitter targeting married 50–59-year-olds in Spain, and prioritise the $70–80k income band over both the largest segment and the highest earners.
 
 **Tools**: Excel · PostgreSQL · Tableau
+
 ---
 
 ###  2. [💎 Customer Analytics – Customer Trends Analytics (Turtle Games)](project2.md)
-**Goal:** Identify customer trends and loyalty patterns to improve sales.  
+**Goal**: Identify the customer trends driving loyalty point accumulation, and gauge sentiment toward the brand, to improve overall sales performance.
 
-**Highlights:** Correlation, Customer segmentation, sentiment analysis (TextBlob), and clustering.  
+**Approach**: Correlation analysis across age, remuneration and spending score; distribution testing (skewness/kurtosis) to check normality assumptions; k-means segmentation on remuneration and spending; NLP sentiment analysis on customer summaries and reviews using TextBlob.
 
-**Tools:** Python · Pandas · Numpy · Matplotlib · Seaborn · TextBlob · NLP · R
+**Result**: Spending score (r = 0.67) and remuneration (r = 0.62) were the strongest predictors of loyalty points, while age showed no meaningful relationship. High earners accumulated 3.5× the loyalty points of low earners (2,503 vs 725 on average). Segmentation surfaced five distinct customer clusters, and review sentiment averaged +0.22 polarity — favourable but lukewarm rather than enthusiastic.
+
+**Recommendation**: Introduce tiered redemption (5–20% discounts) so customers see tangible return on points, converting loyalty accumulation into repeat spend.
+
+**Tools**: Python · Pandas · NumPy · Matplotlib · Seaborn · TextBlob · NLP
 
 ---
 
