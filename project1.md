@@ -18,13 +18,6 @@ This analysis sought to uncover:
 
 ---
 
-## 📄 Project Documentation & Technical Report
-
-👉 [Open and Read the Full Technical Report (PDF)](https://github.com/DKL59/DKL59/blob/main/report1.pdf)
-
----
-
-
 ## 🎥 Project Presentation Video
 <video src="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1" controls width="100%">
   Your browser does not support the video tag.
@@ -123,11 +116,3 @@ Key cleaning steps in **Excel**:
 This project demonstrates a complete analytics workflow — from data cleaning, insight generation to visualization and — translating data into actionable marketing recommendations for strategic decision-making.
 
 ---
-<div align="center">
-
-### ⭐ If you enjoyed this project, consider giving it a star!
-
-</div>
-
-
-
