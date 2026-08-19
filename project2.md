@@ -11,15 +11,6 @@
 
 👉 [Open the R Script (marketing_analysis.R)](LSE_DA301_Assignment_R_Limbu_Dipendra.R)
 
-
-
-## 📄 Technical Report
-
-👉 [Open and Read the Full Technical Report (PDF)](https://github.com/DKL59/DKL59/blob/main/report2.pdf)
-
-
-
-
 ---
 
 
@@ -162,8 +153,3 @@ This project demonstrates how data analytics can uncover key customer trends tha
 Through correlation, segmentation, and sentiment analysis, the study provides **evidence-based recommendations** for improving Turtle Games’ sales and loyalty performance.
 
 ---
-<div align="center">
-
-### ⭐ If you enjoyed this project, consider giving it a star!
-
-</div>
