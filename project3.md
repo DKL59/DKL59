@@ -182,9 +182,3 @@ The findings demonstrate that scholarships are highly effective at improving **s
  | <a href="https://github.com/DKL59/Dipendra-Limbu" target="_blank" rel="noopener noreferrer">GitHub</a>
 
 ---
-
-<div align="center">
-
-### ⭐ If you enjoyed this project, consider giving it a star!
-
-</div>
