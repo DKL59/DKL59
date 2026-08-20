@@ -12,7 +12,7 @@
 
 ## About Me
 
-Data Analyst & Analytics Translator — turning technical findings into decisions people can act on
+Data Analyst & Analytics Translator — turning technical findings into decisions people can act on.
 
 I'm a data analyst who starts with what a decision-maker needs to know, confirms the data can actually answer it, and finishes with a recommendation — not just a set of charts.
 
