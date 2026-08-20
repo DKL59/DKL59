@@ -22,11 +22,11 @@ That business-first instinct comes from a BSc and MSc in Strategy from Copenhage
 
 What I bring:
 
-Python and Excel to clean and prepare data, with working SQL knowledge for querying
-Statistical rigour — regression, hypothesis testing, and segmentation — to separate signal from noise
-Interactive Tableau dashboards that make findings clear to stakeholders
-Comfortable presenting findings to stakeholders and defending the reasoning behind them
-A business-first approach that keeps the decision someone needs to make in view
+A business-first approach that keeps the decision someone needs to make in view.
+Python and Excel to clean and prepare data, with working SQL knowledge for querying.
+Statistical rigour — regression, hypothesis testing, and segmentation — to separate signal from noise.
+Interactive Tableau dashboards that make findings clear to stakeholders.
+Comfortable presenting findings and defending the reasoning behind them.
 
 Open to remote Data Analyst and Business Intelligence work, helping organisations use data to shape future strategy rather than simply report on the past. Based in Nepal (UTC+5:45) and happy to work hours that overlap with teams in Asia, Australia, Africa, Europe, or North America.
 
