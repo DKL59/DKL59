@@ -11,17 +11,24 @@
 <img width="80" height="80" alt="image" src="https://github.com/user-attachments/assets/44d53684-5a7d-438d-ba4b-534aacbe4cac" />
 
 ## About Me
-I start with what a team needs to know and why, check that their data can actually answer it, and finish with a recommendation — not just a collection of charts. In recent projects I've found that a retailer's largest customer segment wasn't its most valuable one, and that a scholarship programme reliably drove enrolment while having no measurable effect on student progression — the kind of findings that change where money goes.
 
-I work in Python, SQL, Tableau and Excel, built through the LSE Data Analytics Career Accelerator (delivered with FourthRev) on top of BSc and MSc degrees in Strategy from Copenhagen Business School. That business grounding shapes how I approach analysis — I try to keep the decision someone needs to make in view, not just the output. With a dual background in BSc & MSc in Strategy and data analytics, I translate technical findings into commercial decisions.
+Data Analyst & Analytics Translator — turning technical findings into decisions people can act on
+
+I'm a data analyst who starts with what a decision-maker needs to know, confirms the data can actually answer it, and finishes with a recommendation — not just a set of charts.
+
+Recent work has shown that a retailer's largest customer segment wasn't its most valuable one, and that a scholarship programme reliably drove enrolment while having no measurable effect on student progression — the kind of finding that changes where money goes.
+
+That business-first instinct comes from a BSc and MSc in Strategy from Copenhagen Business School, sharpened by the LSE Data Analytics Career Accelerator and proven across client and case-study projects in Python, Tableau, Excel, SQL, and R.
 
 What I bring:
 
-Analysis in Python (Pandas, NumPy) to uncover patterns and opportunities
+Python and Excel to clean and prepare data, with working SQL knowledge for querying
+Statistical rigour — regression, hypothesis testing, and segmentation — to separate signal from noise
 Interactive Tableau dashboards that make findings clear to stakeholders
-A business-first approach that prioritises insights people can act on
+Comfortable presenting findings to stakeholders and defending the reasoning behind them
+A business-first approach that keeps the decision someone needs to make in view
 
-I'm seeking remote Data Analyst or Business Intelligence Analyst roles, particularly where data is used to shape future strategy rather than only report on the past. Based in Nepal (UTC+5:45) and happy to work hours that overlap with teams in Asia, Australia, Africa, Europe or North America.
+Open to remote Data Analyst and Business Intelligence work, helping organisations use data to shape future strategy rather than simply report on the past. Based in Nepal (UTC+5:45) and happy to work hours that overlap with teams in Asia, Australia, Africa, Europe, or North America.
 
 ## 🧰 Core Skills
 ✅ Data Cleaning & Preparation    
