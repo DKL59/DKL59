@@ -27,11 +27,11 @@ What I bring:
 Most interested in work where data shapes future strategy rather than only reporting on the past. Happy to work hours that overlap with teams in Asia, Australia, Africa, Europe, or North America.
 
 ## 🧰 Core Skills
-✅ Data Cleaning & Preparation    
-✅ Exploratory Data Analysis (EDA) 
-✅ Statistical & Sentiment Analysis  
-✅ Visualization & Dashboard Design 
-✅ Data Storytelling for Business Decisions
+- Data Cleaning & Preparation    
+- Exploratory Data Analysis (EDA) 
+- Statistical & Sentiment Analysis  
+- Visualization & Dashboard Design 
+- Data Storytelling for Business Decisions
 
 ---
 
