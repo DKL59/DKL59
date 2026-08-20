@@ -12,23 +12,19 @@
 
 ## About Me
 
-Data Analyst & Analytics Translator — turning technical findings into decisions people can act on.
+I turn technical findings into decisions people can act on — starting with what a decision-maker needs to know, confirming the data can actually answer it, and finishing with a recommendation.
 
-I'm a data analyst who starts with what a decision-maker needs to know, confirms the data can actually answer it, and finishes with a recommendation — not just a set of charts.
-
-Recent work has shown that a retailer's largest customer segment wasn't its most valuable one, and that a scholarship programme reliably drove enrolment while having no measurable effect on student progression — the kind of finding that changes where money goes.
-
-That business-first instinct comes from a BSc and MSc in Strategy from Copenhagen Business School, sharpened by the LSE Data Analytics Career Accelerator and proven across client and case-study projects in Python, Tableau, Excel, SQL, and R.
+In recent projects I found that a retailer's largest customer segment wasn't its most valuable one, and that a scholarship programme reliably drove enrolment while having no measurable effect on student progression — the kind of finding that changes where money goes.
 
 What I bring:
 
-A business-first approach that keeps the decision someone needs to make in view.
-Python and Excel to clean and prepare data, with working SQL knowledge for querying.
-Statistical rigour — regression, hypothesis testing, and segmentation — to separate signal from noise.
-Interactive Tableau dashboards that make findings clear to stakeholders.
-Comfortable presenting findings and defending the reasoning behind them.
+- A decision-first approach that keeps the choice someone needs to make in view.
+- Python and Excel to clean and prepare data, with working SQL knowledge for querying.
+- Regression, hypothesis testing, and segmentation in Python and R to separate signal from noise.
+- Interactive Tableau dashboards that make findings clear to stakeholders.
+- Comfortable presenting findings and defending the reasoning behind them.
 
-Open to remote Data Analyst and Business Intelligence work, helping organisations use data to shape future strategy rather than simply report on the past. Based in Nepal (UTC+5:45) and happy to work hours that overlap with teams in Asia, Australia, Africa, Europe, or North America.
+Most interested in work where data shapes future strategy rather than only reporting on the past. Happy to work hours that overlap with teams in Asia, Australia, Africa, Europe, or North America.
 
 ## 🧰 Core Skills
 ✅ Data Cleaning & Preparation    
