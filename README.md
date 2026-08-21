@@ -1,7 +1,7 @@
 <!-- PROFILE SECTION -->
 <p align="center">
   <b>Data Analyst | Business Intelligence</b><br>
-  📍Nepal | 🌍 Open to Remote Roles | 📧 dklimbuz@hotmail.com | 📄 <a href="Limbu%20Dipendra%20Resume.pdf" target="_blank">View Resume</a>
+  📍Nepal | 🌍 Open to Remote Work | 📧 dklimbuz@hotmail.com | 📄 <a href="Limbu%20Dipendra%20Resume.pdf" target="_blank">View Resume</a>
   <br>
   🎓 BSc & MSc in Strategy, Copenhagen Business School (CBS) <br>
   🎓 LSE Data Analytics  
