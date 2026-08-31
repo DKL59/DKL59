@@ -202,6 +202,7 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
     <span class="nav-name">Dipendra Limbu</span>
     <a class="nav-l" href="#about">About</a>
     <a class="nav-l" href="#projects">Projects</a>
+    <a class="nav-l" href="#evaluation">Evaluation</a>
     <a class="nav-l" href="#connect">Connect</a>
     <button class="theme-btn" id="tbtn" type="button">theme</button>
   </div>
@@ -231,7 +232,7 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
     <div><div class="stat-n">$1.34M</div><div class="stat-l">in sales cleaned, validated and analysed</div></div>
     <div><div class="stat-n">3.5&times;</div><div class="stat-l">loyalty points, high earners over low</div></div>
     <div><div class="stat-n">70.5%</div><div class="stat-l">enrolment with a scholarship, against 6.2%</div></div>
-    <div><div class="stat-n">3</div><div class="stat-l">projects, each ending in a recommendation</div></div>
+    <div><div class="stat-n">4</div><div class="stat-l">projects, each ending in a recommendation</div></div>
   </div>
 </div>
 
@@ -431,6 +432,58 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
   </div>
 </section>
 
+<section id="evaluation">
+  <div class="wrap">
+    <div class="sec-head"><h2>Evaluation &amp; systems work</h2><span class="line"></span><span class="count">01</span></div>
+
+    <article class="proj">
+      <div class="pnum">04 &middot; Evaluation &amp; systems work</div>
+      <h3><a href="https://github.com/DKL59/Micro1_Challenge">PRAMAAN — a document-grounded claim checker</a></h3>
+      <div class="proj-grid">
+        <div>
+          <div class="block">
+            <span class="label">Goal</span>
+            <p>Build a system that checks investment claims about NEPSE-listed equities against source documents — every figure it reports carrying the sentence it came from — and then find out whether it actually works. Submitted to the micro1 Frontier Engineering Challenge 2026.</p>
+          </div>
+          <div class="block">
+            <span class="label">Approach</span>
+            <p>A baseline with no documents at all, then four iterations changing one variable each, plus a control with the correction loop disabled. Verdicts scored against hand-written answers fixed before the runs; citations scored mechanically by three rules with no model in the loop.</p>
+          </div>
+          <div class="block key">
+            <span class="label">Result</span>
+            <p>It did not win on the metric I chose. Verdict agreement read 3/3, 3/3, 2/3, 3/3, 3/3 across five runs — never improving — and the document-free baseline matched the finished system. What did move were two columns I had not thought to measure: figures traceable to a source went 0/3 to 3/3, and schema violations 5 to 0.</p>
+          </div>
+          <div class="block rec">
+            <span class="label">What it taught me</span>
+            <p>Two findings I would have missed without measuring: my own analysis had contaminated the source files, so the system was retrieving answers I had planted; and switching the correction loop off entirely changed nothing I was scoring. Both are reported as negative results, with the runs that show them.</p>
+          </div>
+          <div class="tools">Tools: Python · Git · unit testing · LLM API</div>
+          <div class="proj-links">
+            <a class="lnk" href="https://github.com/DKL59/Micro1_Challenge">Repository &rarr;</a>
+            <a class="lnk" href="https://youtu.be/qSmXwHcALKY">5-minute walkthrough &rarr;</a>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <div class="fig-t">The metric I watched</div>
+            <div class="fig-s">Verdict agreement, out of three cases</div>
+            <div class="chart-scroll"><svg id="c4a" viewBox="0 0 460 168" role="img"
+              aria-label="Verdict agreement reads three, three, two, three, three across the baseline and four iterations, never improving."></svg></div>
+            <figcaption>flat across every run, baseline included</figcaption>
+          </figure>
+          <figure>
+            <div class="fig-t">The one I was not watching</div>
+            <div class="fig-s">Schema violations per run</div>
+            <div class="chart-scroll"><svg id="c4b" viewBox="0 0 460 168" role="img"
+              aria-label="Schema violations read five, two, four, zero across the four iterations."></svg></div>
+            <figcaption>my worst run on verdicts was my best on citations</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section class="contact" id="connect">
   <div class="contact-in">
     <p class="eyebrow">Connect With Me</p>
@@ -579,6 +632,16 @@ function draw() {
     { k: "Baseline",       v: 9.99, t: "9.99%", alt: true }
   ], { w: 460, h: 176, max: 80, ticks: [0, 40, 80],
        fmtTick: function (n) { return n + "%"; }, bw: 74 });
+
+  barsV(document.getElementById("c4a"), [
+    { k: "base", v: 3, t: "3" }, { k: "it 1", v: 3, t: "3" }, { k: "it 2", v: 2, t: "2" },
+    { k: "it 3", v: 3, t: "3" }, { k: "it 4", v: 3, t: "3" }
+  ], { w: 460, h: 168, max: 3, ticks: [0, 3], fmtTick: function (n) { return n; }, bw: 56 });
+
+  barsV(document.getElementById("c4b"), [
+    { k: "it 1", v: 5, t: "5", alt: true }, { k: "it 2", v: 2, t: "2", alt: true },
+    { k: "it 3", v: 4, t: "4", alt: true }, { k: "it 4", v: 0, t: "0", alt: true }
+  ], { w: 460, h: 168, max: 5, ticks: [0, 5], fmtTick: function (n) { return n; }, bw: 66 });
 
   barsH(document.getElementById("c3b"), [
     { k: "Progression", v: 0.04, t: "no statistically significant effect", flat: true }
