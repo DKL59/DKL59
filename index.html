@@ -280,9 +280,55 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
   <div class="wrap">
     <div class="sec-head"><h2>Featured Projects</h2><span class="line"></span><span class="count">03</span></div>
 
-    <!-- ================================================ 1 · 2Market -->
+    <!-- ================================================ 1 · Study Group -->
     <article class="proj">
-      <div class="pnum">01 &middot; Marketing Analytics</div>
+      <div class="pnum">01 &middot; Education Analytics</div>
+      <h3><a href="project3.html">Scholarship Impact Analysis (StudyGroup)</a></h3>
+      <div class="proj-grid">
+        <div>
+          <div class="block">
+            <span class="label">Goal</span>
+            <p>Determine whether scholarship discounts actually drive student enrolment and progression, so allocation decisions rest on evidence rather than assumption.</p>
+          </div>
+          <div class="block">
+            <span class="label">Approach</span>
+            <p>EDA on historical application data, Chi-Square tests of independence for enrolment and progression outcomes, OLS regression, and regional/area-level conversion analysis.</p>
+          </div>
+          <div class="block key">
+            <span class="label">Result</span>
+            <p>Students offered a scholarship enrolled at 70.5% versus 6.2% without one — an 11× difference against a 9.99% baseline. But the same testing found no statistically significant effect on academic progression: scholarship money buys enrolment, not student success. Effectiveness also varied sharply by market — China converted strongly on low discounts, while South Asia and UK &amp; Americas underperformed relative to spend.</p>
+          </div>
+          <div class="block rec">
+            <span class="label">Recommendation</span>
+            <p>Allocate scholarships by historical conversion rate per region rather than a uniform global model.</p>
+          </div>
+          <div class="tools">Tools: Python · Pandas · NumPy · SciPy · Statsmodels · Matplotlib · Seaborn · Excel</div>
+          <div class="proj-links">
+            <a class="lnk" href="project3.html">Full write-up &rarr;</a>
+            <a class="lnk" href="https://nbviewer.org/github/DKL59/Dipendra-Limbu/blob/main/EDASTUDYGROUP.ipynb">Python EDA notebook &rarr;</a>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <div class="fig-t">Enrolment conversion</div>
+            <div class="fig-s">With a scholarship, without, and the overall baseline</div>
+            <div class="chart-scroll"><svg id="c3a" viewBox="0 0 460 176" role="img"
+              aria-label="Conversion is 70.5 percent with a scholarship, 6.2 percent without, against a 9.99 percent baseline."></svg></div>
+            <figcaption>an 11× difference on enrolment</figcaption>
+          </figure>
+          <figure>
+            <div class="fig-t">And on progression</div>
+            <div class="fig-s">The second question, asked separately</div>
+            <div class="chart-scroll"><svg id="c3b" viewBox="0 0 460 96" role="img"
+              aria-label="Chi-square testing found no statistically significant effect of scholarships on academic progression."></svg></div>
+            <figcaption>no statistically significant effect</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!-- ================================================ 2 · 2Market -->
+    <article class="proj">
+      <div class="pnum">02 &middot; Marketing Analytics</div>
       <h3><a href="project1.html">Customer &amp; Advertising Analytics (2Market)</a></h3>
       <div class="proj-grid">
         <div>
@@ -334,10 +380,9 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
         </div>
       </div>
     </article>
-
-    <!-- ================================================ 2 · Turtle Games -->
+    <!-- ================================================ 3 · Turtle Games -->
     <article class="proj">
-      <div class="pnum">02 &middot; Customer Analytics</div>
+      <div class="pnum">03 &middot; Customer Analytics</div>
       <h3><a href="project2.html">Customer Trends Analytics (Turtle Games)</a></h3>
       <div class="proj-grid">
         <div>
@@ -378,53 +423,6 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
             <div class="chart-scroll"><svg id="c2b" viewBox="0 0 460 168" role="img"
               aria-label="High earners average 2,503 loyalty points against 725 for low earners, a 3.5 times difference."></svg></div>
             <figcaption>3.5× — the gap the tiered scheme is built for</figcaption>
-          </figure>
-        </div>
-      </div>
-    </article>
-
-    <!-- ================================================ 3 · Study Group -->
-    <article class="proj">
-      <div class="pnum">03 &middot; Education Analytics</div>
-      <h3><a href="project3.html">Scholarship Impact Analysis (StudyGroup)</a></h3>
-      <div class="proj-grid">
-        <div>
-          <div class="block">
-            <span class="label">Goal</span>
-            <p>Determine whether scholarship discounts actually drive student enrolment and progression, so allocation decisions rest on evidence rather than assumption.</p>
-          </div>
-          <div class="block">
-            <span class="label">Approach</span>
-            <p>EDA on historical application data, Chi-Square tests of independence for enrolment and progression outcomes, OLS regression, and regional/area-level conversion analysis.</p>
-          </div>
-          <div class="block key">
-            <span class="label">Result</span>
-            <p>Students offered a scholarship enrolled at 70.5% versus 6.2% without one — an 11× difference against a 9.99% baseline. But the same testing found no statistically significant effect on academic progression: scholarship money buys enrolment, not student success. Effectiveness also varied sharply by market — China converted strongly on low discounts, while South Asia and UK &amp; Americas underperformed relative to spend.</p>
-          </div>
-          <div class="block rec">
-            <span class="label">Recommendation</span>
-            <p>Allocate scholarships by historical conversion rate per region rather than a uniform global model.</p>
-          </div>
-          <div class="tools">Tools: Python · Pandas · NumPy · SciPy · Statsmodels · Matplotlib · Seaborn · Excel</div>
-          <div class="proj-links">
-            <a class="lnk" href="project3.html">Full write-up &rarr;</a>
-            <a class="lnk" href="https://nbviewer.org/github/DKL59/Dipendra-Limbu/blob/main/EDASTUDYGROUP.ipynb">Python EDA notebook &rarr;</a>
-          </div>
-        </div>
-        <div>
-          <figure>
-            <div class="fig-t">Enrolment conversion</div>
-            <div class="fig-s">With a scholarship, without, and the overall baseline</div>
-            <div class="chart-scroll"><svg id="c3a" viewBox="0 0 460 176" role="img"
-              aria-label="Conversion is 70.5 percent with a scholarship, 6.2 percent without, against a 9.99 percent baseline."></svg></div>
-            <figcaption>an 11× difference on enrolment</figcaption>
-          </figure>
-          <figure>
-            <div class="fig-t">And on progression</div>
-            <div class="fig-s">The second question, asked separately</div>
-            <div class="chart-scroll"><svg id="c3b" viewBox="0 0 460 96" role="img"
-              aria-label="Chi-square testing found no statistically significant effect of scholarships on academic progression."></svg></div>
-            <figcaption>no statistically significant effect</figcaption>
           </figure>
         </div>
       </div>
