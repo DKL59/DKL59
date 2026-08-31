@@ -119,6 +119,19 @@ th { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
 td { color:var(--ink-2); }
 tbody tr:hover td { background:var(--surface); }
 .flow th { white-space:nowrap; }
+.tnote { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted);
+  margin-top:10px; max-width:none; }
+td ul { margin:0; max-width:none; }
+td li { border:none; padding:0 0 8px 14px; font-size:13.5px; }
+td li:last-child { border:none; padding-bottom:0; }
+td li::before { top:9px; width:6px; }
+.q td:first-child { font-weight:600; color:var(--ink); width:26%; }
+.cellv { font-family:"IBM Plex Mono",monospace; font-size:12px; fill:var(--ink);
+  font-variant-numeric:tabular-nums; }
+.axis-t { font-family:"IBM Plex Mono",monospace; font-size:11px; fill:var(--muted); }
+.val-t { font-family:"IBM Plex Mono",monospace; font-size:12px; fill:var(--ink);
+  font-variant-numeric:tabular-nums; }
+.gridline { stroke:var(--rule); stroke-width:1; }
 
 figure { margin:26px 0 0; background:var(--surface); border:1px solid var(--rule);
   border-radius:4px; padding:16px; box-shadow:var(--shadow); }
@@ -196,10 +209,7 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 </figure>
 
 <h2>Tools &amp; Technologies<span class="l"></span></h2>
-<div class="chips">
-  <span class="tag">Excel</span><span class="tag">PostgreSQL</span><span class="tag">Tableau</span>
-</div>
-<figure><img src="pic5.png" alt="Tools &amp; Technologies" loading="lazy"><figcaption>Tools &amp; Technologies</figcaption></figure>
+<div class="tbl-scroll"><table class=""><thead><tr><th>Category</th><th>Tools Used</th></tr></thead><tbody><tr><td>Data Cleaning &amp; Preparation</td><td>Microsoft Excel</td></tr><tr><td>Database Management</td><td>PostgreSQL</td></tr><tr><td>Data Visualization</td><td>Tableau/Microsoft Excel</td></tr><tr><td>Querying &amp; Analysis</td><td>SQL</td></tr><tr><td>Documentation</td><td>MS Word / PDF</td></tr></tbody></table></div>
 
 <h2>Data Preparation<span class="l"></span></h2>
 <p>The raw dataset contained customer, product, and marketing information.<br>Key cleaning steps in <strong>Excel</strong>:</p>

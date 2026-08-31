@@ -119,6 +119,19 @@ th { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
 td { color:var(--ink-2); }
 tbody tr:hover td { background:var(--surface); }
 .flow th { white-space:nowrap; }
+.tnote { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted);
+  margin-top:10px; max-width:none; }
+td ul { margin:0; max-width:none; }
+td li { border:none; padding:0 0 8px 14px; font-size:13.5px; }
+td li:last-child { border:none; padding-bottom:0; }
+td li::before { top:9px; width:6px; }
+.q td:first-child { font-weight:600; color:var(--ink); width:26%; }
+.cellv { font-family:"IBM Plex Mono",monospace; font-size:12px; fill:var(--ink);
+  font-variant-numeric:tabular-nums; }
+.axis-t { font-family:"IBM Plex Mono",monospace; font-size:11px; fill:var(--muted); }
+.val-t { font-family:"IBM Plex Mono",monospace; font-size:12px; fill:var(--ink);
+  font-variant-numeric:tabular-nums; }
+.gridline { stroke:var(--rule); stroke-width:1; }
 
 figure { margin:26px 0 0; background:var(--surface); border:1px solid var(--rule);
   border-radius:4px; padding:16px; box-shadow:var(--shadow); }
@@ -211,7 +224,8 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 
 <h2>Statistical Validation<span class="l"></span></h2>
 <p>Rather than relying solely on descriptive analytics, this project applies a <strong>Chi-Square Test of Independence</strong> to determine whether scholarship discounts have a statistically significant relationship with student enrolment and progression.</p>
-<figure><img src="pic12.png" alt="Chi-Square Test Results" loading="lazy"><figcaption>Chi-Square Test Results</figcaption></figure>
+<div class="tbl-scroll"><table class=""><thead><tr><th>Relationship between discount with student enrollment and progression</th><th>Statistical-Test</th><th>P-value &lt;0.05</th><th>Result</th></tr></thead><tbody><tr><td>Does discount have an effect on student enrolment?</td><td>Chi-Squared Test</td><td>YES</td><td><span class="pill yes">Statistically significant</span></td></tr><tr><td>Does discount have an effect on students&rsquo; progression from the course?</td><td>Chi-Squared Test</td><td>NO</td><td><span class="pill no">Statistically Insignificant</span></td></tr></tbody></table></div>
+<p class="tnote">Conclusion &mdash; 1. Positive correlation between a student receiving a discount and enrollment. 2. No relationship between a student receiving a discount and progressing from the course.</p>
 <h3>Results</h3>
 <div class="tbl-scroll"><table>
 <thead><tr><th>Hypothesis</th><th>Outcome</th></tr></thead>
@@ -227,7 +241,7 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 <h2>Results &amp; Insights<span class="l"></span></h2>
 <h3>1. Scholarships Increase Student Enrolment</h3>
 <p>Students receiving a scholarship discount were <strong>over 11&times; more likely to enrol</strong> than students who received an offer without financial support.</p>
-<figure><img src="pic9.png" alt="Discount vs No Discount Conversion" loading="lazy"><figcaption>Discount vs No Discount Conversion</figcaption></figure>
+<figure><div class="fig-t">Comparing Conversion rate of students with an offer</div><div class="fig-s">With Discount, Without Discount</div><div class="chart-scroll"><svg viewBox="0 0 620 250" role="img" aria-label="Conversion rate of students with an offer and discount is significantly higher compared to students with an offer but no discount."><line x1="52" x2="606" y1="204.0" y2="204.0" class="gridline"/><text x="43" y="208.0" class="axis-t" text-anchor="end">0%</text><line x1="52" x2="606" y1="115.0" y2="115.0" class="gridline"/><text x="43" y="119.0" class="axis-t" text-anchor="end">40.0%</text><line x1="52" x2="606" y1="26.0" y2="26.0" class="gridline"/><text x="43" y="30.0" class="axis-t" text-anchor="end">80%</text><rect x="96.33333333333333" y="181.77224999999999" width="96" height="22.22775" rx="3" fill="var(--data-2)"/><text x="144.33333333333331" y="173.77224999999999" class="val-t" text-anchor="middle">9.99%</text><text x="144.33333333333331" y="234" class="axis-t" text-anchor="middle">Overall</text><rect x="281.0" y="47.13750000000002" width="96" height="156.86249999999998" rx="3" fill="var(--accent)"/><text x="329.0" y="39.13750000000002" class="val-t" text-anchor="middle">70.5%</text><text x="329.0" y="234" class="axis-t" text-anchor="middle">With Discount</text><rect x="465.66666666666663" y="190.205" width="96" height="13.795" rx="3" fill="var(--data-flat)"/><text x="513.6666666666666" y="182.205" class="val-t" text-anchor="middle">6.2%</text><text x="513.6666666666666" y="234" class="axis-t" text-anchor="middle">Without Discount</text></svg></div><figcaption>Conversion rate of students with an offer and discount is significantly higher compared to students with an offer but no discount.</figcaption></figure>
 <div class="tbl-scroll"><table>
 <thead><tr><th>Offer &rarr; Enrolment</th><th>With Discount</th><th>Without Discount</th></tr></thead>
 <tbody><tr><td><strong>9.99%</strong></td><td><strong>70.5%</strong></td><td><strong>6.2%</strong></td></tr></tbody>
