@@ -107,6 +107,8 @@ blockquote { margin:20px 0 0; max-width:76ch; padding:18px 22px; background:var(
   border-left:2px solid var(--accent); border-radius:0 3px 3px 0; }
 blockquote p { margin:0; color:var(--ink); font-size:18px; }
 blockquote p + p { margin-top:10px; font-size:16px; color:var(--ink-2); }
+blockquote.note { border-left-color:var(--data-2); }
+blockquote.note p { font-size:15.5px; color:var(--ink-2); }
 blockquote .label { display:block; font-size:10.5px; letter-spacing:.13em;
   text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
 
@@ -201,11 +203,11 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 </ul>
 
 <h2>Project Presentation Video<span class="l"></span></h2>
-<figure>
+<figure id="video">
   <video controls preload="metadata" playsinline src="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1">
     Your browser does not support the video tag.
   </video>
-  <figcaption><a href="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1">Open the video directly &rarr;</a></figcaption>
+  <figcaption>Includes a live walkthrough of both Tableau dashboards &middot; <a href="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1">Open the video directly &rarr;</a></figcaption>
 </figure>
 
 <h2>Tools &amp; Technologies<span class="l"></span></h2>
@@ -237,6 +239,12 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
   <li>Bar charts comparing channel effectiveness by age, country, and marital status.</li>
   <li>Interactive filters for exploring specific customer segments.</li>
 </ul>
+<blockquote class="note">
+  <span class="label">Seeing the dashboards</span>
+  <p>Both dashboards are demonstrated in the <a href="#video">project presentation video</a>
+  above &mdash; a live walkthrough showing the filters being used and the findings appearing
+  as the selections change, rather than a static screenshot.</p>
+</blockquote>
 
 <h2>Key Insights<span class="l"></span></h2>
 <h3>Customer Demography</h3>
