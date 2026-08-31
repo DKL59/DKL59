@@ -36,8 +36,25 @@ h1,h2,h3,h4 { font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-seri
   { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; }
 a { color:var(--accent-text); text-decoration-thickness:1px; text-underline-offset:3px; }
 a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
-.wrap { max-width:820px; margin:0 auto; padding:0 28px; }
-.wide { max-width:1060px; margin:0 auto; padding:0 28px; }
+.wrap { max-width:1160px; margin:0 auto; padding:0 28px; }
+
+/* main body: sticky contents rail + content column */
+.layout { display:grid; grid-template-columns:216px 1fr; gap:56px; align-items:start; }
+.toc { position:sticky; top:78px; }
+.toc-t { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted); padding-bottom:9px;
+  border-bottom:1px solid var(--rule); }
+.toc a { display:block; font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--muted); text-decoration:none; padding:7px 0 7px 11px;
+  border-left:1px solid var(--rule); line-height:1.35; }
+.toc a:hover { color:var(--ink); border-left-color:var(--rule-strong); }
+.toc a.on { color:var(--accent-text); border-left:2px solid var(--accent); padding-left:10px; }
+.col { min-width:0; }
+
+/* figure beside the bullets it belongs to */
+.pair { display:grid; grid-template-columns:1.05fr .95fr; gap:32px; align-items:start; }
+.pair figure { margin-top:18px; }
+.pair ul { margin-top:18px; }
 
 /* nav */
 .nav { position:sticky; top:0; z-index:40; border-bottom:1px solid var(--rule);
@@ -75,9 +92,9 @@ h2 { font-size:14px; font-weight:600; letter-spacing:.01em;
 h2 .l { flex:1; height:1px; background:var(--rule); }
 h3 { font-size:20px; font-weight:600; margin:30px 0 0; }
 h4 { font-size:15px; font-weight:600; margin:22px 0 0; color:var(--ink); }
-p { margin:14px 0 0; max-width:66ch; color:var(--ink-2); }
+p { margin:14px 0 0; max-width:70ch; color:var(--ink-2); }
 p strong, li strong, td strong { color:var(--ink); font-weight:600; }
-ul { margin:14px 0 0; padding:0; list-style:none; max-width:66ch; }
+ul { margin:14px 0 0; padding:0; list-style:none; max-width:70ch; }
 li { position:relative; padding:9px 0 9px 20px; border-top:1px solid var(--rule);
   color:var(--ink-2); font-size:16px; }
 li:last-child { border-bottom:1px solid var(--rule); }
@@ -86,7 +103,7 @@ li::before { content:""; position:absolute; left:0; top:18px; width:7px; height:
 code { font-family:"IBM Plex Mono",monospace; font-size:.88em; background:var(--surface);
   border:1px solid var(--rule); border-radius:3px; padding:1px 5px; }
 
-blockquote { margin:20px 0 0; padding:16px 20px; background:var(--surface);
+blockquote { margin:20px 0 0; max-width:76ch; padding:18px 22px; background:var(--surface);
   border-left:2px solid var(--accent); border-radius:0 3px 3px 0; }
 blockquote p { margin:0; color:var(--ink); font-size:18px; }
 blockquote p + p { margin-top:10px; font-size:16px; color:var(--ink-2); }
@@ -129,6 +146,11 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
   font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted); }
 .foot-in { max-width:1060px; margin:0 auto; padding:0 28px; display:flex; gap:18px; flex-wrap:wrap; }
 .foot-in span { margin-right:auto; }
+@media (max-width:1000px) {
+  .layout { grid-template-columns:1fr; gap:0; }
+  .toc { display:none; }
+  .pair { grid-template-columns:1fr; gap:0; }
+}
 @media (max-width:760px) { .nav-l { display:none; } h2 { padding-top:36px; } }
 </style>
 <nav class="nav"><div class="nav-in">
@@ -143,7 +165,9 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
   <div class="meta"><span>r = 0.67 spending score</span><span>five customer clusters</span><span>+0.22 mean polarity</span></div>
   <div class="mast-links"><a class="lnk" href="https://nbviewer.org/github/DKL59/Dipendra-Limbu/blob/main/LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb">Open the Jupyter Notebook &rarr;</a><a class="lnk" href="LSE_DA301_Assignment_R_Limbu_Dipendra.R">Open the R Script &rarr;</a></div>
 </div></header>
-<main><div class="wrap">
+<main><div class="wrap"><div class="layout">
+  <aside class="toc"><div class="toc-t">On this page</div><nav id="toc"></nav></aside>
+  <div class="col">
 
 <h2>Overview<span class="l"></span></h2>
 <p>This project was completed as part of the <strong>Data Analytics Career Accelerator</strong> from <strong>The London School of Economics and Political Science (LSE)</strong> in collaboration with FourthRev.</p>
@@ -208,12 +232,14 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 <figure><img src="pic2.png" alt="Distribution Analysis" loading="lazy"><figcaption>Distribution Analysis</figcaption></figure>
 
 <h2>Correlation Findings<span class="l"></span></h2>
+<div class="pair">
 <figure><img src="pic4.png" alt="Correlation Findings" loading="lazy"><figcaption>Correlation Findings</figcaption></figure>
 <ul>
   <li><strong>Remuneration &harr; Loyalty Points:</strong> Moderate positive correlation (<strong>r = 0.62</strong>)</li>
   <li><strong>Spending Score &harr; Loyalty Points:</strong> Stronger positive correlation (<strong>r = 0.67</strong>)</li>
   <li>Indicates that higher spenders and earners accumulate more loyalty points.</li>
 </ul>
+</div>
 
 <h2>Customer Segmentation Insights<span class="l"></span></h2>
 <h3>Loyalty Points by Remuneration Group</h3>
@@ -259,7 +285,8 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 <h2>Summary<span class="l"></span></h2>
 <p>This project demonstrates how data analytics can uncover key customer trends that drive actionable sales strategies.<br>Through correlation, segmentation, and sentiment analysis, the study provides <strong>evidence-based recommendations</strong> for improving Turtle Games' sales and loyalty performance.</p>
 
-</div></main><section class="next" id="connect">
+  </div>
+</div></div></main><section class="next" id="connect">
   <div class="next-in">
     <p class="who"><strong>Dipendra Limbu</strong> | Nepal | Data Analyst | Business Intelligence | dklimbuz@hotmail.com</p>
     <a class="btn" href="index.html">All projects</a>
@@ -282,6 +309,26 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
     root.setAttribute("data-theme", n);
     try { localStorage.setItem("dl-theme", n); } catch (e) {}
   });
+})();
+/* Contents rail, built from the h2s already on the page. */
+(function () {
+  var nav = document.getElementById("toc");
+  var hs = [].slice.call(document.querySelectorAll("main h2"));
+  hs.forEach(function (h, i) {
+    var id = "s" + i; h.id = id;
+    var a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent.trim();
+    nav.appendChild(a);
+  });
+  var links = [].slice.call(nav.children);
+  function mark() {
+    var best = 0;
+    hs.forEach(function (h, i) { if (h.getBoundingClientRect().top < 140) best = i; });
+    links.forEach(function (a, i) { a.classList.toggle("on", i === best); });
+  }
+  mark();
+  addEventListener("scroll", mark, { passive: true });
 })();
 /* If an image cannot load (preview sandbox blocks the site's own host),
    show its filename rather than a broken icon. */
