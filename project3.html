@@ -1,0 +1,291 @@
+<title>Education Analytics StudyGroup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground:#F7F8F7; --surface:#FFFFFF; --ink:#141A19; --ink-2:#3A4644;
+  --muted:#5C6866; --rule:#DFE4E1; --rule-strong:#C3CCC8;
+  --accent:#0F9B86; --accent-text:#0A6B5C; --accent-wash:#E4F1ED;
+  --data-2:#BE851C; --data-flat:#B9C3C0;
+  --shadow:0 1px 2px rgba(20,26,25,.05), 0 10px 28px rgba(20,26,25,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0E1211; --surface:#161B1A; --ink:#E9EEEC; --ink-2:#C2CBC8;
+    --muted:#97A3A0; --rule:#262E2C; --rule-strong:#37413E;
+    --accent:#2FAA93; --accent-text:#58C6B0; --accent-wash:#14302B;
+    --data-2:#B0821F; --data-flat:#414B48;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0E1211; --surface:#161B1A; --ink:#E9EEEC; --ink-2:#C2CBC8;
+  --muted:#97A3A0; --rule:#262E2C; --rule-strong:#37413E;
+  --accent:#2FAA93; --accent-text:#58C6B0; --accent-wash:#14302B;
+  --data-2:#B0821F; --data-flat:#414B48;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif; font-size:17px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; }
+h1,h2,h3,h4 { font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  margin:0; text-wrap:balance; letter-spacing:-.015em; }
+.mono,.label,.eyebrow,.tag,.nav-l,.lnk,.btn,th,td,figcaption,.meta,.crumb
+  { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; }
+a { color:var(--accent-text); text-decoration-thickness:1px; text-underline-offset:3px; }
+a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+.wrap { max-width:820px; margin:0 auto; padding:0 28px; }
+.wide { max-width:1060px; margin:0 auto; padding:0 28px; }
+
+/* nav */
+.nav { position:sticky; top:0; z-index:40; border-bottom:1px solid var(--rule);
+  background:color-mix(in srgb,var(--ground) 88%,transparent); backdrop-filter:blur(8px); }
+.nav-in { max-width:1060px; margin:0 auto; padding:0 28px; height:54px;
+  display:flex; align-items:center; gap:24px; }
+.nav-name { font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+  font-size:15px; margin-right:auto; text-decoration:none; color:var(--ink); }
+.nav-l { font-size:12px; color:var(--muted); text-decoration:none; }
+.nav-l:hover { color:var(--ink); }
+.theme-btn { font-family:"IBM Plex Mono",monospace; font-size:11px; background:transparent;
+  border:1px solid var(--rule-strong); color:var(--muted); padding:4px 9px;
+  border-radius:3px; cursor:pointer; }
+.theme-btn:hover { color:var(--ink); border-color:var(--ink); }
+
+/* masthead */
+.mast { padding:56px 0 34px; border-bottom:1px solid var(--rule); }
+.crumb { font-size:12px; color:var(--muted); text-decoration:none; }
+.crumb:hover { color:var(--ink); }
+.kick { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--accent-text);
+  margin:22px 0 8px; }
+.mast h1 { font-size:clamp(30px,4.6vw,46px); font-weight:600; line-height:1.1; max-width:20ch; }
+.meta { margin-top:24px; display:flex; flex-wrap:wrap; gap:8px 22px;
+  font-size:12.5px; color:var(--muted); }
+.mast-links { margin-top:24px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+.lnk { font-size:13px; }
+.btn { font-size:13px; text-decoration:none; background:var(--ink); color:var(--ground);
+  padding:10px 18px; border-radius:3px; }
+.btn:hover { background:var(--accent-text); color:#fff; }
+
+/* body */
+main { padding:6px 0 20px; }
+h2 { font-size:14px; font-weight:600; letter-spacing:.01em;
+  padding-top:46px; margin-bottom:2px; display:flex; align-items:baseline; gap:14px; }
+h2 .l { flex:1; height:1px; background:var(--rule); }
+h3 { font-size:20px; font-weight:600; margin:30px 0 0; }
+h4 { font-size:15px; font-weight:600; margin:22px 0 0; color:var(--ink); }
+p { margin:14px 0 0; max-width:66ch; color:var(--ink-2); }
+p strong, li strong, td strong { color:var(--ink); font-weight:600; }
+ul { margin:14px 0 0; padding:0; list-style:none; max-width:66ch; }
+li { position:relative; padding:9px 0 9px 20px; border-top:1px solid var(--rule);
+  color:var(--ink-2); font-size:16px; }
+li:last-child { border-bottom:1px solid var(--rule); }
+li::before { content:""; position:absolute; left:0; top:18px; width:7px; height:1px;
+  background:var(--accent); }
+code { font-family:"IBM Plex Mono",monospace; font-size:.88em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:3px; padding:1px 5px; }
+
+blockquote { margin:20px 0 0; padding:16px 20px; background:var(--surface);
+  border-left:2px solid var(--accent); border-radius:0 3px 3px 0; }
+blockquote p { margin:0; color:var(--ink); font-size:18px; }
+blockquote p + p { margin-top:10px; font-size:16px; color:var(--ink-2); }
+blockquote .label { display:block; font-size:10.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
+
+.tbl-scroll { overflow-x:auto; margin-top:18px; }
+table { border-collapse:collapse; width:100%; font-size:13.5px; }
+th,td { text-align:left; padding:10px 14px; border-bottom:1px solid var(--rule);
+  vertical-align:top; }
+th { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; border-bottom:1px solid var(--rule-strong); }
+td { color:var(--ink-2); }
+tbody tr:hover td { background:var(--surface); }
+.flow th { white-space:nowrap; }
+
+figure { margin:26px 0 0; background:var(--surface); border:1px solid var(--rule);
+  border-radius:4px; padding:16px; box-shadow:var(--shadow); }
+figure img { display:block; width:100%; height:auto; border-radius:3px; }
+figure video { display:block; width:100%; border-radius:3px; background:var(--ground); }
+figcaption { margin-top:11px; padding-top:9px; border-top:1px solid var(--rule);
+  font-size:11px; color:var(--muted); }
+.imgfail { border:1px dashed var(--rule-strong); border-radius:3px; padding:34px 18px;
+  text-align:center; font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--muted); background:var(--ground); }
+
+.pill { display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+  border-radius:3px; padding:2px 8px; }
+.pill.yes { color:var(--accent-text); background:var(--accent-wash); }
+.pill.no  { color:var(--data-2); border:1px solid var(--data-2); }
+.chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:16px; }
+.tag { font-size:11.5px; color:var(--muted); border:1px solid var(--rule-strong);
+  border-radius:3px; padding:4px 9px; }
+
+.next { border-top:1px solid var(--rule-strong); background:var(--surface); margin-top:56px; }
+.next-in { max-width:1060px; margin:0 auto; padding:40px 28px;
+  display:flex; gap:20px; flex-wrap:wrap; align-items:center; }
+.next-in .who { margin-right:auto; font-size:15px; color:var(--ink-2); max-width:44ch; }
+footer { border-top:1px solid var(--rule); padding:22px 0 42px;
+  font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted); }
+.foot-in { max-width:1060px; margin:0 auto; padding:0 28px; display:flex; gap:18px; flex-wrap:wrap; }
+.foot-in span { margin-right:auto; }
+@media (max-width:760px) { .nav-l { display:none; } h2 { padding-top:36px; } }
+</style>
+<nav class="nav"><div class="nav-in">
+  <a class="nav-name" href="index.html">Dipendra Limbu</a>
+  <a class="nav-l" href="index.html">All projects</a>
+  <a class="nav-l" href="#connect">Connect</a>
+  <button class="theme-btn" id="tbtn" type="button">theme</button>
+</div></nav><header class="mast"><div class="wrap">
+  <a class="crumb" href="index.html">&larr; All projects</a>
+  <div class="kick">03 &middot; Education Analytics</div>
+  <h1>Scholarship Impact Analysis (StudyGroup)</h1>
+  <div class="meta"><span>70.5% vs 6.2%</span><span>Chi-Square Test of Independence</span><span>OLS regression</span></div>
+  <div class="mast-links"><a class="lnk" href="https://nbviewer.org/github/DKL59/Dipendra-Limbu/blob/main/EDASTUDYGROUP.ipynb">Open the Jupyter Notebook &rarr;</a></div>
+</div></header>
+<main><div class="wrap">
+
+<h2>Project Overview<span class="l"></span></h2>
+<p>A data analytics case study investigating the impact of scholarship discounts on student enrolment using exploratory data analysis (EDA), statistical hypothesis testing, regression analysis, and data visualisation.</p>
+<div class="chips">
+  <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+  <span class="tag">SciPy</span><span class="tag">Statsmodels</span><span class="tag">Matplotlib</span>
+  <span class="tag">Seaborn</span><span class="tag">Excel</span>
+</div>
+
+<h2>Executive Summary<span class="l"></span></h2>
+<p>Scholarship programmes represent a significant financial investment for educational institutions, yet their effectiveness is rarely evaluated using data.</p>
+<p>This project analyses historical student application data from <strong>StudyGroup</strong> to determine whether scholarship discounts influence student enrolment and academic progression.</p>
+<p>Using <strong>Python</strong> and <strong>statistical hypothesis testing</strong>, the analysis identifies the true impact of scholarship incentives and provides evidence-based recommendations for optimising future scholarship allocation.</p>
+
+<h2>Business Objectives<span class="l"></span></h2>
+<ul>
+  <li>Evaluate the impact of scholarship discounts on student enrolment.</li>
+  <li>Determine whether discounts influence student progression.</li>
+  <li>Analyse scholarship allocation across regions.</li>
+  <li>Identify opportunities to improve scholarship investment.</li>
+</ul>
+
+<h2>Technology Stack<span class="l"></span></h2>
+<div class="tbl-scroll"><table>
+<thead><tr><th>Category</th><th>Tools</th></tr></thead>
+<tbody>
+<tr><td><strong>Programming</strong></td><td>Python</td></tr>
+<tr><td><strong>Libraries</strong></td><td>pandas, numpy, matplotlib, seaborn, scipy, statsmodels</td></tr>
+<tr><td><strong>Visualisation</strong></td><td>matplotlib, seaborn</td></tr>
+<tr><td><strong>Data Cleaning</strong></td><td>Excel</td></tr>
+<tr><td><strong>Environment</strong></td><td>Jupyter Notebook</td></tr>
+</tbody></table></div>
+
+<h2>Project Workflow<span class="l"></span></h2>
+<div class="tbl-scroll"><table class="flow">
+<thead><tr><th>Collect</th><th>Clean</th><th>Analyse</th><th>Visualise</th><th>Validate</th><th>Recommend</th></tr></thead>
+<tbody><tr>
+<td>Raw Dataset</td><td>Data Wrangling</td><td>Exploratory Data Analysis</td>
+<td>Charts &amp; Dashboards</td><td>Chi-Square Test</td><td>Business Recommendations</td>
+</tr></tbody></table></div>
+
+<h2>Statistical Validation<span class="l"></span></h2>
+<p>Rather than relying solely on descriptive analytics, this project applies a <strong>Chi-Square Test of Independence</strong> to determine whether scholarship discounts have a statistically significant relationship with student enrolment and progression.</p>
+<figure><img src="pic12.png" alt="Chi-Square Test Results" loading="lazy"><figcaption>Chi-Square Test Results</figcaption></figure>
+<h3>Results</h3>
+<div class="tbl-scroll"><table>
+<thead><tr><th>Hypothesis</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>Scholarship discounts increase student enrolment</td><td><span class="pill yes">Supported</span></td></tr>
+<tr><td>Scholarship discounts improve academic progression</td><td><span class="pill no">Not Supported</span></td></tr>
+</tbody></table></div>
+<blockquote>
+  <span class="label">Key Finding</span>
+  <p>Scholarship discounts significantly influence <strong>student enrolment</strong>, but they do <strong>not</strong> have a statistically significant effect on student progression.</p>
+</blockquote>
+
+<h2>Results &amp; Insights<span class="l"></span></h2>
+<h3>1. Scholarships Increase Student Enrolment</h3>
+<p>Students receiving a scholarship discount were <strong>over 11&times; more likely to enrol</strong> than students who received an offer without financial support.</p>
+<figure><img src="pic9.png" alt="Discount vs No Discount Conversion" loading="lazy"><figcaption>Discount vs No Discount Conversion</figcaption></figure>
+<div class="tbl-scroll"><table>
+<thead><tr><th>Offer &rarr; Enrolment</th><th>With Discount</th><th>Without Discount</th></tr></thead>
+<tbody><tr><td><strong>9.99%</strong></td><td><strong>70.5%</strong></td><td><strong>6.2%</strong></td></tr></tbody>
+</table></div>
+
+<h3>2. Regional Analysis</h3>
+<figure><img src="pic11.png" alt="Regional Analysis" loading="lazy"><figcaption>Regional Analysis</figcaption></figure>
+<h4>Key Insights</h4>
+<ul>
+  <li>North Asia achieved the strongest enrolment performance.</li>
+  <li>South East Asia also demonstrated consistently high conversion.</li>
+  <li>Pakistan, India and Nigeria showed comparatively low enrolment despite scholarship investment.</li>
+  <li>Scholarship effectiveness varies considerably between regions.</li>
+</ul>
+<h4>Recommendation</h4>
+<p>Adopt region-specific scholarship strategies rather than a uniform global allocation model.</p>
+
+<h3>3. Area-Level Analysis</h3>
+<figure><img src="pic10.png" alt="Area-Level Analysis" loading="lazy"><figcaption>Area-Level Analysis</figcaption></figure>
+<h4>Key Insights</h4>
+<ul>
+  <li>China achieved strong enrolment despite relatively low discounts.</li>
+  <li>ANZ &amp; East Asia combined high discounts with strong enrolment outcomes.</li>
+  <li>UK &amp; Americas and South Asia underperformed relative to scholarship investment.</li>
+</ul>
+<p>The results indicate that scholarship decisions should be informed by historical conversion rates and regional performance, enabling resources to be directed towards markets where scholarships have demonstrated the greatest impact on enrolment.</p>
+
+<h2>Business Recommendations<span class="l"></span></h2>
+<ul>
+  <li>Optimise scholarship allocation based on historical enrolment conversion rates.</li>
+  <li>Prioritise scholarship investment in regions with consistently high conversion performance.</li>
+  <li>Review scholarship strategies in low-performing regions to improve return on investment.</li>
+  <li>Consider additional factors influencing enrolment, such as programme demand, tuition fees and market conditions, alongside scholarship incentives.</li>
+</ul>
+
+<h2>Competencies Demonstrated<span class="l"></span></h2>
+<ul>
+  <li>Data Cleaning &amp; Preparation</li>
+  <li>Exploratory Data Analysis (EDA)</li>
+  <li>Data Visualisation</li>
+  <li>Chi-Square Hypothesis Testing</li>
+  <li>OLS Regression Analysis</li>
+  <li>Data-Driven Decision Making</li>
+  <li>Technical Reporting</li>
+</ul>
+
+<h2>Project Impact<span class="l"></span></h2>
+<p>This analysis provides StudyGroup with a data-driven framework for evaluating scholarship effectiveness.</p>
+<p>The findings demonstrate that scholarships are highly effective at improving <strong>student enrolment</strong>, while offering little measurable benefit to <strong>academic progression</strong>. These insights enable more strategic allocation of scholarship funding and support evidence-based decision-making.</p>
+
+</div></main><section class="next" id="connect">
+  <div class="next-in">
+    <p class="who"><strong>Dipendra Limbu</strong> | Nepal | Data Analyst | Business Intelligence | dklimbuz@hotmail.com</p>
+    <a class="btn" href="index.html">All projects</a>
+    <a class="lnk" href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/">LinkedIn &rarr;</a>
+    <a class="lnk" href="https://github.com/DKL59/Dipendra-Limbu">GitHub &rarr;</a>
+  </div>
+</section>
+<footer><div class="foot-in">
+  <span>Dipendra Limbu &middot; Data Analyst | Business Intelligence &middot; Nepal</span>
+  <a href="index.html">Home</a><a href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/">LinkedIn</a><a href="https://github.com/DKL59/Dipendra-Limbu">GitHub</a>
+</div></footer>
+<script>
+(function () {
+  var root = document.documentElement, b = document.getElementById("tbtn");
+  try { var s = localStorage.getItem("dl-theme"); if (s) root.setAttribute("data-theme", s); } catch (e) {}
+  b.addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") === "dark" ||
+      (!root.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+    var n = dark ? "light" : "dark";
+    root.setAttribute("data-theme", n);
+    try { localStorage.setItem("dl-theme", n); } catch (e) {}
+  });
+})();
+/* If an image cannot load (preview sandbox blocks the site's own host),
+   show its filename rather than a broken icon. */
+document.querySelectorAll("figure img").forEach(function (im) {
+  im.addEventListener("error", function () {
+    var d = document.createElement("div");
+    d.className = "imgfail";
+    d.textContent = im.getAttribute("src").split("/").pop() + " — loads on the live site";
+    im.replaceWith(d);
+  });
+});
+</script>

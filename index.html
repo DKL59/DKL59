@@ -1,0 +1,589 @@
+<title>Dipendra Limbu Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+/* ============================================================== TOKENS
+   Light palette on bare :root so the un-stamped (system) state resolves.
+   Dark redefines TOKENS ONLY — once behind prefers-color-scheme, guarded
+   so an explicit light choice wins, and once behind the dark stamp. */
+:root {
+  --ground:      #F7F8F7;
+  --surface:     #FFFFFF;
+  --ink:         #141A19;
+  --ink-2:       #3A4644;
+  --muted:       #5C6866;
+  --rule:        #DFE4E1;
+  --rule-strong: #C3CCC8;
+  --accent:      #0F9B86;   /* validated light: all six colour checks PASS */
+  --accent-text: #0A6B5C;
+  --accent-wash: #E4F1ED;
+  --data-2:      #BE851C;   /* validated pair partner */
+  --data-flat:   #B9C3C0;
+  --shadow:      0 1px 2px rgba(20,26,25,.05), 0 10px 28px rgba(20,26,25,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #0E1211;
+    --surface:     #161B1A;
+    --ink:         #E9EEEC;
+    --ink-2:       #C2CBC8;
+    --muted:       #97A3A0;
+    --rule:        #262E2C;
+    --rule-strong: #37413E;
+    --accent:      #2FAA93;  /* validated dark: all six colour checks PASS */
+    --accent-text: #58C6B0;
+    --accent-wash: #14302B;
+    --data-2:      #B0821F;
+    --data-flat:   #414B48;
+    --shadow:      0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:      #0E1211;
+  --surface:     #161B1A;
+  --ink:         #E9EEEC;
+  --ink-2:       #C2CBC8;
+  --muted:       #97A3A0;
+  --rule:        #262E2C;
+  --rule-strong: #37413E;
+  --accent:      #2FAA93;
+  --accent-text: #58C6B0;
+  --accent-wash: #14302B;
+  --data-2:      #B0821F;
+  --data-flat:   #414B48;
+  --shadow:      0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+}
+
+/* ============================================================== BASE */
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 17px; line-height: 1.62; -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  margin: 0; text-wrap: balance; letter-spacing: -.015em;
+}
+.mono, .tag, .eyebrow, .label { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+.mono, .stat-n, .val-t { font-variant-numeric: tabular-nums; }
+a { color: var(--accent-text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 28px; }
+.eyebrow { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+/* ============================================================== NAV */
+.nav { position: sticky; top: 0; z-index: 40; border-bottom: 1px solid var(--rule);
+       background: color-mix(in srgb, var(--ground) 88%, transparent); backdrop-filter: blur(8px); }
+.nav-in { max-width: 1060px; margin: 0 auto; padding: 0 28px; height: 54px;
+          display: flex; align-items: center; gap: 24px; }
+.nav-name { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; font-size: 15px; margin-right: auto; }
+.nav-l { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); text-decoration: none; }
+.nav-l:hover { color: var(--ink); }
+.theme-btn { font-family: "IBM Plex Mono", monospace; font-size: 11px; background: transparent;
+             border: 1px solid var(--rule-strong); color: var(--muted); padding: 4px 9px;
+             border-radius: 3px; cursor: pointer; }
+.theme-btn:hover { color: var(--ink); border-color: var(--ink); }
+
+/* ============================================================== HERO */
+.hero { padding: 80px 0 44px; }
+.hero h1 { font-size: clamp(33px, 5.2vw, 55px); font-weight: 600; line-height: 1.07; max-width: 18ch; }
+.hero h1 em { font-style: normal; color: var(--accent-text); }
+.role { margin: 26px 0 0; font-family: "IBM Plex Mono", monospace; font-size: 14px; color: var(--ink-2); }
+.facts { margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 6px 20px;
+         font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--muted); }
+.hero-links { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.btn { font-family: "IBM Plex Mono", monospace; font-size: 13px; text-decoration: none;
+       background: var(--ink); color: var(--ground); padding: 10px 18px; border-radius: 3px; }
+.btn:hover { background: var(--accent-text); color: #fff; }
+.lnk { font-family: "IBM Plex Mono", monospace; font-size: 13px; }
+
+/* ============================================================== STRIP */
+.strip { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--surface); }
+.strip-in { max-width: 1060px; margin: 0 auto; padding: 26px 28px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat-n { font-family: "Bricolage Grotesque", sans-serif; font-size: 26px; font-weight: 600; line-height: 1.1; }
+.stat-l { font-size: 13px; color: var(--muted); margin-top: 5px; line-height: 1.4; }
+
+/* ============================================================== SECTIONS */
+section { padding: 60px 0; }
+.sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px; }
+.sec-head h2 { font-size: 15px; font-weight: 600; }
+.sec-head .line { flex: 1; height: 1px; background: var(--rule); }
+.sec-head .count { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); }
+
+.about { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: start; }
+.about p { margin: 0 0 18px; max-width: 62ch; }
+.about p.lead { font-size: 19px; color: var(--ink); }
+.about p:last-child { margin-bottom: 0; }
+.bring { margin: 0; padding: 0; list-style: none; }
+.bring li { padding: 12px 0 12px 20px; border-top: 1px solid var(--rule); font-size: 15.5px;
+            color: var(--ink-2); position: relative; }
+.bring li:last-child { border-bottom: 1px solid var(--rule); }
+.bring li::before { content: ""; position: absolute; left: 0; top: 21px;
+                    width: 7px; height: 1px; background: var(--accent); }
+.side h4 { font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag { font-size: 11.5px; color: var(--muted); border: 1px solid var(--rule-strong);
+       border-radius: 3px; padding: 4px 9px; }
+.side + .side { margin-top: 30px; }
+
+/* ============================================================== PROJECT */
+.proj { border-top: 1px solid var(--rule-strong); padding: 46px 0; }
+.proj:first-of-type { border-top: none; padding-top: 4px; }
+.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: start; }
+.pnum { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--accent-text); }
+.proj h3 { font-size: 26px; font-weight: 600; line-height: 1.2; margin: 8px 0 0; }
+.proj h3 a { color: inherit; text-decoration: none; }
+.proj h3 a:hover { color: var(--accent-text); }
+.block { margin-top: 20px; }
+.label { display: block; font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase;
+         color: var(--muted); margin-bottom: 5px; }
+.block p { margin: 0; color: var(--ink-2); max-width: 60ch; }
+.block.key { background: var(--surface); border-left: 2px solid var(--accent);
+             padding: 15px 18px; border-radius: 0 3px 3px 0; }
+.block.key p { color: var(--ink); }
+.block.rec { background: var(--surface); border-left: 2px solid var(--data-2);
+             padding: 15px 18px; border-radius: 0 3px 3px 0; }
+.block.rec p { color: var(--ink); }
+.tools { margin-top: 18px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); }
+.proj-links { margin-top: 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.proj-links a[data-todo]::after {
+  content: "url needed"; margin-left: 7px; font-size: 10px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--data-2); border: 1px solid var(--data-2);
+  border-radius: 2px; padding: 1px 5px; vertical-align: 2px; display: inline-block;
+}
+
+/* ============================================================== FIGURE */
+figure { margin: 0; background: var(--surface); border: 1px solid var(--rule);
+         border-radius: 4px; padding: 20px 20px 14px; box-shadow: var(--shadow); }
+figure + figure { margin-top: 20px; }
+.fig-t { font-family: "Bricolage Grotesque", sans-serif; font-size: 14.5px; font-weight: 600; }
+.fig-s { font-size: 13px; color: var(--muted); margin: 2px 0 16px; }
+figcaption { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule);
+             font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); }
+.chart-scroll { overflow-x: auto; }
+figure.vid video { width: 100%; display: block; border-radius: 3px;
+                   background: var(--ground); border: 1px solid var(--rule); }
+figure.vid figcaption { text-align: right; }
+svg { display: block; max-width: 100%; }
+.gridline { stroke: var(--rule); stroke-width: 1; }
+.axis-t { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; fill: var(--muted); }
+.val-t { font-family: "IBM Plex Mono", monospace; font-size: 11px; fill: var(--ink); }
+.bar { transition: opacity .15s ease; }
+.bar:hover { opacity: .82; }
+@media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
+#tip { position: fixed; z-index: 60; pointer-events: none; opacity: 0; background: var(--ink);
+       color: var(--ground); border-radius: 3px; padding: 6px 9px; white-space: nowrap;
+       font-family: "IBM Plex Mono", monospace; font-size: 11.5px; transition: opacity .12s ease; }
+
+/* ============================================================== CONTACT */
+.contact { background: var(--surface); border-top: 1px solid var(--rule-strong); }
+.contact-in { max-width: 1060px; margin: 0 auto; padding: 62px 28px; }
+.contact h2 { font-size: clamp(25px, 3.4vw, 36px); font-weight: 600; max-width: 22ch; }
+.contact p { max-width: 58ch; color: var(--ink-2); margin: 16px 0 26px; }
+footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
+         font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); }
+.foot-in { max-width: 1060px; margin: 0 auto; padding: 0 28px; display: flex; gap: 18px; flex-wrap: wrap; }
+.foot-in span { margin-right: auto; }
+
+/* ============================================================== RESPONSIVE */
+@media (max-width: 900px) {
+  .about, .proj-grid { grid-template-columns: 1fr; gap: 30px; }
+  .strip-in { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .nav-l { display: none; }
+}
+</style>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-name">Dipendra Limbu</span>
+    <a class="nav-l" href="#about">About</a>
+    <a class="nav-l" href="#projects">Projects</a>
+    <a class="nav-l" href="#connect">Connect</a>
+    <button class="theme-btn" id="tbtn" type="button">theme</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Dipendra Limbu</p>
+    <h1>I turn technical findings into <em>decisions people can act on</em>.</h1>
+    <p class="role">Data Analyst | Business Intelligence</p>
+    <div class="facts">
+      <span>Nepal</span><span>Open to Remote Work</span><span>dklimbuz@hotmail.com</span>
+    </div>
+    <div class="facts">
+      <span>BSc &amp; MSc in Strategy, Copenhagen Business School (CBS)</span><span>LSE Data Analytics</span>
+    </div>
+    <div class="hero-links">
+      <a class="btn" href="#projects">Featured Projects</a>
+      <a class="lnk" href="Limbu%20Dipendra%20Resume.pdf">View Resume &rarr;</a>
+      <a class="lnk" href="mailto:dklimbuz@hotmail.com">Email &rarr;</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="strip-in">
+    <div><div class="stat-n">$1.34M</div><div class="stat-l">in sales cleaned, validated and analysed</div></div>
+    <div><div class="stat-n">3.5&times;</div><div class="stat-l">loyalty points, high earners over low</div></div>
+    <div><div class="stat-n">70.5%</div><div class="stat-l">enrolment with a scholarship, against 6.2%</div></div>
+    <div><div class="stat-n">3</div><div class="stat-l">projects, each ending in a recommendation</div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>About Me</h2><span class="line"></span></div>
+    <div class="about">
+      <div>
+        <p class="lead">I turn technical findings into decisions people can act on — starting with what a decision-maker needs to know, confirming the data can actually answer it, and finishing with a recommendation.</p>
+        <p>In recent projects I found that a retailer's largest customer segment wasn't its most valuable one, and that a scholarship programme reliably drove enrolment while having no measurable effect on student progression — the kind of finding that changes where money goes.</p>
+        <p class="eyebrow" style="margin-bottom:10px">What I bring</p>
+        <ul class="bring">
+          <li>A decision-first approach that keeps the choice someone needs to make in view.</li>
+          <li>Python and Excel to clean and prepare data, with working SQL knowledge for querying.</li>
+          <li>Regression, hypothesis testing, and segmentation in Python and R to separate signal from noise.</li>
+          <li>Interactive Tableau dashboards that make findings clear to stakeholders.</li>
+          <li>Comfortable presenting findings and defending the reasoning behind them.</li>
+        </ul>
+        <p style="margin-top:18px">Most interested in work where data shapes future strategy rather than only reporting on the past. Happy to work hours that overlap with teams in Asia, Australia, Africa, Europe, or North America.</p>
+      </div>
+      <div>
+        <div class="side">
+          <h4>Core Skills</h4>
+          <ul class="bring">
+            <li>Data Cleaning &amp; Preparation</li>
+            <li>Exploratory Data Analysis (EDA)</li>
+            <li>Statistical &amp; Sentiment Analysis</li>
+            <li>Visualization &amp; Dashboard Design</li>
+            <li>Data Storytelling for Business Decisions</li>
+          </ul>
+        </div>
+        <div class="side">
+          <h4>Tools &amp; Technologies</h4>
+          <div class="chips">
+            <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Tableau</span>
+            <span class="tag">Excel</span><span class="tag">Jupyter</span><span class="tag">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head"><h2>Featured Projects</h2><span class="line"></span><span class="count">03</span></div>
+
+    <!-- ================================================ 1 · 2Market -->
+    <article class="proj">
+      <div class="pnum">01 &middot; Marketing Analytics</div>
+      <h3><a href="project1.html">Customer &amp; Advertising Analytics (2Market)</a></h3>
+      <div class="proj-grid">
+        <div>
+          <div class="block">
+            <span class="label">Goal</span>
+            <p>Help the marketing team design a campaign by identifying who their customers are, what sells, and which advertising channels convert.</p>
+          </div>
+          <div class="block">
+            <span class="label">Approach</span>
+            <p>Cleaned and validated 2,213 customer records in Excel (repairing malformed date and currency fields, removing implausible ages), loaded to PostgreSQL for channel analysis, and built two interactive Tableau dashboards with demographic filters.</p>
+          </div>
+          <div class="block key">
+            <span class="label">Result</span>
+            <p>Across $1.34M in sales, alcoholic beverages and meat products drove 78% of revenue (50% and 28%). Spain accounts for nearly half of all sales. The key finding: the largest customer group ($30–40k income) is not the most valuable — revenue peaks at $70–80k and declines above it, so customer count and customer value point in different directions. Twitter was the most effective ad channel; brochures the least.</p>
+          </div>
+          <div class="block rec">
+            <span class="label">Recommendation</span>
+            <p>Concentrate spend on Twitter targeting married 50–59-year-olds in Spain, and prioritise the $70–80k income band over both the largest segment and the highest earners.</p>
+          </div>
+          <div class="tools">Tools: Excel · PostgreSQL · Tableau</div>
+          <div class="proj-links">
+            <a class="lnk" href="project1.html">Full write-up &rarr;</a>
+            <a class="lnk" href="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1">Video presentation &rarr;</a>
+          </div>
+        </div>
+        <div>
+          <figure class="vid">
+            <div class="fig-t">Walkthrough</div>
+            <div class="fig-s">The analysis, and a live walkthrough of both Tableau dashboards</div>
+            <video controls preload="metadata" playsinline src="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption><a href="https://github.com/user-attachments/assets/f8a76b7c-b399-49f5-87a5-397e0ebc87e1">Open the video directly &rarr;</a></figcaption>
+          </figure>
+          <figure>
+            <div class="fig-t">Where the $1.34M comes from</div>
+            <div class="fig-s">Share of revenue by product category</div>
+            <div class="chart-scroll"><svg id="c1a" viewBox="0 0 460 156" role="img"
+              aria-label="Alcoholic beverages 50 percent and meat products 28 percent of revenue, all other categories 22 percent."></svg></div>
+            <figcaption>78% of revenue sits in two categories</figcaption>
+          </figure>
+          <figure>
+            <div class="fig-t">Count and value point different ways</div>
+            <div class="fig-s">Largest customer group against the revenue peak</div>
+            <div class="chart-scroll"><svg id="c1b" viewBox="0 0 460 148" role="img"
+              aria-label="The largest customer group is the 30 to 40 thousand income band, while revenue peaks at the 70 to 80 thousand band."></svg></div>
+            <figcaption>the finding the campaign turns on</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================================================ 2 · Turtle Games -->
+    <article class="proj">
+      <div class="pnum">02 &middot; Customer Analytics</div>
+      <h3><a href="project2.html">Customer Trends Analytics (Turtle Games)</a></h3>
+      <div class="proj-grid">
+        <div>
+          <div class="block">
+            <span class="label">Goal</span>
+            <p>Identify the customer trends driving loyalty point accumulation, and gauge sentiment toward the brand, to improve overall sales performance.</p>
+          </div>
+          <div class="block">
+            <span class="label">Approach</span>
+            <p>Correlation analysis across age, remuneration and spending score; distribution testing (skewness/kurtosis) to check normality assumptions; k-means segmentation on remuneration and spending; NLP sentiment analysis on customer summaries and reviews using TextBlob.</p>
+          </div>
+          <div class="block key">
+            <span class="label">Result</span>
+            <p>Spending score (r = 0.67) and remuneration (r = 0.62) were the strongest predictors of loyalty points, while age showed no meaningful relationship. High earners accumulated 3.5× the loyalty points of low earners (2,503 vs 725 on average). Segmentation surfaced five distinct customer clusters, and review sentiment averaged +0.22 polarity — favourable but lukewarm rather than enthusiastic.</p>
+          </div>
+          <div class="block rec">
+            <span class="label">Recommendation</span>
+            <p>Introduce tiered redemption (5–20% discounts) so customers see tangible return on points, converting loyalty accumulation into repeat spend.</p>
+          </div>
+          <div class="tools">Tools: Python · Pandas · NumPy · Matplotlib · Seaborn · TextBlob · NLP</div>
+          <div class="proj-links">
+            <a class="lnk" href="project2.html">Full write-up &rarr;</a>
+            <a class="lnk" href="https://nbviewer.org/github/DKL59/Dipendra-Limbu/blob/main/LSE_DA301_FINAL_Assignment_Python_Limbu_Dipendra_Turtle_games.ipynb">Python notebook &rarr;</a>
+            <a class="lnk" href="https://github.com/DKL59/Dipendra-Limbu/blob/main/LSE_DA301_Assignment_R_Limbu_Dipendra.R">R analysis &rarr;</a>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <div class="fig-t">What predicts loyalty points</div>
+            <div class="fig-s">Correlation with points accumulated</div>
+            <div class="chart-scroll"><svg id="c2a" viewBox="0 0 460 156" role="img"
+              aria-label="Spending score correlates 0.67 with loyalty points, remuneration 0.62, and age shows no meaningful relationship."></svg></div>
+            <figcaption>age was expected to matter, and did not</figcaption>
+          </figure>
+          <figure>
+            <div class="fig-t">Average loyalty points</div>
+            <div class="fig-s">High earners against low earners</div>
+            <div class="chart-scroll"><svg id="c2b" viewBox="0 0 460 168" role="img"
+              aria-label="High earners average 2,503 loyalty points against 725 for low earners, a 3.5 times difference."></svg></div>
+            <figcaption>3.5× — the gap the tiered scheme is built for</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================================================ 3 · Study Group -->
+    <article class="proj">
+      <div class="pnum">03 &middot; Education Analytics</div>
+      <h3><a href="project3.html">Scholarship Impact Analysis (StudyGroup)</a></h3>
+      <div class="proj-grid">
+        <div>
+          <div class="block">
+            <span class="label">Goal</span>
+            <p>Determine whether scholarship discounts actually drive student enrolment and progression, so allocation decisions rest on evidence rather than assumption.</p>
+          </div>
+          <div class="block">
+            <span class="label">Approach</span>
+            <p>EDA on historical application data, Chi-Square tests of independence for enrolment and progression outcomes, OLS regression, and regional/area-level conversion analysis.</p>
+          </div>
+          <div class="block key">
+            <span class="label">Result</span>
+            <p>Students offered a scholarship enrolled at 70.5% versus 6.2% without one — an 11× difference against a 9.99% baseline. But the same testing found no statistically significant effect on academic progression: scholarship money buys enrolment, not student success. Effectiveness also varied sharply by market — China converted strongly on low discounts, while South Asia and UK &amp; Americas underperformed relative to spend.</p>
+          </div>
+          <div class="block rec">
+            <span class="label">Recommendation</span>
+            <p>Allocate scholarships by historical conversion rate per region rather than a uniform global model.</p>
+          </div>
+          <div class="tools">Tools: Python · Pandas · NumPy · SciPy · Statsmodels · Matplotlib · Seaborn · Excel</div>
+          <div class="proj-links">
+            <a class="lnk" href="project3.html">Full write-up &rarr;</a>
+            <a class="lnk" href="https://nbviewer.org/github/DKL59/Dipendra-Limbu/blob/main/EDASTUDYGROUP.ipynb">Python EDA notebook &rarr;</a>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <div class="fig-t">Enrolment conversion</div>
+            <div class="fig-s">With a scholarship, without, and the overall baseline</div>
+            <div class="chart-scroll"><svg id="c3a" viewBox="0 0 460 176" role="img"
+              aria-label="Conversion is 70.5 percent with a scholarship, 6.2 percent without, against a 9.99 percent baseline."></svg></div>
+            <figcaption>an 11× difference on enrolment</figcaption>
+          </figure>
+          <figure>
+            <div class="fig-t">And on progression</div>
+            <div class="fig-s">The second question, asked separately</div>
+            <div class="chart-scroll"><svg id="c3b" viewBox="0 0 460 96" role="img"
+              aria-label="Chi-square testing found no statistically significant effect of scholarships on academic progression."></svg></div>
+            <figcaption>no statistically significant effect</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="contact" id="connect">
+  <div class="contact-in">
+    <p class="eyebrow">Connect With Me</p>
+    <h2>Open to Remote Work.</h2>
+    <p>Most interested in work where data shapes future strategy rather than only reporting on the past. Happy to work hours that overlap with teams in Asia, Australia, Africa, Europe, or North America.</p>
+    <div class="hero-links">
+      <a class="btn" href="mailto:dklimbuz@hotmail.com">dklimbuz@hotmail.com</a>
+      <a class="lnk" href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/">LinkedIn &rarr;</a>
+      <a class="lnk" href="https://github.com/DKL59/Dipendra-Limbu">GitHub &rarr;</a>
+      <a class="lnk" href="Limbu%20Dipendra%20Resume.pdf">View Resume &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <span>Dipendra Limbu · Data Analyst | Business Intelligence · Nepal</span>
+    <a href="#projects">Projects</a>
+    <a href="#connect">Connect</a>
+  </div>
+</footer>
+
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script>
+/* ------------------------------------------------------------- theme */
+(function () {
+  var root = document.documentElement, btn = document.getElementById("tbtn");
+  try { var s = localStorage.getItem("dl-theme"); if (s) root.setAttribute("data-theme", s); } catch (e) {}
+  btn.addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") === "dark" ||
+      (!root.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("dl-theme", next); } catch (e) {}
+    draw();
+  });
+})();
+
+/* ------------------------------------------------------------- tooltip */
+var tip = document.getElementById("tip");
+function showTip(e, t) {
+  tip.textContent = t; tip.style.opacity = "1";
+  tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 200) + "px";
+  tip.style.top = (e.clientY - 34) + "px";
+}
+function hideTip() { tip.style.opacity = "0"; }
+function v(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+function el(t, a) {
+  var n = document.createElementNS("http://www.w3.org/2000/svg", t);
+  for (var k in a) n.setAttribute(k, a[k]);
+  return n;
+}
+function hook(node, text) {
+  node.addEventListener("mousemove", function (e) { showTip(e, text); });
+  node.addEventListener("mouseleave", hideTip);
+  node.addEventListener("focus", function () {
+    var b = node.getBoundingClientRect();
+    showTip({ clientX: b.left + b.width / 2, clientY: b.top }, text);
+  });
+  node.addEventListener("blur", hideTip);
+}
+
+/* Horizontal bars: rounded data-end, value label outside, category label left. */
+function barsH(svg, data, o) {
+  svg.textContent = "";
+  var W = o.w, H = o.h, padL = o.padL, padR = o.padR || 60, padT = 8, padB = 8;
+  var plotW = W - padL - padR;
+  var max = o.max || Math.max.apply(null, data.map(function (d) { return d.v; }));
+  var step = (H - padT - padB) / data.length, bh = Math.min(o.bh || 22, step - 10);
+
+  data.forEach(function (d, i) {
+    var w = Math.max((d.v / max) * plotW, d.v > 0 ? 3 : 0);
+    var y = padT + i * step + (step - bh) / 2;
+    var fill = d.flat ? v("--data-flat") : v(d.alt ? "--data-2" : "--accent");
+    var r = el("rect", { x: padL, y: y, width: w, height: bh, rx: 3, fill: fill,
+                         class: "bar", tabindex: "0", role: "img",
+                         "aria-label": d.k + ": " + d.t });
+    hook(r, d.k + " · " + d.t);
+    svg.appendChild(r);
+    var kt = el("text", { x: padL - 12, y: y + bh / 2 + 3.5, class: "axis-t", "text-anchor": "end" });
+    kt.textContent = d.k; svg.appendChild(kt);
+    var vt = el("text", { x: padL + w + 9, y: y + bh / 2 + 3.5, class: "val-t" });
+    vt.textContent = d.t; svg.appendChild(vt);
+  });
+}
+
+/* Vertical bars for a small comparison set. */
+function barsV(svg, data, o) {
+  svg.textContent = "";
+  var W = o.w, H = o.h, padL = 40, padR = 10, padT = 22, padB = 34;
+  var plotW = W - padL - padR, plotH = H - padT - padB;
+  var max = o.max, step = plotW / data.length, bw = Math.min(o.bw || 70, step - 16);
+
+  (o.ticks || []).forEach(function (t) {
+    var y = padT + plotH - (t / max) * plotH;
+    svg.appendChild(el("line", { x1: padL, x2: W - padR, y1: y, y2: y, class: "gridline" }));
+    var lb = el("text", { x: padL - 8, y: y + 3.5, class: "axis-t", "text-anchor": "end" });
+    lb.textContent = o.fmtTick(t); svg.appendChild(lb);
+  });
+
+  data.forEach(function (d, i) {
+    var h = Math.max((d.v / max) * plotH, 3);
+    var x = padL + i * step + (step - bw) / 2, y = padT + plotH - h;
+    var fill = d.flat ? v("--data-flat") : v(d.alt ? "--data-2" : "--accent");
+    var r = el("rect", { x: x, y: y, width: bw, height: h, rx: 3, fill: fill,
+                         class: "bar", tabindex: "0", role: "img",
+                         "aria-label": d.k + ": " + d.t });
+    hook(r, d.k + " · " + d.t);
+    svg.appendChild(r);
+    var vt = el("text", { x: x + bw / 2, y: y - 7, class: "val-t", "text-anchor": "middle" });
+    vt.textContent = d.t; svg.appendChild(vt);
+    var kt = el("text", { x: x + bw / 2, y: H - 12, class: "axis-t", "text-anchor": "middle" });
+    kt.textContent = d.k; svg.appendChild(kt);
+  });
+}
+
+/* Every figure below is a number stated in the project text above it. */
+function draw() {
+  barsH(document.getElementById("c1a"), [
+    { k: "Alcoholic beverages", v: 50, t: "50%" },
+    { k: "Meat products",       v: 28, t: "28%" },
+    { k: "All other",           v: 22, t: "22%", flat: true }
+  ], { w: 460, h: 156, padL: 148, max: 55 });
+
+  barsH(document.getElementById("c1b"), [
+    { k: "Largest group",  v: 1, t: "$30–40k", flat: true },
+    { k: "Revenue peak",   v: 1, t: "$70–80k" }
+  ], { w: 460, h: 148, padL: 148, max: 1, padR: 100, bh: 26 });
+
+  barsH(document.getElementById("c2a"), [
+    { k: "Spending score", v: 0.67, t: "r = 0.67" },
+    { k: "Remuneration",   v: 0.62, t: "r = 0.62" },
+    { k: "Age",            v: 0.02, t: "no meaningful relationship", flat: true }
+  ], { w: 460, h: 156, padL: 128, max: 0.75, padR: 190 });
+
+  barsV(document.getElementById("c2b"), [
+    { k: "High earners", v: 2503, t: "2,503" },
+    { k: "Low earners",  v: 725,  t: "725", flat: true }
+  ], { w: 460, h: 168, max: 2800, ticks: [0, 1400, 2800],
+       fmtTick: function (n) { return n.toLocaleString(); }, bw: 96 });
+
+  barsV(document.getElementById("c3a"), [
+    { k: "Scholarship",    v: 70.5, t: "70.5%" },
+    { k: "No scholarship", v: 6.2,  t: "6.2%", flat: true },
+    { k: "Baseline",       v: 9.99, t: "9.99%", alt: true }
+  ], { w: 460, h: 176, max: 80, ticks: [0, 40, 80],
+       fmtTick: function (n) { return n + "%"; }, bw: 74 });
+
+  barsH(document.getElementById("c3b"), [
+    { k: "Progression", v: 0.04, t: "no statistically significant effect", flat: true }
+  ], { w: 460, h: 96, padL: 108, max: 1, padR: 40, bh: 22 });
+}
+draw();
+window.addEventListener("resize", hideTip);
+</script>
