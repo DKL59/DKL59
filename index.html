@@ -187,6 +187,25 @@ svg { display: block; max-width: 100%; }
 .bar { transition: opacity .15s ease; }
 .bar:hover { opacity: .82; }
 @media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
+/* Click-to-load player: a thumbnail until asked, so the page stays light
+   and nothing reaches YouTube unless the visitor chooses to watch. */
+figure.vid .ytlite { display: block; position: relative; width: 100%; padding: 0;
+  border: 0; border-radius: 3px; overflow: hidden; cursor: pointer; line-height: 0;
+  background: var(--ink); aspect-ratio: 16 / 9; }
+/* the frame holds 16:9 itself, so a thumbnail that fails to load
+   cannot collapse or stretch the layout */
+figure.vid .ytlite img { position: absolute; inset: 0; display: block;
+  width: 100%; height: 100%; object-fit: cover; transition: opacity .18s ease; }
+figure.vid .ytlite:hover img { opacity: .78; }
+figure.vid .ytplay { position: absolute; inset: 0; margin: auto; width: 62px;
+  height: 44px; border-radius: 9px; background: var(--accent);
+  box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+figure.vid .ytplay::after { content: ""; position: absolute; inset: 0; margin: auto;
+  width: 0; height: 0; border-style: solid; border-width: 9px 0 9px 15px;
+  border-color: transparent transparent transparent #fff; }
+figure.vid iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0;
+  border-radius: 3px; }
+@media (prefers-reduced-motion: reduce) { figure.vid .ytlite img { transition: none; } }
 #tip { position: fixed; z-index: 60; pointer-events: none; opacity: 0; background: var(--ink);
        color: var(--ground); border-radius: 3px; padding: 6px 9px; white-space: nowrap;
        font-family: "IBM Plex Mono", monospace; font-size: 11.5px; transition: opacity .12s ease; }
@@ -226,7 +245,7 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
     <h1>I turn technical findings into <em>decisions people can act on</em>.</h1>
     <p class="role">Data Analyst | Business Intelligence</p>
     <div class="facts">
-      <span>Nepal &middot; UTC+5:45</span><span>Open to remote work worldwide</span><span>dklimbuz@hotmail.com</span>
+      <span>Nepal &middot; UTC+5:45</span><span>Open to remote work</span><span>dklimbuz@hotmail.com</span>
     </div>
     <div class="facts">
       <span>BSc &amp; MSc in Strategy, Copenhagen Business School (CBS)</span><span>LSE Data Analytics</span>
@@ -263,7 +282,7 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
           <li>Interactive Tableau dashboards that make findings clear to stakeholders.</li>
           <li>Comfortable presenting findings and defending the reasoning behind them.</li>
         </ul>
-        <p style="margin-top:18px">Most interested in work where data shapes future strategy rather than only reporting on the past. Available worldwide &mdash; Nepal, UTC+5:45, with Asia-Pacific in my morning, Europe through my afternoon and the US East Coast in my evening.</p>
+        <p style="margin-top:18px">Most interested in work where data shapes future strategy rather than only reporting on the past. Based in Nepal, UTC+5:45 &mdash; Asia-Pacific in my morning, Europe through my afternoon, the US East Coast in my evening.</p>
       </div>
       <div>
         <div class="side">
@@ -474,6 +493,17 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
           </div>
         </div>
         <div>
+          <figure class="vid">
+            <div class="fig-t">Solution video</div>
+            <div class="fig-s">Five minutes &mdash; the problem, one full execution, and the finding</div>
+            <button class="ytlite" type="button" data-yt="qSmXwHcALKY"
+                    aria-label="Play the PRAMAAN solution video">
+              <img src="https://img.youtube.com/vi/qSmXwHcALKY/hqdefault.jpg"
+                   alt="PRAMAAN solution video" loading="lazy">
+              <span class="ytplay" aria-hidden="true"></span>
+            </button>
+            <figcaption><a href="https://youtu.be/qSmXwHcALKY">Watch on YouTube &rarr;</a></figcaption>
+          </figure>
           <figure>
             <div class="fig-t">The metric I watched</div>
             <div class="fig-s">Verdict agreement, out of three cases</div>
@@ -498,7 +528,7 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
   <div class="contact-in">
     <p class="eyebrow">Connect With Me</p>
     <h2>Open to Remote Work.</h2>
-    <p>Most interested in work where data shapes future strategy rather than only reporting on the past. Available worldwide &mdash; Nepal, UTC+5:45, with Asia-Pacific in my morning, Europe through my afternoon and the US East Coast in my evening.</p>
+    <p>Most interested in work where data shapes future strategy rather than only reporting on the past. Based in Nepal, UTC+5:45 &mdash; Asia-Pacific in my morning, Europe through my afternoon, the US East Coast in my evening.</p>
     <div class="hero-links">
       <a class="btn" href="mailto:dklimbuz@hotmail.com">dklimbuz@hotmail.com</a>
       <a class="lnk" href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/">LinkedIn &rarr;</a>
@@ -657,6 +687,19 @@ function draw() {
     { k: "Progression", v: 0.04, t: "no statistically significant effect", flat: true }
   ], { w: 460, h: 96, padL: 108, max: 1, padR: 40, bh: 22 });
 }
+
+/* Swap the thumbnail for the real player only on click. */
+document.querySelectorAll(".ytlite").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube.com/embed/" + b.dataset.yt + "?autoplay=1&rel=0";
+    f.title = "PRAMAAN solution video";
+    f.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture";
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
+
 draw();
 window.addEventListener("resize", hideTip);
 </script>
