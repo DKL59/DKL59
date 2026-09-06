@@ -489,6 +489,7 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
   <p>The model was not learning to cite better. It was learning where the file wraps.</p>
   <p>The instruction asked for &ldquo;the exact line from the source document&rdquo;, and told the model to change nothing else. Once a quote was rejected for not appearing in the file, shortening it to a single line was the only repair those two constraints left open.</p>
 </blockquote>
+<p>Read as a check rather than a defect, this is the baseline test arriving from the other direction. A newline changed the outcome while nothing about the evidence changed &mdash; and a score that moves for reasons unrelated to the thing it claims to measure is not measuring that thing.</p>
 
 <h2 data-toc="6 &middot; Did the ground truth move?">6 &middot; Has my ground truth moved since I started &mdash; and did I record it?<span class="l"></span></h2>
 <p>Yes &mdash; once. Case 1&rsquo;s verdict in <code>CASES.md</code> was revised from <em>partly supported</em> to <em>unsupported</em> &mdash; after both the baseline and Iteration 1 had already run.</p>
@@ -524,6 +525,7 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 <p>Stated here because the project&rsquo;s entire argument is that unchecked claims are the problem.</p>
 <ul>
   <li><strong>Three evaluation cases &middot; one attribution case.</strong> A case study, not statistical power. The free tier allows twenty requests a day, and six runs of three cases is eighteen calls before any correction. The attribution result rests on a single case — the weakest evidence here.</li>
+  <li><strong>The reference is my own judgement.</strong> Verdicts were hand-scored by me and checked against no second reader. Verdict agreement therefore measures agreement with one person, not with an independently established answer.</li>
   <li><strong>Findings are local, the method is what transfers.</strong> One model, one corpus, no repeated runs and no variance estimate. Nothing here supports a general claim about correction loops; it supports a claim about this one, measured this way, with the control that shows it.</li>
   <li><strong>Five defects shipped unfixed.</strong> Found, documented, and left — because tightening a rule on the last day would re-score five completed runs against a contract the agent was never given. The reasoning for each is dated in <code>DECISIONS.md</code>.</li>
   <li><strong>No user has used it.</strong> It ships as an evaluation harness, not a product. The README says so plainly.</li>
@@ -533,7 +535,7 @@ footer { border-top:1px solid var(--rule); padding:22px 0 42px;
 
 <h2>Reproduce it<span class="l"></span></h2>
 <p>Four scripts &middot; no API key &middot; no network:</p>
-<div class="tbl-scroll"><table class="q"><thead><tr><th>Script</th><th>What it reproduces</th></tr></thead><tbody><tr><td><code>check_results.py</code></td><td>timings, tokens, verdicts</td></tr><tr><td><code>validate.py</code></td><td>schema violations per run</td></tr><tr><td><code>test_validate.py</code></td><td>23 tests over the validator</td></tr><tr><td><code>check_divergence.py</code></td><td>the runtime / scorer divergence</td></tr></tbody></table></div><p class="tnote">19 dated decision records · 7 result files, never hand-edited or overwritten · a failed run kept because a failed run is evidence too · full git history in the repository.</p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th>Script</th><th>What it reproduces</th></tr></thead><tbody><tr><td><code>check_results.py</code></td><td>timings, tokens, verdicts</td></tr><tr><td><code>validate.py</code></td><td>schema violations per run</td></tr><tr><td><code>test_validate.py</code></td><td>23 tests over the validator</td></tr><tr><td><code>check_divergence.py</code></td><td>the runtime / scorer divergence</td></tr></tbody></table></div><p class="tnote">19 dated decision records, one carrying a prediction registered before the run · 7 result files, never hand-edited or overwritten · a failed run kept because a failed run is evidence too · full git history in the repository.</p>
 <p><code>REPRODUCE.md</code> walks through it end to end. The baseline and the shipped agent cost 8 API calls and about four and a half minutes on a free-tier Gemini key — which is capped at 20 requests per day, so the guide is written around that limit.</p>
 
 <h2>Hot take<span class="l"></span></h2>
