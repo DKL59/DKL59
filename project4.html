@@ -1,0 +1,625 @@
+<title>PRAMAAN — checking whether I knew what I thought I knew</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground:#F7F8F7; --surface:#FFFFFF; --ink:#141A19; --ink-2:#3A4644;
+  --muted:#5C6866; --rule:#DFE4E1; --rule-strong:#C3CCC8;
+  --accent:#0F9B86; --accent-text:#0A6B5C; --accent-wash:#E4F1ED;
+  --data-2:#BE851C; --data-flat:#B9C3C0;
+  --shadow:0 1px 2px rgba(20,26,25,.05), 0 10px 28px rgba(20,26,25,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0E1211; --surface:#161B1A; --ink:#E9EEEC; --ink-2:#C2CBC8;
+    --muted:#97A3A0; --rule:#262E2C; --rule-strong:#37413E;
+    --accent:#2FAA93; --accent-text:#58C6B0; --accent-wash:#14302B;
+    --data-2:#B0821F; --data-flat:#414B48;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0E1211; --surface:#161B1A; --ink:#E9EEEC; --ink-2:#C2CBC8;
+  --muted:#97A3A0; --rule:#262E2C; --rule-strong:#37413E;
+  --accent:#2FAA93; --accent-text:#58C6B0; --accent-wash:#14302B;
+  --data-2:#B0821F; --data-flat:#414B48;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif; font-size:17px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; }
+h1,h2,h3,h4 { font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  margin:0; text-wrap:balance; letter-spacing:-.015em; }
+.mono,.label,.eyebrow,.tag,.nav-l,.lnk,.btn,th,td,figcaption,.meta,.crumb
+  { font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace; }
+a { color:var(--accent-text); text-decoration-thickness:1px; text-underline-offset:3px; }
+a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+.wrap { max-width:1160px; margin:0 auto; padding:0 28px; }
+
+/* main body: sticky contents rail + content column */
+.layout { display:grid; grid-template-columns:216px 1fr; gap:56px; align-items:start; }
+.toc { position:sticky; top:78px; }
+.toc-t { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted); padding-bottom:9px;
+  border-bottom:1px solid var(--rule); }
+.toc a { display:block; font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--muted); text-decoration:none; padding:7px 0 7px 11px;
+  border-left:1px solid var(--rule); line-height:1.35; }
+.toc a:hover { color:var(--ink); border-left-color:var(--rule-strong); }
+.toc a.on { color:var(--accent-text); border-left:2px solid var(--accent); padding-left:10px; }
+.col { min-width:0; }
+
+/* figure beside the bullets it belongs to */
+.pair { display:grid; grid-template-columns:1.05fr .95fr; gap:32px; align-items:start; }
+.pair figure { margin-top:18px; }
+.pair ul { margin-top:18px; }
+
+/* nav */
+.nav { position:sticky; top:0; z-index:40; border-bottom:1px solid var(--rule);
+  background:color-mix(in srgb,var(--ground) 88%,transparent); backdrop-filter:blur(8px); }
+.nav-in { max-width:1060px; margin:0 auto; padding:0 28px; height:54px;
+  display:flex; align-items:center; gap:24px; }
+.nav-name { font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+  font-size:15px; margin-right:auto; text-decoration:none; color:var(--ink); }
+.nav-l { font-size:12px; color:var(--muted); text-decoration:none; }
+.nav-l:hover { color:var(--ink); }
+.theme-btn { font-family:"IBM Plex Mono",monospace; font-size:11px; background:transparent;
+  border:1px solid var(--rule-strong); color:var(--muted); padding:4px 9px;
+  border-radius:3px; cursor:pointer; }
+.theme-btn:hover { color:var(--ink); border-color:var(--ink); }
+
+/* masthead */
+.mast { padding:56px 0 34px; border-bottom:1px solid var(--rule); }
+.crumb { font-size:12px; color:var(--muted); text-decoration:none; }
+.crumb:hover { color:var(--ink); }
+.kick { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--accent-text);
+  margin:22px 0 8px; }
+.mast h1 { font-size:clamp(30px,4.6vw,46px); font-weight:600; line-height:1.1; max-width:20ch; }
+.meta { margin-top:24px; display:flex; flex-wrap:wrap; gap:8px 22px;
+  font-size:12.5px; color:var(--muted); }
+.mast-links { margin-top:24px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+/* One divider rule for every row where links sit side by side, so two
+   destinations are never read as one sequence. Buttons are already distinct,
+   so the rule applies only between adjacent text links. */
+.proj-links a + a::before,
+.hero-links a.lnk + a.lnk::before,
+.meta span + span::before,
+.mast-links a + a::before,
+.next-in a.lnk + a.lnk::before,
+.foot-in a + a::before {
+  content: ""; display: inline-block; width: 2px; height: 12px;
+  background: var(--accent); border-radius: 1px;
+  margin-right: 14px; vertical-align: -1px;
+}
+.lnk { font-size:13px; }
+.btn { font-size:13px; text-decoration:none; background:var(--ink); color:var(--ground);
+  padding:10px 18px; border-radius:3px; }
+.btn:hover { background:var(--accent-text); color:#fff; }
+
+/* body */
+main { padding:6px 0 20px; }
+h2 { font-size:14px; font-weight:600; letter-spacing:.01em;
+  padding-top:46px; margin-bottom:2px; display:flex; align-items:baseline; gap:14px; }
+h2 .l { flex:1; height:1px; background:var(--rule); }
+h3 { font-size:20px; font-weight:600; margin:30px 0 0; }
+h4 { font-size:15px; font-weight:600; margin:22px 0 0; color:var(--ink); }
+p { margin:14px 0 0; max-width:70ch; color:var(--ink-2); }
+p strong, li strong, td strong { color:var(--ink); font-weight:600; }
+ul { margin:14px 0 0; padding:0; list-style:none; max-width:70ch; }
+li { position:relative; padding:9px 0 9px 20px; border-top:1px solid var(--rule);
+  color:var(--ink-2); font-size:16px; }
+li:last-child { border-bottom:1px solid var(--rule); }
+li::before { content:""; position:absolute; left:0; top:18px; width:7px; height:1px;
+  background:var(--accent); }
+code { font-family:"IBM Plex Mono",monospace; font-size:.88em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:3px; padding:1px 5px; }
+
+blockquote { margin:20px 0 0; max-width:76ch; padding:18px 22px; background:var(--surface);
+  border-left:2px solid var(--accent); border-radius:0 3px 3px 0; }
+blockquote p { margin:0; color:var(--ink); font-size:18px; }
+blockquote p + p { margin-top:10px; font-size:16px; color:var(--ink-2); }
+blockquote.note { border-left-color:var(--data-2); }
+blockquote.note p { font-size:15.5px; color:var(--ink-2); }
+blockquote .label { display:block; font-size:10.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
+
+.tbl-scroll { overflow-x:auto; margin-top:18px; }
+table { border-collapse:collapse; width:100%; font-size:13.5px; }
+th,td { text-align:left; padding:10px 14px; border-bottom:1px solid var(--rule);
+  vertical-align:top; }
+th { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; border-bottom:1px solid var(--rule-strong); }
+td { color:var(--ink-2); }
+tbody tr:hover td { background:var(--surface); }
+.flow th { white-space:nowrap; }
+.tnote { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted);
+  margin-top:10px; max-width:none; }
+td ul { margin:0; max-width:none; }
+td li { border:none; padding:0 0 8px 14px; font-size:13.5px; }
+td li:last-child { border:none; padding-bottom:0; }
+td li::before { top:9px; width:6px; }
+.q td:first-child { font-weight:600; color:var(--ink); width:26%; }
+.cellv { font-family:"IBM Plex Mono",monospace; font-size:12px; fill:var(--ink);
+  font-variant-numeric:tabular-nums; }
+.axis-t { font-family:"IBM Plex Mono",monospace; font-size:11px; fill:var(--muted); }
+.val-t { font-family:"IBM Plex Mono",monospace; font-size:12px; fill:var(--ink);
+  font-variant-numeric:tabular-nums; }
+.gridline { stroke:var(--rule); stroke-width:1; }
+
+figure { margin:26px 0 0; background:var(--surface); border:1px solid var(--rule);
+  border-radius:4px; padding:16px; box-shadow:var(--shadow); }
+figure img { display:block; width:100%; height:auto; border-radius:3px; }
+figure video { display:block; width:100%; border-radius:3px; background:var(--ground); }
+figcaption { margin-top:11px; padding-top:9px; border-top:1px solid var(--rule);
+  font-size:11px; color:var(--muted); }
+/* figure headings and the horizontal escape hatch for wide charts */
+.fig-t { font-family:"Bricolage Grotesque",sans-serif; font-size:14.5px; font-weight:600; }
+.fig-s { font-size:13px; color:var(--muted); margin:2px 0 14px; }
+.chart-scroll { overflow-x:auto; }
+svg { display:block; max-width:100%; }
+
+/* Click-to-load player: a thumbnail until asked, so the page stays light
+   and nothing reaches YouTube unless the visitor chooses to watch. */
+figure.vid figcaption { text-align:right; }
+figure.vid .ytlite { display:block; position:relative; width:100%; padding:0;
+  border:0; border-radius:3px; overflow:hidden; cursor:pointer; line-height:0;
+  background:var(--ink); aspect-ratio:16 / 9; }
+/* the frame holds 16:9 itself, so a thumbnail that fails to load
+   cannot collapse or stretch the layout */
+figure.vid .ytlite img { position:absolute; inset:0; display:block;
+  width:100%; height:100%; object-fit:cover; transition:opacity .18s ease; }
+figure.vid .ytlite:hover img { opacity:.78; }
+figure.vid .ytplay { position:absolute; inset:0; margin:auto; width:62px; height:44px;
+  border-radius:9px; background:var(--accent); box-shadow:0 2px 10px rgba(0,0,0,.35); }
+figure.vid .ytplay::after { content:""; position:absolute; inset:0; margin:auto;
+  width:0; height:0; border-style:solid; border-width:9px 0 9px 15px;
+  border-color:transparent transparent transparent #fff; }
+figure.vid iframe { display:block; width:100%; aspect-ratio:16 / 9; border:0; border-radius:3px; }
+@media (prefers-reduced-motion:reduce) { figure.vid .ytlite img { transition:none; } }
+
+/* diagram: scoped so nothing else on the page moves */
+.d-band { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.16em;
+  fill:var(--muted); }
+.d-box { fill:var(--surface); stroke:var(--rule-strong); stroke-width:1; }
+.d-key { stroke:var(--ink); }
+.d-rule { stroke:var(--accent); stroke-width:1.5; }
+.d-t { font-family:"Bricolage Grotesque",sans-serif; font-size:13px; font-weight:600;
+  fill:var(--ink); text-anchor:middle; }
+.d-s { font-family:"IBM Plex Mono",monospace; font-size:10px; fill:var(--muted);
+  text-anchor:middle; }
+.d-lbl { font-family:"IBM Plex Mono",monospace; font-size:10px; fill:var(--muted);
+  text-anchor:middle; }
+.d-line { fill:none; stroke:var(--rule-strong); stroke-width:1.4; }
+.d-run { stroke:var(--accent); stroke-width:1.8; }
+.d-score { stroke:var(--data-2); stroke-width:1.8; }
+.d-run-t { fill:var(--accent-text); }
+.d-score-t { fill:var(--data-2); }
+/* "how to read it" walkthrough under a diagram */
+ol.howto { margin:20px 0 0; padding:0; list-style:none; counter-reset:s; max-width:74ch; }
+ol.howto li { border:none; padding:8px 0 8px 34px; font-size:15.5px; }
+ol.howto li:last-child { border-bottom:none; }
+ol.howto li::before { counter-increment:s; content:counter(s); left:0; top:9px;
+  width:21px; height:21px; background:var(--accent-wash); color:var(--accent-text);
+  border-radius:50%; font-family:"IBM Plex Mono",monospace; font-size:11px;
+  line-height:21px; text-align:center; }
+.swatch { display:inline-block; width:22px; height:3px; border-radius:2px;
+  vertical-align:3px; margin:0 3px; }
+.sw-run { background:var(--accent); }
+.sw-score { background:var(--data-2); }
+.imgfail { border:1px dashed var(--rule-strong); border-radius:3px; padding:34px 18px;
+  text-align:center; font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--muted); background:var(--ground); }
+
+.pill { display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+  border-radius:3px; padding:2px 8px; color:var(--muted);
+  border:1px solid var(--rule-strong); }
+.pill.yes { color:var(--accent-text); background:var(--accent-wash); border-color:transparent; }
+.pill.no  { color:var(--data-2); border-color:var(--data-2); }
+.chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:16px; }
+.tag { font-size:11.5px; color:var(--muted); border:1px solid var(--rule-strong);
+  border-radius:3px; padding:4px 9px; }
+
+.next { border-top:1px solid var(--rule-strong); background:var(--surface); margin-top:56px; }
+.next-in { max-width:1060px; margin:0 auto; padding:40px 28px;
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.next-in .who { margin-right:auto; font-size:15px; color:var(--ink-2); max-width:44ch; }
+footer { border-top:1px solid var(--rule); padding:22px 0 42px;
+  font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted); }
+.foot-in { max-width:1060px; margin:0 auto; padding:0 28px; display:flex; gap:14px; flex-wrap:wrap; }
+.foot-in span { margin-right:auto; }
+@media (max-width:1000px) {
+  .layout { grid-template-columns:1fr; gap:0; }
+  .toc { display:none; }
+  .pair { grid-template-columns:1fr; gap:0; }
+}
+@media (max-width:760px) { .nav-l { display:none; } h2 { padding-top:36px; } }
+</style>
+<nav class="nav"><div class="nav-in">
+  <a class="nav-name" href="index.html">Dipendra Limbu</a>
+  <a class="nav-l" href="index.html">All projects</a>
+  <a class="nav-l" href="#connect">Connect</a>
+  <button class="theme-btn" id="tbtn" type="button">theme</button>
+</div></nav><header class="mast"><div class="wrap">
+  <a class="crumb" href="index.html">&larr; All projects</a>
+  <div class="kick">04 &middot; Agent evaluation</div>
+  <h1>PRAMAAN — checking whether I knew what I thought I knew</h1>
+  <div class="meta"><span>a claim checker for NEPSE stock advice</span><span>six questions, three answered against me</span><span>548 lines of measurement to 384 of agent</span><span>no documents at all, same score as the shipped agent</span></div>
+  <div class="mast-links"><a class="lnk" href="https://github.com/DKL59/Micro1_Challenge">GitHub repository &rarr;</a><a class="lnk" href="https://youtu.be/qSmXwHcALKY">Solution video &mdash; 5 minutes &rarr;</a></div>
+</div></header>
+<main><div class="wrap"><div class="layout">
+  <aside class="toc"><div class="toc-t">On this page</div><nav id="toc"></nav></aside>
+  <div class="col">
+
+<figure class="vid">
+  <div class="fig-t">Solution video</div>
+  <div class="fig-s">Five minutes &mdash; the problem, one full execution, and the finding</div>
+  <button class="ytlite" type="button" data-yt="qSmXwHcALKY"
+          aria-label="Play the PRAMAAN solution video">
+    <img src="https://img.youtube.com/vi/qSmXwHcALKY/hqdefault.jpg"
+         alt="PRAMAAN solution video" loading="lazy">
+    <span class="ytplay" aria-hidden="true"></span>
+  </button>
+  <figcaption><a href="https://youtu.be/qSmXwHcALKY">Watch on YouTube &rarr;</a></figcaption>
+</figure>
+
+<h2 data-toc="The reframe">What this project became<span class="l"></span></h2>
+<p>It started as a claim checker for Nepali stock advice. It ended as a study of a narrower and more awkward question: <strong>what does it take to know whether an agent actually improved?</strong></p>
+<p>Across five runs the score I was watching never improved. And every time it did move, a measure I had never thought to record moved the other way.</p>
+<p>Every time I checked whether I knew something, the answer came back no — so the next thing I built was another way of checking. The repository records that drift in its own proportions.</p>
+<div class="tbl-scroll"><table class="flow"><thead><tr><th>What it is</th><th>Files</th><th>Lines</th></tr></thead><tbody><tr><td>The subject under test</td><td><code>agent.py</code>, <code>baseline.py</code></td><td>384</td></tr><tr><td>The apparatus that measures it</td><td><code>validate.py</code>, <code>test_validate.py</code>, <code>check_results.py</code>, <code>check_divergence.py</code></td><td><strong>548</strong></td></tr><tr><td>The record of what the measurements meant</td><td><code>CHANGELOG.md</code>, <code>DECISIONS.md</code>, <code>CASES.md</code>, <code>REPRODUCE.md</code>, <code>README.md</code></td><td>1,611</td></tr></tbody></table></div><p class="tnote">Counted with <code>wc -l</code> at commit c28f8e3. Seven result files, twenty-three stored attempts, none overwritten or hand-edited.</p>
+<p>More code measuring the system than composing it, and four times as much again documenting what the measurements meant. The claim checker is the subject on the bench, not the product.</p>
+
+<h2>The six questions<span class="l"></span></h2>
+<p>If this page has one transferable thing in it, this is it: six questions to ask of any agent you are trying to improve. Each is here because asking it changed what I believed about mine &mdash; and the rest of this page is the evidence behind every answer.</p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th>The question</th><th>What it returned when I asked it</th></tr></thead><tbody><tr><td>Does my metric separate my system from a stripped-down version of it?</td><td><strong>Mine didn&rsquo;t.</strong> A baseline with no documents at all scored 3/3 &mdash; the same as the shipped agent, four iterations later.</td></tr><tr><td>Does my evaluation data already contain the answer I am testing for?</td><td><strong>Mine did</strong>, for a whole iteration. I had written my own conclusions into the source files the agent reads, so it was retrieving answers I had planted.</td></tr><tr><td>Have I run it once with my favourite component switched off?</td><td><strong>Not until after I had shipped it.</strong> When I did, the loop turned out to cost 3.4&times; the time and 1.7&times; the tokens, and to move nothing I was scoring.</td></tr><tr><td>Is the checker I trust actually tested?</td><td><strong>Not until I wrote 23 tests over it</strong> &mdash; which found four defects that reading the code had not.</td></tr><tr><td>Is the checker driving my loop the same function as the one that scores me?</td><td><strong>Mine were not.</strong> The loop was stricter in four of eight attempts, and never looser &mdash; so every violation it reacted to was invisible to the score.</td></tr><tr><td>Has my ground truth moved since I started &mdash; and did I record it?</td><td><strong>Mine moved.</strong> One verdict was revised after two runs had completed. The change and its cost are dated in <code>DECISIONS.md</code>.</td></tr></tbody></table></div><p class="tnote">Findings from three cases do not generalise. Questions do &mdash; which is why this list is made of them, and why each answer beside it is a cost I paid rather than a law I am claiming.</p>
+
+<h2 data-toc="The instruments">The instruments that asked them<span class="l"></span></h2>
+<figure>
+  <div class="fig-t">How the parts fit together</div>
+  <div class="fig-s">One rule, two callers &mdash; and the audit that compares them</div>
+  <div class="chart-scroll">
+  <svg viewBox="0 0 900 620" role="img" aria-label="agent.py drives the model and writes every attempt to results. Both agent.py and validate.py call the same validate_response function, but agent.py passes the source files as written with line breaks intact, while validate.py passes them whitespace-normalised. test_validate.py tests the rule itself; check_divergence.py compares the two inputs.">
+    <defs>
+      <marker id="d4-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
+      <marker id="d4-run" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"/></marker>
+      <marker id="d4-score" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--data-2)"/></marker>
+    </defs>
+    <rect x="330" y="24" width="240" height="52" rx="4" class="d-box"/>
+    <text x="450" y="50" class="d-t">claim + fixed corpus</text>
+    <text x="450" y="67" class="d-s">nothing is retrieved from the web</text>
+    <rect x="330" y="110" width="240" height="58" rx="4" class="d-box"/>
+    <text x="450" y="136" class="d-t">agent.py</text>
+    <text x="450" y="153" class="d-s">builds the prompt, drives the loop</text>
+    <rect x="640" y="110" width="240" height="58" rx="4" class="d-box"/>
+    <text x="760" y="136" class="d-t">the model</text>
+    <text x="760" y="153" class="d-s">one call per attempt</text>
+    <path d="M450,76 L450,104" class="d-line" marker-end="url(#d4-a)"/>
+    <path d="M570,128 L634,128" class="d-line" marker-end="url(#d4-a)"/>
+    <text x="602" y="120" class="d-lbl" text-anchor="middle">prompt</text>
+    <path d="M640,152 L576,152" class="d-line" marker-end="url(#d4-a)"/>
+    <text x="602" y="168" class="d-lbl" text-anchor="middle">JSON</text>
+    <rect x="640" y="210" width="240" height="58" rx="4" class="d-box"/>
+    <text x="760" y="236" class="d-t">results/*.json</text>
+    <text x="760" y="253" class="d-s">every attempt, with its own</text>
+    <text x="760" y="266" class="d-s">prompt and its own token count</text>
+    <rect x="640" y="310" width="240" height="58" rx="4" class="d-box"/>
+    <text x="760" y="336" class="d-t">validate.py</text>
+    <text x="760" y="353" class="d-s">the score</text>
+    <path d="M550,168 L550,239 L634,239" class="d-line" marker-end="url(#d4-a)"/>
+    <text x="556" y="232" class="d-lbl" text-anchor="start">every attempt</text>
+    <path d="M760,268 L760,304" class="d-line" marker-end="url(#d4-a)"/>
+    <text x="770" y="292" class="d-lbl" text-anchor="start">reads</text>
+    <rect x="290" y="410" width="320" height="84" rx="4" class="d-box d-rule"/>
+    <text x="450" y="436" class="d-t">validate_response()</text>
+    <text x="450" y="453" class="d-s">status is one of three &middot; the quote is in its file</text>
+    <text x="450" y="466" class="d-s">every number in the figure is in that quote</text>
+    <path d="M410,168 L410,404" class="d-line d-run" marker-end="url(#d4-run)"/>
+    <text x="400" y="268" class="d-lbl d-run-t" text-anchor="end">sources AS WRITTEN</text>
+    <text x="400" y="281" class="d-lbl d-run-t" text-anchor="end">line breaks intact</text>
+    <path d="M490,410 L490,174" class="d-line" marker-end="url(#d4-a)"/>
+    <text x="500" y="268" class="d-lbl" text-anchor="start">violations &rarr;</text>
+    <text x="500" y="281" class="d-lbl" text-anchor="start">retry, max 3</text>
+    <path d="M700,368 L700,452 L616,452" class="d-line d-score" marker-end="url(#d4-score)"/>
+    <text x="710" y="400" class="d-lbl d-score-t" text-anchor="start">sources NORMALISED</text>
+    <text x="710" y="413" class="d-lbl d-score-t" text-anchor="start">whitespace collapsed</text>
+    <rect x="30" y="530" width="240" height="70" rx="4" class="d-box"/>
+    <text x="150" y="556" class="d-t">test_validate.py</text>
+    <text x="150" y="573" class="d-s">23 tests &mdash; is the rule</text>
+    <text x="150" y="586" class="d-s">itself correct?</text>
+    <rect x="640" y="530" width="240" height="70" rx="4" class="d-box"/>
+    <text x="760" y="556" class="d-t">check_divergence.py</text>
+    <text x="760" y="573" class="d-s">re-scores every attempt both</text>
+    <text x="760" y="586" class="d-s">ways &mdash; same input or not?</text>
+    <path d="M150,530 L150,500 L350,500 L350,500" class="d-line" marker-end="url(#d4-a)"/>
+    <text x="250" y="492" class="d-lbl" text-anchor="middle">tests the rule itself</text>
+    <path d="M760,530 L760,500 L550,500 L550,500" class="d-line" marker-end="url(#d4-a)"/>
+    <text x="655" y="492" class="d-lbl" text-anchor="middle">compares the two inputs</text>
+    <text x="16" y="18" class="d-band">THE RUN</text>
+    <text x="16" y="204" class="d-band">THE RECORD</text>
+    <text x="16" y="404" class="d-band">THE RULE</text>
+    <text x="16" y="524" class="d-band">THE AUDIT</text>
+  </svg>
+  </div>
+  <figcaption>Both callers run the same three rules. Only the text they hand them differs &mdash; and that is the whole finding.</figcaption>
+</figure>
+<h4>How to read it</h4>
+<ol class="howto">
+  <li><strong>Top centre.</strong> A claim and a fixed set of documents go in. Nothing is retrieved from the web, so any run can be re-scored later from its own recorded prompt.</li>
+  <li><strong><code>agent.py</code> and the model.</strong> One prompt out, one JSON response back. That pair is a single attempt.</li>
+  <li><strong>Down to the record.</strong> Every attempt is written to <code>results/*.json</code> with its own prompt and its own token count. Nothing is overwritten &mdash; which is what makes the two audits at the bottom possible at all.</li>
+  <li><strong>The arrow down the middle</strong> <span class="swatch sw-run"></span> &mdash; <code>agent.py</code> hands the response to <code>validate_response()</code> together with the source files <strong>as written</strong>, line breaks intact. If a rule fails, the arrow beside it carries the violations back up and the model tries again, up to three times.</li>
+  <li><strong>The arrow entering from the right</strong> <span class="swatch sw-score"></span> &mdash; once the run is finished, <code>validate.py</code> reads the results and calls <strong>the same function</strong>. But it hands it the sources with the <strong>whitespace collapsed</strong>.</li>
+  <li><strong>The bottom row.</strong> <code>test_validate.py</code> asks whether the rule is correct. <code>check_divergence.py</code> asks whether those two arrows are handing the rule the same thing. They were not &mdash; and everything else on this page follows from that.</li>
+</ol>
+<p>Each instrument exists because the previous one returned &ldquo;you do not actually know that.&rdquo; Read the diagram top to bottom and it is the same question, asked one level deeper each time.</p>
+
+<h2 data-toc="The subject">The subject under test<span class="l"></span></h2>
+<p>This is built for one kind of NEPSE investor: someone in a full-time job who invests on the side, without the hours — or in some cases the financial background — to check whether the advice reaching them rests on any evidence. And the claims that reach them are rarely false. They are true figures with the context stripped off.</p>
+<blockquote>
+  <span class="label">Test claim &middot; synthetic</span>
+  <p>&ldquo;Nabil declared 30% dividend this year. Bank FD is giving only 4%. Why keep money in fixed deposit when a blue chip bank is paying 30%? Long term hold, guaranteed income.&rdquo;</p>
+</blockquote>
+<p>Nabil did declare <strong>30.00%</strong> — for fiscal year 2078/79, three years earlier. For the year the claim is about, 2081/82, it declared 12.50% and no bonus. And a dividend percentage is calculated on the <strong>Rs 100 par value</strong>, not on the Rs 540.20 the share costs. So <code>Rs 12.50 &divide; Rs 540.20</code> = <strong>2.31%</strong>, against ordinary individual fixed deposit rates of 2.75% to 4.55% across the three banks in the sources.</p>
+<figure>
+  <div class="fig-t">What the claim actually compares</div>
+  <div class="fig-s">The dividend it calls 30%, against the deposit rates it calls 4%</div>
+  <div class="chart-scroll">
+  <svg viewBox="0 0 700 258" role="img" aria-label="Nabil's dividend yield of 2.31 percent falls below the floor of every published deposit range in the sources: Nabil 2.80 to 4.55 percent, NIC Asia 2.75 to 4.00, Everest 2.75 to 4.05.">
+    <line x1="168" x2="168" y1="44" y2="206" class="gridline"/>
+    <text x="168" y="226" class="axis-t" text-anchor="middle">0%</text>
+    <line x1="269.6" x2="269.6" y1="44" y2="206" class="gridline"/>
+    <text x="269.6" y="226" class="axis-t" text-anchor="middle">1%</text>
+    <line x1="371.2" x2="371.2" y1="44" y2="206" class="gridline"/>
+    <text x="371.2" y="226" class="axis-t" text-anchor="middle">2%</text>
+    <line x1="472.8" x2="472.8" y1="44" y2="206" class="gridline"/>
+    <text x="472.8" y="226" class="axis-t" text-anchor="middle">3%</text>
+    <line x1="574.4" x2="574.4" y1="44" y2="206" class="gridline"/>
+    <text x="574.4" y="226" class="axis-t" text-anchor="middle">4%</text>
+    <line x1="676" x2="676" y1="44" y2="206" class="gridline"/>
+    <text x="676" y="226" class="axis-t" text-anchor="middle">5%</text>
+    <text x="154" y="74" class="axis-t" text-anchor="end">Nabil Bank &middot; normal</text>
+    <rect x="452.48" y="62" width="177.8" height="18" rx="3" fill="var(--data-2)" opacity="0.26"/>
+    <rect x="451.48" y="62" width="2" height="18" fill="var(--data-2)"/>
+    <rect x="629.28" y="62" width="2" height="18" fill="var(--data-2)"/>
+    <text x="541.38" y="75" class="cellv" text-anchor="middle">2.80&ndash;4.55%</text>
+    <text x="154" y="108" class="axis-t" text-anchor="end">NIC Asia Bank</text>
+    <rect x="447.4" y="96" width="127" height="18" rx="3" fill="var(--data-2)" opacity="0.26"/>
+    <rect x="446.4" y="96" width="2" height="18" fill="var(--data-2)"/>
+    <rect x="573.4" y="96" width="2" height="18" fill="var(--data-2)"/>
+    <text x="510.9" y="109" class="cellv" text-anchor="middle">2.75&ndash;4.00%</text>
+    <text x="154" y="142" class="axis-t" text-anchor="end">Everest Bank</text>
+    <rect x="447.4" y="130" width="132.08" height="18" rx="3" fill="var(--data-2)" opacity="0.26"/>
+    <rect x="446.4" y="130" width="2" height="18" fill="var(--data-2)"/>
+    <rect x="578.48" y="130" width="2" height="18" fill="var(--data-2)"/>
+    <text x="513.44" y="143" class="cellv" text-anchor="middle">2.75&ndash;4.05%</text>
+    <line x1="18" x2="676" y1="162" y2="162" stroke="var(--rule)" stroke-width="1"/>
+    <text x="154" y="190" class="axis-t" text-anchor="end">Nabil dividend yield</text>
+    <rect x="168" y="178" width="234.696" height="18" rx="3" fill="var(--accent)"/>
+    <text x="411.696" y="191" class="val-t">2.31%</text>
+    <line x1="402.696" x2="402.696" y1="44" y2="206" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </svg>
+  </div>
+  <figcaption>Rs 12.50 &divide; Rs 540.20 = 2.31% &mdash; below the floor of every deposit range in the sources, which is the opposite of what the claim asserts.</figcaption>
+</figure>
+<p>Every number is true. They support the opposite conclusion. Checking it by hand takes four lookups, and the step that decides it — par value, not market price — is the one most people skip.</p>
+<p><strong>PRAMAAN</strong> — <em>evidence</em> — takes a claim, breaks it into separate assertions, and rules each one <strong>verified</strong>, <strong>contradicted</strong> or <strong>not_found</strong> against a fixed corpus. Every figure must arrive with the exact quote it came from and the file that quote lives in. If the sources do not settle an assertion, it must say not_found rather than estimate. It never advises buying or selling.</p>
+<blockquote class="note">
+  <span class="label">How agentic is this, honestly?</span>
+  <p>Only the validation stage acts, checks its own output and acts again — the minimum that qualifies. No planning, no tool use, no memory. And a control run with that loop disabled scores exactly the same.</p>
+</blockquote>
+
+<h2 data-toc="1 &middot; Does the metric separate?">1 &middot; Does my metric separate my system from a stripped-down version of it?<span class="l"></span></h2>
+<p><code>baseline.py</code> — one API call, one line of instruction, no documents at all.</p>
+<div class="pair">
+  <div>
+    <h4>What it got right</h4>
+    <ul>
+      <li>Reached the correct verdict on all three cases</li>
+      <li>Knew a dividend is quoted on par value, unprompted</li>
+      <li>Rejected &ldquo;guaranteed income&rdquo; on its own</li>
+    </ul>
+  </div>
+  <div>
+    <h4>What it invented</h4>
+    <blockquote>
+      <p>&ldquo;you might have to pay a Market Price of NPR 600 or more&rdquo;</p>
+      <p>&ldquo;your actual return on investment (yield) might only be 3% to 5%&rdquo;</p>
+    </blockquote>
+    <p>Both fabricated. The real figure, 2.31%, sits below the floor of that range.</p>
+  </div>
+</div>
+<p>Correct answers, invented evidence, <strong>0/3</strong> figures traceable to a source. And a verdict score of 3/3 — identical to the shipped agent, four iterations later. That is the ablation, and it arrived on day one: <strong>whatever my metric was rewarding, grounding was not it.</strong></p>
+
+<h2 data-toc="2 &middot; Is the answer in the data?">2 &middot; Does my evaluation data already contain the answer I am testing for?<span class="l"></span></h2>
+<p>Iteration 1 looked like a clean win. Figures traceable to a source went <strong>0/3 to 3/3</strong>, and the attribution error went from missed to caught, <strong>0/1 to 1/1</strong>. Both numbers moved in the right direction and stayed there.</p>
+<p>Then I read my own source files properly. Here are all six substantive quotes Iteration 1 returned, taken verbatim from <code>results/agent_v1.json</code>:</p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th>The quote the agent returned</th><th>What it actually was</th></tr></thead><tbody><tr><td><code>Cash dividend: 12.50%</code></td><td><span class='pill yes'>published</span> A figure from the company&rsquo;s own record.</td></tr><tr><td><code>Range across all three banks: 2.75% to 4.55% for individual normal fixed deposits.</code></td><td><span class='pill no'>mine</span> A range I had synthesised from three separate rate cards.</td></tr><tr><td><code>Nabil&rsquo;s dividend yield of 2.31% is below the entire deposit range&hellip;</code></td><td><span class='pill no'>mine</span> My conclusion, with my arithmetic already done.</td></tr><tr><td><code>the share carries price risk a deposit does not.</code></td><td><span class='pill no'>mine</span> My conclusion.</td></tr><tr><td><code>That figure belongs to the sector, not to EBL, and covers a different period&hellip;</code></td><td><span class='pill no'>mine</span> The attribution answer, written by me, under a heading naming the check.</td></tr><tr><td><code>Price to book: 729.50 / 246.74 = 2.96x &mdash; trading at nearly three times book value</code></td><td><span class='pill no'>mine</span> Arithmetic I had already performed for it.</td></tr></tbody></table></div><p class="tnote">One published figure, five lines of my own. What looked like the agent reasoning was mostly the agent reading me back to myself.</p>
+<blockquote class="note">
+  <span class="label">The worst instance</span>
+  <p>Case 3&rsquo;s attribution finding &mdash; the result I was most pleased with &mdash; quoted a sentence I had put into <code>sources/ebl.md</code> myself, under a heading that named the check being performed. The agent had not detected anything. It had retrieved my answer.</p>
+</blockquote>
+<p><strong>Iteration 2 was the fix:</strong> every line of my own analysis moved out of <code>sources/</code> and into <code>notes/</code>, a folder the agent never sees. Only published figures remained. Then I ran it again.</p>
+<p>The attribution finding <strong>survived unaided</strong>. The agent found the sector line on its own, and derived its own supporting arithmetic &mdash; price to book 729.50 / 246.74 = 2.96 &mdash; rather than copying a number I had already worked out for it.</p>
+<p>It cost a verdict. Agreement fell from 3/3 to 2/3, because Case 1 came back <em>partly supported</em>: the agent marked &ldquo;Bank FD is giving only 4%&rdquo; verified against a single rate-card row, and never computed the yield that decides the case.</p>
+<blockquote>
+  <span class="label">The decision</span>
+  <p>Report both. A 3 of 3 built on a corpus that contained the answers is worth less than a 2 of 3 that does not.</p>
+  <p>That is the run that made every later number mean something.</p>
+</blockquote>
+<h2 data-toc="3 &middot; What if I switch it off?">3 &middot; Have I run it once with my favourite component switched off?<span class="l"></span></h2>
+<p>The correction loop is the thing I had built that whole iteration around. A control run with it disabled scores identically on both machine-checked metrics.</p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th></th><th>Loop on</th><th>Loop off</th></tr></thead><tbody><tr><td>Verdicts</td><td>3 / 3</td><td>3 / 3</td></tr><tr><td>Violations</td><td>0</td><td>0</td></tr><tr><td>Mean time</td><td>70.1s</td><td>20.7s</td></tr><tr><td>Mean tokens</td><td>10,741</td><td>6,373</td></tr></tbody></table></div>
+<p>The loop cost 3.4 times the time and 1.7 times the tokens and moved the scored metric by nothing. It did repair four violations of the rule it enforces, which the control leaves standing. Against the rule that scores this project, it changed nothing. That is a negative result and it is reported as one.</p>
+<p>So the change that contributed most was not this loop. It was decontaminating the sources &mdash; question two above.</p>
+
+<h2 data-toc="4 &middot; Is the checker tested?">4 &middot; Is the checker I trust actually tested?<span class="l"></span></h2>
+<p>Three rules, with no model in the loop. Each is checked against the run&rsquo;s <em>own recorded prompt</em>, not today&rsquo;s files, so retrospective scoring stays honest after the corpus changes.</p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th>Rule</th><th>What it checks</th><th>What it cannot catch</th></tr></thead><tbody><tr><td>1 &middot; Status</td><td>The status is one of exactly three permitted strings.</td><td>Nothing &mdash; this one is complete for what it claims.</td></tr><tr><td>2 &middot; Quote</td><td>The quote appears in the file it names.</td><td>Whether the quote has anything to do with the assertion beside it.</td></tr><tr><td>3 &middot; Figure</td><td>Every number in the reported figure appears in its own quote.</td><td>Whether that number means what the assertion says it means.</td></tr></tbody></table></div><p class="tnote">Rules 2 and 3 establish that a citation is well-formed. Neither can establish that it is apt &mdash; which is the limit no mechanical rule closes.</p>
+
+
+<p><code>test_validate.py</code> runs twenty-three tests: twelve over the three rules — that each catches what it should and passes what it should — seven over the whitespace, source-parsing and response-shape helpers those rules depend on, and four that pin known gaps in the rules, written to fail if a rule is ever tightened.</p>
+<blockquote>
+  <span class="label">What the tests found</span>
+  <p><strong>Four defects</strong>, none of which reading the code had shown me &mdash; and one of them was living in a regular expression I had read several times over. A checker you have only read is one you are trusting, not testing.</p>
+</blockquote>
+<p>No API key, no network, no dependencies, and it finishes in well under a second. The gaps were documented rather than fixed, because every run was scored under the current rules and three of them can no longer be re-run.</p>
+
+<h2 data-toc="5 &middot; Same checker as the scorer?">5 &middot; Is the checker driving my loop the same function as the one that scores me?<span class="l"></span></h2>
+<p>Found on the last day, while writing the video script. The loop and the scorer call the same validator with different text: <code>agent.py</code> passes the source files as written, line breaks intact; <code>validate.py</code> passes them whitespace-normalised. A quote spanning a line break fails the first and passes the second.</p>
+<p><code>check_divergence.py</code> re-scores every stored attempt both ways and prints the two numbers side by side. Eight attempts have per-attempt records. Four agree. In all four that disagree, the loop saw violations and the scorer sees zero — <strong>stricter in one direction, never the other.</strong></p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th></th><th>Violations detected live</th><th>Repaired?</th><th>Violations when scored</th></tr></thead><tbody><tr><td>Iteration 4 &mdash; loop on</td><td>4</td><td>Yes, at 70.1s and 10,741 mean tokens</td><td><strong>0</strong></td></tr><tr><td>Control v5 &mdash; loop off</td><td>4</td><td>No &mdash; it shipped with them on its record</td><td><strong>0</strong></td></tr></tbody></table></div><p class="tnote">The control tied, but not because the loop was redundant. It tied because the scoring rule never charged for the thing the loop was repairing.</p>
+<p>So every violation the correction loop ever reacted to was invisible to the score. The loop was enforcing a stricter contract than the one this project is measured against, and accidentally so.</p>
+
+<h2>One execution, start to finish<span class="l"></span></h2>
+<p>The run where that divergence surfaced. Case 3 &middot; EBL undervaluation &middot; <code>results/agent_v4.json</code>.</p>
+<blockquote>
+  <p>&ldquo;EBL net profit up 32% this quarter, best in the sector. Still trading below book value, market has not priced it in yet. Undervalued blue chip, accumulate now.&rdquo;</p>
+</blockquote>
+<div class="tbl-scroll"><table class="q"><thead><tr><th>Step</th><th>What happened</th><th>Cost</th></tr></thead><tbody><tr><td>Attempt 1</td><td>The agent finds the 32% — and finds it belongs to the whole commercial banking sector, not to EBL. Marks the assertion contradicted and quotes the line.</td><td>6,417 tokens</td></tr><tr><td>Validator</td><td>Rejects the response. Not the verdict — the citation.<br><code>assertion 1: quote does not appear in sources/ebl.md</code></td><td>1 violation</td></tr><tr><td>Attempt 2</td><td>The same response is returned with the violation named and an instruction to fix that and change nothing else. Comes back clean.</td><td>5,758 tokens</td></tr></tbody></table></div>
+<h3>What actually changed between the two attempts</h3>
+<div class="tbl-scroll"><table class="q"><thead><tr><th></th><th>The quote the agent gave</th></tr></thead><tbody><tr><td>Attempt 1 — <span class='pill no'>rejected</span></td><td><code>&quot;Commercial banks' combined net profit rose 32.33% to NPR 69.78 arba in Q4 2082/83.&quot;</code></td></tr><tr><td>Attempt 2 — <span class='pill yes'>accepted</span></td><td><code>&quot;Commercial banks' combined net profit rose 32.33% to NPR 69.78 arba in&quot;</code></td></tr><tr><td><code>sources/ebl.md</code><br>lines 80 and 81</td><td><code>Commercial banks' combined net profit rose 32.33% to NPR 69.78 arba in &crarr;<br>Q4 2082/83. Nabil Bank is reported as leading the sector.</code></td></tr></tbody></table></div>
+<p>Same verdict. Same figures. Same summary, byte for byte. The only difference is that the quote now stops at the line break — and under the rule that scores this project, the rejected version was already valid. The loop threw out a good citation and the replacement it forced carries less: the sector attribution survives, the reporting period does not.</p>
+<blockquote>
+  <span class="label">The finding</span>
+  <p>The model was not learning to cite better. It was learning where the file wraps.</p>
+  <p>The instruction asked for &ldquo;the exact line from the source document&rdquo;, and told the model to change nothing else. Once a quote was rejected for not appearing in the file, shortening it to a single line was the only repair those two constraints left open.</p>
+</blockquote>
+
+<h2 data-toc="6 &middot; Did the ground truth move?">6 &middot; Has my ground truth moved since I started &mdash; and did I record it?<span class="l"></span></h2>
+<p>Yes &mdash; once. Case 1&rsquo;s verdict in <code>CASES.md</code> was revised from <em>partly supported</em> to <em>unsupported</em> &mdash; after both the baseline and Iteration 1 had already run.</p>
+<p><strong>What moved it.</strong> The claim quotes a 30% dividend. I had accepted the figure as genuine and judged the claim misleading only in how it framed a true number. During a file audit I checked the source: Nabil declared 12.50% cash and no bonus for FY 2081/2082. The quoted figure is contradicted by the source for the year the claim is about, so the verdict became unsupported.</p>
+<blockquote>
+  <span class="label">Why the timing does not invalidate the measurement</span>
+  <p>A ground truth adjusted after seeing results is worthless unless you can say what moved it. What moved this one was the <strong>source document</strong>, not either system&rsquo;s output.</p>
+  <p>Both result files that existed at that point were re-scored against the corrected verdict, and both moved <strong>identically</strong> &mdash; baseline and agent each went from 2/3 to 3/3. That is confirmed rather than assumed: both files record &ldquo;unsupported&rdquo; on Case 1. The comparison between the two systems is unaffected.</p>
+</blockquote>
+<p>The disclosure sits in <code>REPRODUCE.md</code>, so anyone reproducing these numbers meets it <em>before</em> they meet the scores.</p>
+<h3>What it cost</h3>
+<p>A finding. I had recorded a third weakness in the baseline &mdash; that it condemns a whole claim rather than separating the accurate part from the misleading part &mdash; and built it on the assumption that the 30% was real for the current year. Once the figure was checked, the gap dissolved.</p>
+<p>I removed it rather than leave a conclusion standing on a premise I never verified. Two gaps, not three.</p>
+<blockquote class="note">
+  <p>A figure taken on trust and never traced to its source &mdash; the exact failure this project was built to catch, committed by me.</p>
+</blockquote>
+<h2>The final comparison<span class="l"></span></h2>
+<p>Five runs plus a control, scored on the same three cases. Schema violations are scored mechanically by <code>validate.py</code>. Verdict agreement is against hand-scored verdicts &mdash; and Case 1&rsquo;s was revised from <em>partly supported</em> to <em>unsupported</em> after the baseline and Iteration 1 had already run, because the source contradicted my original reading. That revision, and what it did to the measurements, is dated in <code>DECISIONS.md</code>.</p>
+<div class="tbl-scroll"><table class="flow"><thead><tr><th>Run</th><th>What changed</th><th>Verdicts</th><th>Schema violations</th><th>Mean time</th><th>Mean tokens</th></tr></thead><tbody><tr><td>Baseline</td><td>No documents at all</td><td>3 / 3</td><td>&mdash;</td><td>15.8s</td><td>1,832</td></tr><tr><td>Iteration 1</td><td>Grounding + structured output</td><td>3 / 3</td><td>5</td><td>16.4s</td><td>5,338</td></tr><tr><td>Iteration 2</td><td>My conclusions stripped from sources</td><td>2 / 3</td><td>2</td><td>15.3s</td><td>4,805</td></tr><tr><td>Iteration 3</td><td>Range and ratio rules in the instruction</td><td>3 / 3</td><td>4</td><td>20.3s</td><td>5,620</td></tr><tr><td>Iteration 4</td><td>Validation loop &mdash; <strong>shipped</strong></td><td>3 / 3</td><td><strong>0</strong></td><td>70.1s</td><td>10,741</td></tr><tr><td>Control (v5)</td><td>Same instruction, loop disabled</td><td>3 / 3</td><td>0</td><td>20.7s</td><td>6,373</td></tr></tbody></table></div><p class="tnote">A schema violation is a response that breaks one of the validator's three rules: a status outside the three permitted values, a quote that does not exist in the file it names, or a figure whose numbers are absent from its own quote. The verdict can still be right — it just cannot be checked.</p>
+<div class="tbl-scroll"><table class=""><thead><tr><th>What never improved</th><th>Biggest change from the baseline</th><th>Biggest change across the iterations</th></tr></thead><tbody><tr><td>Verdict agreement: 3, 3, 2, 3, 3. The baseline — with no documents at all — scores the same as the shipped agent.</td><td>Figures traceable to a source: 0/3 &rarr; 3/3, from Iteration 1. Attribution error: 0/1 &rarr; 1/1 — but unaided only from Iteration 2, once I stopped planting the answer in the corpus.</td><td>Schema violations: 5 &rarr; 0. Not a baseline comparison — free text has no schema to break. And the control scores 0 with the loop off, so the instruction rules did this, not the loop.</td></tr></tbody></table></div>
+
+<h2>The axis I was not watching<span class="l"></span></h2>
+<p>Two measures, shown separately because they are different scales — and the baseline appears on only one of them.</p>
+<figure><div class="fig-t">Verdict agreement</div><div class="fig-s">Correct verdicts out of three cases</div><div class="chart-scroll"><svg viewBox="0 0 620 250" role="img" aria-label="Verdict agreement reads 3, 3, 2, 3, 3 — the baseline with no documents matches the shipped agent."><line x1="52" x2="606" y1="204.0" y2="204.0" class="gridline"/><text x="43" y="208.0" class="axis-t" text-anchor="end">0</text><line x1="52" x2="606" y1="144.66666666666669" y2="144.66666666666669" class="gridline"/><text x="43" y="148.66666666666669" class="axis-t" text-anchor="end">1</text><line x1="52" x2="606" y1="85.33333333333334" y2="85.33333333333334" class="gridline"/><text x="43" y="89.33333333333334" class="axis-t" text-anchor="end">2</text><line x1="52" x2="606" y1="26.0" y2="26.0" class="gridline"/><text x="43" y="30.0" class="axis-t" text-anchor="end">3</text><rect x="65.0" y="26.0" width="66.33333333333333" height="178.0" rx="3" fill="var(--data-2)"/><text x="98.16666666666666" y="18.0" class="val-t" text-anchor="middle">3</text><text x="98.16666666666666" y="234" class="axis-t" text-anchor="middle">Baseline</text><rect x="157.33333333333331" y="26.0" width="66.33333333333333" height="178.0" rx="3" fill="var(--data-flat)"/><text x="190.49999999999997" y="18.0" class="val-t" text-anchor="middle">3</text><text x="190.49999999999997" y="234" class="axis-t" text-anchor="middle">Iter 1</text><rect x="249.66666666666666" y="85.33333333333334" width="66.33333333333333" height="118.66666666666666" rx="3" fill="var(--data-flat)"/><text x="282.8333333333333" y="77.33333333333334" class="val-t" text-anchor="middle">2</text><text x="282.8333333333333" y="234" class="axis-t" text-anchor="middle">Iter 2</text><rect x="342.0" y="26.0" width="66.33333333333333" height="178.0" rx="3" fill="var(--data-flat)"/><text x="375.1666666666667" y="18.0" class="val-t" text-anchor="middle">3</text><text x="375.1666666666667" y="234" class="axis-t" text-anchor="middle">Iter 3</text><rect x="434.3333333333333" y="26.0" width="66.33333333333333" height="178.0" rx="3" fill="var(--accent)"/><text x="467.5" y="18.0" class="val-t" text-anchor="middle">3</text><text x="467.5" y="234" class="axis-t" text-anchor="middle">Iter 4</text><rect x="526.6666666666666" y="26.0" width="66.33333333333333" height="178.0" rx="3" fill="var(--data-flat)"/><text x="559.8333333333333" y="18.0" class="val-t" text-anchor="middle">3</text><text x="559.8333333333333" y="234" class="axis-t" text-anchor="middle">Control</text></svg></div><figcaption>Verdict agreement reads 3, 3, 2, 3, 3 — the baseline with no documents matches the shipped agent.</figcaption></figure>
+<figure><div class="fig-t">Schema violations</div><div class="fig-s">Lower is better — the baseline has no bar, because free text has no schema to break</div><div class="chart-scroll"><svg viewBox="0 0 620 250" role="img" aria-label="Schema violations run 5, 2, 4, 0 across the iterations, and 0 for the control run."><line x1="52" x2="606" y1="204.0" y2="204.0" class="gridline"/><text x="43" y="208.0" class="axis-t" text-anchor="end">0</text><line x1="52" x2="606" y1="168.4" y2="168.4" class="gridline"/><text x="43" y="172.4" class="axis-t" text-anchor="end">1</text><line x1="52" x2="606" y1="132.8" y2="132.8" class="gridline"/><text x="43" y="136.8" class="axis-t" text-anchor="end">2</text><line x1="52" x2="606" y1="97.2" y2="97.2" class="gridline"/><text x="43" y="101.2" class="axis-t" text-anchor="end">3</text><line x1="52" x2="606" y1="61.599999999999994" y2="61.599999999999994" class="gridline"/><text x="43" y="65.6" class="axis-t" text-anchor="end">4</text><line x1="52" x2="606" y1="26.0" y2="26.0" class="gridline"/><text x="43" y="30.0" class="axis-t" text-anchor="end">5</text><rect x="65.0" y="26.0" width="84.8" height="178.0" rx="3" fill="var(--data-2)"/><text x="107.4" y="18.0" class="val-t" text-anchor="middle">5</text><text x="107.4" y="234" class="axis-t" text-anchor="middle">Iter 1</text><rect x="175.8" y="132.8" width="84.8" height="71.2" rx="3" fill="var(--data-flat)"/><text x="218.20000000000002" y="124.80000000000001" class="val-t" text-anchor="middle">2</text><text x="218.20000000000002" y="234" class="axis-t" text-anchor="middle">Iter 2</text><rect x="286.6" y="61.599999999999994" width="84.8" height="142.4" rx="3" fill="var(--data-2)"/><text x="329.0" y="53.599999999999994" class="val-t" text-anchor="middle">4</text><text x="329.0" y="234" class="axis-t" text-anchor="middle">Iter 3</text><rect x="397.4" y="201" width="84.8" height="3" rx="3" fill="var(--accent)"/><text x="439.79999999999995" y="193" class="val-t" text-anchor="middle">0</text><text x="439.79999999999995" y="234" class="axis-t" text-anchor="middle">Iter 4</text><rect x="508.2" y="201" width="84.8" height="3" rx="3" fill="var(--data-flat)"/><text x="550.6" y="193" class="val-t" text-anchor="middle">0</text><text x="550.6" y="234" class="axis-t" text-anchor="middle">Control</text></svg></div><figcaption>Schema violations run 5, 2, 4, 0 across the iterations, and 0 for the control run.</figcaption></figure>
+<p>In the first chart the baseline &mdash; with no documents at all &mdash; matches the shipped agent. That is the ablation. In the second it has no bar at all, which is why 5 &rarr; 0 is not a comparison against the baseline. Of the three runs that predate the validator, Iteration 2 is my worst on verdicts and my best on citations &mdash; and Iteration 3, which fixed a real reasoning defect, doubled them. These four runs produced eleven violations in total, and ten of them are citation failures.</p>
+
+<h2>The changelog<span class="l"></span></h2>
+<p>One variable per iteration — except the last, which is why the control run exists.</p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th></th><th>What I changed</th><th>What it taught me</th></tr></thead><tbody><tr><td>Baseline</td><td>What a user gets today: paste the claim into a chat window.</td><td>Reasons well. Verifies nothing.</td></tr><tr><td>Iteration 1</td><td>Gave it the published figures; required a quote and file per figure.</td><td>Traceability 0/3 &rarr; 3/3. But I had written my own conclusions into the sources — so the attribution catch measured retrieval, not detection.</td></tr><tr><td>Iteration 2</td><td>Stripped my analysis out of the sources into <code>notes/</code>. Only published figures remain.</td><td>The finding survived unaided. Cost one verdict — and that is the run that made every later number mean something.</td></tr><tr><td>Iteration 3</td><td>Two rules added: state the full range when comparing; compute any ratio the claim turns on.</td><td>3/3 restored and earned. Citations got twice as bad.</td></tr><tr><td>Iteration 4</td><td>Built <code>validate.py</code> and wired it into the agent: fail &rarr; return the violations &rarr; retry.</td><td>Schema violations to zero. 3.5&times; the time and 1.9&times; the tokens of Iteration 3.</td></tr></tbody></table></div>
+
+<h2>What this does not establish<span class="l"></span></h2>
+<p>Stated here because the project&rsquo;s entire argument is that unchecked claims are the problem.</p>
+<ul>
+  <li><strong>Three evaluation cases &middot; one attribution case.</strong> A case study, not statistical power. The free tier allows twenty requests a day, and six runs of three cases is eighteen calls before any correction. The attribution result rests on a single case — the weakest evidence here.</li>
+  <li><strong>Findings are local, the method is what transfers.</strong> One model, one corpus, no repeated runs and no variance estimate. Nothing here supports a general claim about correction loops; it supports a claim about this one, measured this way, with the control that shows it.</li>
+  <li><strong>Five defects shipped unfixed.</strong> Found, documented, and left — because tightening a rule on the last day would re-score five completed runs against a contract the agent was never given. The reasoning for each is dated in <code>DECISIONS.md</code>.</li>
+  <li><strong>No user has used it.</strong> It ships as an evaluation harness, not a product. The README says so plainly.</li>
+  <li><strong>The scored metric never told the systems apart.</strong> Verdict agreement was the wrong thing to optimise. I only know that because I measured it and published the result.</li>
+</ul>
+<p>And the limit no mechanical rule closes: the validator proves a citation is <strong>well-formed</strong>. It cannot tell whether it is <strong>apt</strong>. In Iteration 3 the agent marked &ldquo;Bonus shares provide free shares to investors.&rdquo; as contradicted and cited <code>| 2081/2082 | 0.00% | 0.00% | No dividend |</code> — traceable, correctly structured, and addressing nothing.</p>
+
+<h2>Reproduce it<span class="l"></span></h2>
+<p>Four scripts &middot; no API key &middot; no network:</p>
+<div class="tbl-scroll"><table class="q"><thead><tr><th>Script</th><th>What it reproduces</th></tr></thead><tbody><tr><td><code>check_results.py</code></td><td>timings, tokens, verdicts</td></tr><tr><td><code>validate.py</code></td><td>schema violations per run</td></tr><tr><td><code>test_validate.py</code></td><td>23 tests over the validator</td></tr><tr><td><code>check_divergence.py</code></td><td>the runtime / scorer divergence</td></tr></tbody></table></div><p class="tnote">19 dated decision records · 7 result files, never hand-edited or overwritten · a failed run kept because a failed run is evidence too · full git history in the repository.</p>
+<p><code>REPRODUCE.md</code> walks through it end to end. The baseline and the shipped agent cost 8 API calls and about four and a half minutes on a free-tier Gemini key — which is capped at 20 requests per day, so the guide is written around that limit.</p>
+
+<h2>Hot take<span class="l"></span></h2>
+<blockquote>
+  <p>The axis you aren&rsquo;t measuring is the one your agent is moving on.</p>
+</blockquote>
+<p>For three iterations my only metric was verdict agreement. It read 3/3, 3/3, 2/3, 3/3. By that number I had spent three days building nothing.</p>
+<p>The fix is not &ldquo;measure more things&rdquo; — you cannot act on that. It is narrower, and it is uncomfortable: <strong>remove the part you&rsquo;re proudest of, and run it again.</strong></p>
+<p>Take your documents away and see whether your score survives. Mine didn&rsquo;t. And when the thing doing the measuring is code you wrote, point the same test at that.</p>
+
+<h3>Why &ldquo;measure more things&rdquo; is not the fix</h3>
+<p><strong>It does not tell you which thing.</strong> The list of properties you could score is endless, and nothing on it announces itself as the one that matters. I only thought to score whether a citation was well-formed because I had already built a validator that defined it. &ldquo;Measure more&rdquo; would never have pointed me there &mdash; it is an aspiration, and an aspiration has no next action attached to it.</p>
+<p><strong>A new metric can be exactly as invalid as the old one.</strong> Adding measurements multiplies observations, not validity. The metric I added is a case in point: the same function that computed it was, when called from the other side of this system, enforcing a stricter rule &mdash; so the number I trusted and the number the loop acted on were never the same number.</p>
+<p><strong>Addition and removal answer different questions.</strong> Another metric can show you that something <em>moved</em>. Only taking a component away and running it again can show you that the component was ever what moved it. &ldquo;Did this contribute?&rdquo; is a counterfactual question &mdash; it asks about the system without the part &mdash; and no amount of extra scoring produces a counterfactual. That is why the three sharpest answers above came from taking something away &mdash; the documents, the conclusions I had planted, and the correction loop itself &mdash; and why the other three came from turning the same suspicion on the instruments doing the measuring.</p>
+<p><strong>And removal is a test, not an intention.</strong> The control run cost three API calls, and the answer came back against me: the loop I had built that whole iteration around moved nothing I was scoring. &ldquo;Measure more things&rdquo; has no such answer waiting for it. Nothing bounds it, and nothing it returns can contradict you &mdash; and advice that cannot fail is advice you cannot learn from.</p>
+
+<h2>Where the work went<span class="l"></span></h2>
+<p>Five of the six questions above are not about the agent. They are about the metric, the data behind it, the checker, the second checker, and the reference I was scoring against. Only the third asks anything about the system itself &mdash; whether one part of it earns its cost.</p>
+<p>I did not plan that ratio. It is where the work went once I started checking whether I knew what I thought I knew &mdash; and it is why 548 lines of this repository measure the 384 that do the work.</p>
+
+  </div>
+</div></div></main><section class="next" id="connect">
+  <div class="next-in">
+    <p class="who"><strong>Dipendra Limbu</strong> | Nepal | Data Analyst | Business Intelligence | dklimbuz@hotmail.com</p>
+    <a class="btn" href="index.html">All projects</a>
+    <a class="lnk" href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/">LinkedIn &rarr;</a>
+    <a class="lnk" href="https://github.com/DKL59/Dipendra-Limbu">GitHub &rarr;</a>
+  </div>
+</section>
+<footer><div class="foot-in">
+  <span>Dipendra Limbu &middot; Data Analyst | Business Intelligence &middot; Nepal</span>
+  <a href="index.html">Home</a><a href="https://www.linkedin.com/in/dipendra-limbu-4234901a9/">LinkedIn</a><a href="https://github.com/DKL59/Dipendra-Limbu">GitHub</a>
+</div></footer>
+<script>
+(function () {
+  var root = document.documentElement, b = document.getElementById("tbtn");
+  try { var s = localStorage.getItem("dl-theme"); if (s) root.setAttribute("data-theme", s); } catch (e) {}
+  b.addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") === "dark" ||
+      (!root.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+    var n = dark ? "light" : "dark";
+    root.setAttribute("data-theme", n);
+    try { localStorage.setItem("dl-theme", n); } catch (e) {}
+  });
+})();
+/* Contents rail, built from the h2s already on the page. */
+(function () {
+  var nav = document.getElementById("toc");
+  var hs = [].slice.call(document.querySelectorAll("main h2"));
+  hs.forEach(function (h, i) {
+    var id = "s" + i; h.id = id;
+    var a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = (h.dataset.toc || h.textContent).trim();
+    nav.appendChild(a);
+  });
+  var links = [].slice.call(nav.children);
+  function mark() {
+    var best = 0;
+    hs.forEach(function (h, i) { if (h.getBoundingClientRect().top < 140) best = i; });
+    links.forEach(function (a, i) { a.classList.toggle("on", i === best); });
+  }
+  mark();
+  addEventListener("scroll", mark, { passive: true });
+})();
+/* If an image cannot load (preview sandbox blocks the site's own host),
+   show its filename rather than a broken icon. */
+/* Swap the video thumbnail for the real player only on click. */
+document.querySelectorAll(".ytlite").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube.com/embed/" + b.dataset.yt + "?autoplay=1&rel=0";
+    f.title = "PRAMAAN solution video";
+    f.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture";
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
+/* The video thumbnail is excluded: its frame already holds 16:9, so a
+   failed thumbnail degrades to a plain dark play button rather than a box. */
+document.querySelectorAll("figure:not(.vid) img").forEach(function (im) {
+  im.addEventListener("error", function () {
+    var d = document.createElement("div");
+    d.className = "imgfail";
+    d.textContent = im.getAttribute("src").split("/").pop() + " — loads on the live site";
+    im.replaceWith(d);
+  });
+});
+</script>

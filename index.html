@@ -153,6 +153,7 @@ section { padding: 60px 0; }
 /* One divider rule for every row where links sit side by side, so two
    destinations are never read as one sequence. Buttons are already distinct,
    so the rule applies only between adjacent text links. */
+.facts span + span::before,
 .proj-links a + a::before,
 .hero-links a.lnk + a.lnk::before,
 .mast-links a + a::before,
@@ -466,28 +467,29 @@ footer { border-top: 1px solid var(--rule); padding: 22px 0 42px;
     <div class="sec-head"><h2>Evaluation &amp; systems work</h2><span class="line"></span><span class="count">01</span></div>
 
     <article class="proj">
-      <div class="pnum">04 &middot; Evaluation &amp; systems work</div>
-      <h3><a href="https://github.com/DKL59/Micro1_Challenge">PRAMAAN — a document-grounded claim checker</a></h3>
+      <div class="pnum">04 &middot; Agent evaluation</div>
+      <h3><a href="project4.html">PRAMAAN — checking whether I knew what I thought I knew</a></h3>
       <div class="proj-grid">
         <div>
           <div class="block">
             <span class="label">Goal</span>
-            <p>Build a system that checks investment claims about NEPSE-listed equities against source documents — every figure it reports carrying the sentence it came from — and then find out whether it actually works. Submitted to the micro1 Frontier Engineering Challenge 2026.</p>
+            <p>It began as a claim checker for NEPSE-listed equities, every figure carrying the sentence it came from. It ended as a study of a narrower question: what does it take to know whether an agent actually improved? Submitted to the micro1 Frontier Engineering Challenge 2026.</p>
           </div>
           <div class="block">
             <span class="label">Approach</span>
-            <p>A baseline with no documents at all, then four iterations changing one variable each, plus a control with the correction loop disabled. Verdicts scored against hand-written answers fixed before the runs; citations scored mechanically by three rules with no model in the loop.</p>
+            <p>Six instruments, each built because the previous one returned &ldquo;you do not actually know that&rdquo;: a baseline with no documents, verdicts hand-scored before the runs, a mechanical validator, 23 tests over that validator, a control with the correction loop disabled, and finally an audit of the validator itself. 384 lines of agent; 548 of apparatus.</p>
           </div>
           <div class="block key">
             <span class="label">Result</span>
-            <p>It did not win on the metric I chose. Verdict agreement read 3/3, 3/3, 2/3, 3/3, 3/3 across five runs — never improving — and the document-free baseline matched the finished system. What did move were two columns I had not thought to measure: figures traceable to a source went 0/3 to 3/3, and schema violations 5 to 0.</p>
+            <p>Three of the six instruments returned a negative result about my own work. The metric never separated the systems — verdict agreement read 3/3, 3/3, 2/3, 3/3, 3/3, and a document-free baseline matched the finished agent. The correction loop cost 3.4&times; the time and moved nothing scored. And the checker driving that loop turned out to be stricter than the scorer, in four of eight attempts and never the other way.</p>
           </div>
           <div class="block rec">
             <span class="label">What it taught me</span>
-            <p>Two findings I would have missed without measuring: my own analysis had contaminated the source files, so the system was retrieving answers I had planted; and switching the correction loop off entirely changed nothing I was scoring. Both are reported as negative results, with the runs that show them.</p>
+            <p>That the findings are local and the method is what transfers. Three cases and one model support no general claim about agents — but the discipline does: ablate the part you believe in, keep a control arm, and point the same scepticism at the instrument doing the measuring. Every figure here is reproducible from the repository without an API key.</p>
           </div>
-          <div class="tools">Tools: Python · Git · unit testing · LLM API</div>
+          <div class="tools">Tools: Python · Git · unit testing · experiment design · LLM API</div>
           <div class="proj-links">
+            <a class="lnk" href="project4.html">The study in full &rarr;</a>
             <a class="lnk" href="https://github.com/DKL59/Micro1_Challenge">GitHub repository &rarr;</a>
             <a class="lnk" href="https://youtu.be/qSmXwHcALKY">Solution video &mdash; 5 minutes &rarr;</a>
           </div>
